@@ -1,0 +1,30 @@
+{
+  "document": "data/sample/sample_credit_agreement.html",
+  "notes": "Synthetic fixture, hand-authored against the raw HTML directly. All three covenants are standing quarterly/at-all-times tests -- no incurrence-condition language anywhere in this document.",
+  "financial_covenants": [
+    {
+      "name": "Consolidated Leverage Ratio",
+      "comparison": "not_to_exceed",
+      "threshold": 3.50,
+      "unit": "ratio",
+      "covenant_type": "maintenance",
+      "citation_contains": "Consolidated Leverage Ratio as of the last day of any fiscal quarter to exceed 3.50:1.00"
+    },
+    {
+      "name": "Fixed Charge Coverage Ratio",
+      "comparison": "not_less_than",
+      "threshold": 1.25,
+      "unit": "ratio",
+      "covenant_type": "maintenance",
+      "citation_contains": "Fixed Charge Coverage Ratio as of the last day of any fiscal quarter to be less than 1.25:1.00"
+    },
+    {
+      "name": "Minimum Liquidity",
+      "comparison": "not_less_than",
+      "threshold": 10000000,
+      "unit": "USD",
+      "covenant_type": "maintenance",
+      "citation_contains": "Consolidated Liquidity of not"
+    }
+  ]
+}

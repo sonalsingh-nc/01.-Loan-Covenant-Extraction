@@ -1,0 +1,38 @@
+{
+  "document": "data/sample/Mizuho- QVC - Loan Agreement.htm",
+  "notes": "Verified complete by grepping for other covenant-ratio keywords (Fixed Charge/Debt Service/Interest Coverage, Minimum Liquidity, Net Worth, Current Ratio) -- none found; this document is leverage-ratio-only. Deliberately does NOT include a 'Consolidated Leverage Ratio, incurrence_condition, 3.5' entry: earlier manual investigation in this project found the pipeline extracts one, but its citation text never actually states '3.5'/'3.50' anywhere -- it's a fabricated/misattributed value (likely confused with the parallel Secured Leverage Ratio clause's 3.50 nearby), so a correct extractor should NOT produce it. Running the eval against this gold set should surface that entry as a false positive if the fix hasn't been applied. `citation_contains` anchors for the two Incremental-Facility-basket entries were tightened to the number-bearing phrase itself ('does not exceed (x) N.NN:1.00') after a cross-model eval run showed a looser, lead-in-text anchor (e.g. 'in the case of ... unsecured') spuriously miss a model that quoted the same clause starting closer to the number -- anchors should key on the fact being verified, not on incidental quoting-boundary choices any one model happened to make.",
+  "financial_covenants": [
+    {
+      "name": "Consolidated Leverage Ratio",
+      "comparison": "not_to_exceed",
+      "threshold": 4.50,
+      "unit": "ratio",
+      "covenant_type": "maintenance",
+      "citation_contains": "the Consolidated Leverage Ratio as of the last day of each fiscal quarter to be greater than 4.50:1.00"
+    },
+    {
+      "name": "Consolidated Leverage Ratio",
+      "comparison": "not_to_exceed",
+      "threshold": 4.50,
+      "unit": "ratio",
+      "covenant_type": "incurrence_condition",
+      "citation_contains": "does not exceed either (x) 4.50:1.00"
+    },
+    {
+      "name": "Consolidated Secured Leverage Ratio",
+      "comparison": "not_to_exceed",
+      "threshold": 3.50,
+      "unit": "ratio",
+      "covenant_type": "incurrence_condition",
+      "citation_contains": "does not exceed (x) 3.50:1.00"
+    },
+    {
+      "name": "Consolidated Secured Leverage Ratio",
+      "comparison": "not_to_exceed",
+      "threshold": 3.75,
+      "unit": "ratio",
+      "covenant_type": "incurrence_condition",
+      "citation_contains": "immediately before and immediately after giving pro forma effect thereto the Consolidated Secured Leverage Ratio would not be greater than 3.75 to 1.00"
+    }
+  ]
+}

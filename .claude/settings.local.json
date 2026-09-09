@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(.venv/Scripts/python -c \"import pydantic; print\\(pydantic.VERSION\\)\")",
+      "Bash(.venv/Scripts/python -m pytest tests/ -q)",
+      "Bash(LLM_MODEL_NAME=\"qwen2.5-vl-32b-instruct\" \"C:\\\\Users\\\\sonal\\\\venvs\\\\loan-covenant-extraction\\\\Scripts\\\\python.exe\" scripts/run_extraction.py \"data/sample/Wells Fargo - RetailCo - Loan Agreement.html\" --out \"data/processed/WellsFargo_RetailCo-Covenants.json\")",
+      "Bash(.venv/Scripts/python -c ' *)",
+      "Skill(claude-api)",
+      "Skill(claude-api:*)",
+      "Bash('C:\\\\Users\\\\sonal\\\\venvs\\\\loan-covenant-extraction\\\\Scripts\\\\python.exe' -c ' *)"
+    ]
+  }
+}

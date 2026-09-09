@@ -1,0 +1,14 @@
+{
+  "document": "data/sample/Old Plank Trail Community Bank - Halo Purely for Pets - Loan and Security Agreement.html",
+  "notes": "Verified complete by grepping the full document text for Leverage/Coverage/Net Worth/Debt Service/Current Ratio -- the only other 'net worth' hit is an unrelated eligibility criterion for a permitted-investment bank, not a Borrower covenant.",
+  "financial_covenants": [
+    {
+      "name": "Fixed Charge Coverage Ratio",
+      "comparison": "not_less_than",
+      "threshold": 1.25,
+      "unit": "ratio",
+      "covenant_type": "maintenance",
+      "citation_contains": "Not permit the Fixed Charge Coverage Ratio as of the last day of any fiscal quarter to be less than 1.25 to 1.00"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+# Document ingestion
+pymupdf>=1.24
+beautifulsoup4>=4.12
+lxml>=5.2
+
+# Embeddings (local, CPU)
+# BgeM3Embedder (default): best semantic recall, but downloads a multi-GB
+# pretrained model from the Hugging Face Hub on first use -- sentence-
+# transformers/torch are only needed for this path.
+sentence-transformers>=3.0
+torch>=2.2
+# TfidfEmbedder (network-restricted environments): no pretrained weights,
+# no network access. scikit-learn is also a transitive dependency of
+# sentence-transformers, but is listed explicitly since it's now a direct
+# import too (retrieval/embeddings.py).
+scikit-learn>=1.3
+
+# Schema / config / LLM client
+pydantic>=2.7
+pydantic-settings>=2.2
+openai>=1.30
+anthropic>=0.69  # optional: only needed for ClaudeClient (evals/, LLM comparison)
+python-dotenv>=1.0
+
+# Testing
+pytest>=8.0
+pytest-mock>=3.14
