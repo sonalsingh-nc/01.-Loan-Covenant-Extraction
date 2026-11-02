@@ -1,0 +1,52 @@
+{
+  "document": "data/sample/Astronics Corporation - Credit Agreement.htm",
+  "cached_output": "data/processed/Astronics_CreditAgreement-Covenants.json",
+  "notes": "Section 6.1 Financial Covenants has three maintenance tests; (c) Total Net Debt Leverage Ratio steps down from 4.75x (FQ ending 12/31/2025) to 4.50x (FQ ending 3/31/2026 onward) and is labeled as one covenant with a schedule. The 'Maximum Leverage Requirement' definition carries a 2.50x Secured Net Debt Leverage Ratio incurrence test for Incremental Commitments. Pricing-grid leverage levels are excluded. Checked by grepping every 'N.NN to 1.00' in the document.",
+  "financial_covenants": [
+    {
+      "name": "Consolidated Interest Coverage Ratio",
+      "comparison": "not_less_than",
+      "threshold": 3.5,
+      "unit": "ratio",
+      "covenant_type": "maintenance",
+      "test_frequency": "quarterly",
+      "citation_contains": "for the period of four (4) consecutive fiscal quarters ending with the end of such fiscal quarter to be less than 3.50 to 1.00"
+    },
+    {
+      "name": "Secured Net Debt Leverage Ratio",
+      "comparison": "not_to_exceed",
+      "threshold": 3.0,
+      "unit": "ratio",
+      "covenant_type": "maintenance",
+      "test_frequency": "quarterly",
+      "citation_contains": "to exceed 3.00 to 1.00"
+    },
+    {
+      "name": "Total Net Debt Leverage Ratio",
+      "comparison": "not_to_exceed",
+      "threshold": 4.75,
+      "unit": "ratio",
+      "covenant_type": "maintenance",
+      "test_frequency": "quarterly",
+      "citation_contains": "The Borrower shall not permit the Total Net Debt Leverage Ratio, determined as of the end of each of its fiscal quarters",
+      "schedule": [
+        {
+          "period": "fiscal quarter ending December 31, 2025",
+          "threshold": 4.75
+        },
+        {
+          "period": "fiscal quarter ending March 31, 2026 and each fiscal quarter thereafter",
+          "threshold": 4.5
+        }
+      ]
+    },
+    {
+      "name": "Secured Net Debt Leverage Ratio",
+      "comparison": "not_to_exceed",
+      "threshold": 2.5,
+      "unit": "ratio",
+      "covenant_type": "incurrence_condition",
+      "citation_contains": "without causing the Secured Net Debt Leverage Ratio to exceed 2.50 to 1.00"
+    }
+  ]
+}

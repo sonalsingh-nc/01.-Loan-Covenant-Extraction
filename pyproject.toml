@@ -7,6 +7,9 @@ name = "covenant-extraction"
 version = "0.1.0"
 requires-python = ">=3.11"
 
+[project.scripts]
+covenant-eval = "covenant_extraction.evals.cli:main"
+
 [tool.setuptools.packages.find]
 where = ["src"]
 

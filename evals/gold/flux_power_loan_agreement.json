@@ -1,0 +1,134 @@
+{
+  "document": "data/sample/Flux Power - Loan Agreement - ex10-1.htm",
+  "cached_output": "data/processed/FluxPower_LoanAgreement-Covenants.json",
+  "notes": "Section 10 Financial Covenants. 10.1 Minimum TTM EBITDA, tested monthly during a Financial Covenant Trigger Period (springing when Excess Availability < $3,000,000), with a 25-step monthly step-up schedule from $(4,750,000) to $3,000,000; negative numbers in parentheses. Labeled maintenance (it is a standing monthly test while the trigger is active, not a precondition to a voluntary action). 10.2 Capital Expenditures <= $1,200,000 unfinanced per fiscal year.",
+  "financial_covenants": [
+    {
+      "name": "Minimum EBITDA",
+      "comparison": "not_less_than",
+      "threshold": -4750000,
+      "unit": "USD",
+      "covenant_type": "maintenance",
+      "test_frequency": "monthly",
+      "citation_contains": [
+        "EBITDA of no less than",
+        "For the month ending July 31, 2023"
+      ],
+      "schedule": [
+        {
+          "period": "month ending July 31, 2023",
+          "threshold": -4750000
+        },
+        {
+          "period": "month ending August 31, 2023",
+          "threshold": -4650000
+        },
+        {
+          "period": "month ending September 30, 2023",
+          "threshold": -4360000
+        },
+        {
+          "period": "month ending October 31, 2023",
+          "threshold": -4150000
+        },
+        {
+          "period": "month ending November 30, 2023",
+          "threshold": -3510000
+        },
+        {
+          "period": "month ending December 31, 2023",
+          "threshold": -3360000
+        },
+        {
+          "period": "month ending January 31, 2024",
+          "threshold": -2740000
+        },
+        {
+          "period": "month ending February 29, 2024",
+          "threshold": -1860000
+        },
+        {
+          "period": "month ending March 31, 2024",
+          "threshold": -1410000
+        },
+        {
+          "period": "month ending April 30, 2024",
+          "threshold": -90000
+        },
+        {
+          "period": "month ending May 31, 2024",
+          "threshold": 860000
+        },
+        {
+          "period": "month ending June 30, 2024",
+          "threshold": 1050000
+        },
+        {
+          "period": "month ending July 31, 2024",
+          "threshold": 1200000
+        },
+        {
+          "period": "month ending August 31, 2024",
+          "threshold": 1350000
+        },
+        {
+          "period": "month ending September 30, 2024",
+          "threshold": 1500000
+        },
+        {
+          "period": "month ending October 31, 2024",
+          "threshold": 1650000
+        },
+        {
+          "period": "month ending November 30, 2024",
+          "threshold": 1800000
+        },
+        {
+          "period": "month ending December 31, 2024",
+          "threshold": 1950000
+        },
+        {
+          "period": "month ending January 31, 2025",
+          "threshold": 2100000
+        },
+        {
+          "period": "month ending February 28, 2025",
+          "threshold": 2250000
+        },
+        {
+          "period": "month ending March 31, 2025",
+          "threshold": 2400000
+        },
+        {
+          "period": "month ending April 30, 2025",
+          "threshold": 2550000
+        },
+        {
+          "period": "month ending May 31, 2025",
+          "threshold": 2700000
+        },
+        {
+          "period": "month ending June 30, 2025",
+          "threshold": 2850000
+        },
+        {
+          "period": "month ending July 31, 2025",
+          "threshold": 3000000
+        }
+      ]
+    },
+    {
+      "name": "Capital Expenditures",
+      "comparison": "not_to_exceed",
+      "threshold": 1200000,
+      "unit": "USD",
+      "covenant_type": "maintenance",
+      "test_frequency": "annual",
+      "name_aliases": [
+        "Maximum Capital Expenditures",
+        "Capex Limit"
+      ],
+      "citation_contains": "unfinanced Capital Expenditures in an amount greater than"
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "document": "data/sample/Innventure LLC - WTI Fund X and XI - Loan and Security Agreement.htm",
+  "cached_output": "data/processed/Innventure_WTIFund-Covenants.json",
+  "notes": "Venture loan with no financial covenants: the agreement states 'Borrower shall not be required to maintain any minimum tangible net worth, working capital, current ratio, quick asset ratio, liquidity ratio or debt-to-equity ratio or comply with any similar financial covenant'. A correct extractor returns nothing; any extraction is a false positive. Tests abstention.",
+  "financial_covenants": []
+}

@@ -1,0 +1,16 @@
+{
+  "document": "data/sample/Lone Star State Bank of Texas - AST & Science LLC - Loan Agreement.html",
+  "cached_output": "data/processed/LoneStarBank_ASTScience-Covenants.json",
+  "notes": "Equipment loan with no ratio or net-worth covenants. Section 6.c (LSB MM Fund) requires topping up a pledged money-market account to $15,000,000 if Cash on Hand drops below $75,000,000 -- a springing cash-collateral obligation rather than a standing financial covenant, so it is optional (required: false). Section 6.a only requires reporting Cash on Hand.",
+  "financial_covenants": [
+    {
+      "name": "Minimum LSB MM Fund Balance",
+      "comparison": "not_less_than",
+      "threshold": 15000000,
+      "unit": "USD",
+      "covenant_type": "maintenance",
+      "required": false,
+      "citation_contains": "maintain a cash balance of not less than fifteen million Dollars"
+    }
+  ]
+}

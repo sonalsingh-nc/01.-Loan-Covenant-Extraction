@@ -1,0 +1,3481 @@
+{
+  "summary": {
+    "documents_scored": 10,
+    "documents_skipped": [],
+    "true_positives": 15,
+    "false_negatives": 5,
+    "false_positives": 2,
+    "precision": 0.8823529411764706,
+    "recall": 0.75,
+    "f1": 0.8108108108108107,
+    "recall_by_covenant_type": {
+      "incurrence_condition": {
+        "gold": 6,
+        "hits": 4,
+        "recall": 0.6666666666666666
+      },
+      "maintenance": {
+        "gold": 14,
+        "hits": 11,
+        "recall": 0.7857142857142857
+      }
+    },
+    "field_counts": {
+      "threshold_exact": [
+        15,
+        15
+      ],
+      "threshold_tolerance": [
+        15,
+        15
+      ],
+      "comparison": [
+        15,
+        15
+      ],
+      "covenant_type": [
+        15,
+        15
+      ],
+      "unit": [
+        15,
+        15
+      ],
+      "name": [
+        15,
+        15
+      ],
+      "test_frequency": [
+        11,
+        11
+      ],
+      "all_fields": [
+        15,
+        15
+      ]
+    },
+    "field_accuracy": {
+      "threshold_exact": 1.0,
+      "threshold_tolerance": 1.0,
+      "comparison": 1.0,
+      "covenant_type": 1.0,
+      "unit": 1.0,
+      "name": 1.0,
+      "test_frequency": 1.0,
+      "all_fields": 1.0
+    },
+    "schedule_covenants": 2,
+    "schedule_complete": 1,
+    "schedule_levels": 27,
+    "schedule_levels_found": 3,
+    "no_covenant_documents": 3,
+    "no_covenant_documents_clean": 3,
+    "rel_tol": 0.01
+  },
+  "documents": [
+    {
+      "gold_id": "astronics_credit_agreement",
+      "document": "data/sample/Astronics Corporation - Credit Agreement.htm",
+      "score": {
+        "num_gold": 4,
+        "num_extracted": 4,
+        "num_hits": 4,
+        "num_misses": 0,
+        "num_false_positives": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "threshold_accuracy": 1.0,
+        "covenant_type_accuracy": 1.0
+      },
+      "fields": [
+        {
+          "gold_name": "Consolidated Interest Coverage Ratio",
+          "covenant_type": "maintenance",
+          "threshold_exact": true,
+          "threshold_tolerance": true,
+          "comparison": true,
+          "covenant_type_correct": true,
+          "unit": true,
+          "name": true,
+          "test_frequency": true,
+          "all_fields": true,
+          "extracted_threshold": 3.5,
+          "gold_threshold": 3.5,
+          "schedule_levels": 0,
+          "schedule_levels_found": 0,
+          "schedule_complete": null
+        },
+        {
+          "gold_name": "Secured Net Debt Leverage Ratio",
+          "covenant_type": "maintenance",
+          "threshold_exact": true,
+          "threshold_tolerance": true,
+          "comparison": true,
+          "covenant_type_correct": true,
+          "unit": true,
+          "name": true,
+          "test_frequency": true,
+          "all_fields": true,
+          "extracted_threshold": 3.0,
+          "gold_threshold": 3.0,
+          "schedule_levels": 0,
+          "schedule_levels_found": 0,
+          "schedule_complete": null
+        },
+        {
+          "gold_name": "Total Net Debt Leverage Ratio",
+          "covenant_type": "maintenance",
+          "threshold_exact": true,
+          "threshold_tolerance": true,
+          "comparison": true,
+          "covenant_type_correct": true,
+          "unit": true,
+          "name": true,
+          "test_frequency": true,
+          "all_fields": true,
+          "extracted_threshold": 4.75,
+          "gold_threshold": 4.75,
+          "schedule_levels": 2,
+          "schedule_levels_found": 2,
+          "schedule_complete": true
+        },
+        {
+          "gold_name": "Secured Net Debt Leverage Ratio",
+          "covenant_type": "incurrence_condition",
+          "threshold_exact": true,
+          "threshold_tolerance": true,
+          "comparison": true,
+          "covenant_type_correct": true,
+          "unit": true,
+          "name": true,
+          "test_frequency": null,
+          "all_fields": true,
+          "extracted_threshold": 2.5,
+          "gold_threshold": 2.5,
+          "schedule_levels": 0,
+          "schedule_levels_found": 0,
+          "schedule_complete": null
+        }
+      ],
+      "field_accuracy": {
+        "counts": {
+          "threshold_exact": [
+            4,
+            4
+          ],
+          "threshold_tolerance": [
+            4,
+            4
+          ],
+          "comparison": [
+            4,
+            4
+          ],
+          "covenant_type": [
+            4,
+            4
+          ],
+          "unit": [
+            4,
+            4
+          ],
+          "name": [
+            4,
+            4
+          ],
+          "test_frequency": [
+            3,
+            3
+          ],
+          "all_fields": [
+            4,
+            4
+          ]
+        },
+        "schedule_covenants": 1,
+        "schedule_complete": 1,
+        "schedule_levels": 2,
+        "schedule_levels_found": 2,
+        "accuracy": {
+          "threshold_exact": 1.0,
+          "threshold_tolerance": 1.0,
+          "comparison": 1.0,
+          "covenant_type": 1.0,
+          "unit": 1.0,
+          "name": 1.0,
+          "test_frequency": 1.0,
+          "all_fields": 1.0
+        }
+      },
+      "misses": [],
+      "optional_found": [],
+      "false_positives": [],
+      "extracted_financial_covenants": [
+        {
+          "name": "Secured Net Debt Leverage Ratio",
+          "comparison": "not_to_exceed",
+          "threshold": 3.0,
+          "unit": "ratio",
+          "test_frequency": "quarterly",
+          "covenant_type": "maintenance",
+          "citation": {
+            "source_text": "The Borrower shall not permit the Secured Net Debt Leverage Ratio (commencing with the fiscal quarter ending December 31, 2025), determined as of the end of each of its fiscal quarters, for the period of four (4) consecutive fiscal quarters ending with the end of such fiscal quarter, to exceed 3.00 to 1.00.",
+            "page": null,
+            "section_label": "Section 6.1"
+          },
+          "audit": {
+            "citation_verified": true,
+            "citation_similarity": 1.0,
+            "calculator_checked": true,
+            "calculator_match": true,
+            "citation_grounded": true,
+            "recomputed_threshold": 3.0,
+            "recomputed_comparison": "not_to_exceed"
+          },
+          "definition": "as of the last day of any fiscal quarter, the ratio of (a) Secured Debt as of such day less unrestricted cash and Cash Equivalent Investments of the Loan Parties maintained in deposit accounts in the United States on such day to (b) Consolidated EBITDA for the period of four (4) consecutive fiscal quarters ending on such last day of such fiscal quarter.",
+          "resolved_definition": {
+            "term": "Secured Net Debt Leverage Ratio",
+            "formula": "(Secured Debt - Unrestricted Cash - Cash Equivalent Investments) / Consolidated EBITDA",
+            "components": {
+              "United States": {
+                "term": "United States",
+                "formula": "",
+                "components": {},
+                "carve_outs": [],
+                "provenance": [],
+                "status": "requires_human_review",
+                "reason": "term_not_found_in_definitions_section"
+              },
+              "Cash Equivalent Investments": {
+                "term": "Cash Equivalent Investments",
+                "formula": "US Govt Obligations (\u22641yr) | USD Commercial Paper (\u2264270d, highest rating S&P/Moody's) | CDs/Banker's Acceptances/Time Deposits (\u2264180d, bank capital+surplus+profits \u2265$500M) | Repo Agreements (\u226430d, securities per (a), counterparty per (c)) | Money Market Funds (SEC Rule 2a-7 compliant, AAA/Aaa rated, assets \u2265$5B)",
+                "components": {
+                  "Investment Company Act": {
+                    "term": "Investment Company Act",
+                    "formula": "",
+                    "components": {},
+                    "carve_outs": [],
+                    "provenance": [],
+                    "status": "requires_human_review",
+                    "reason": "term_not_found_in_definitions_section"
+                  },
+                  "SEC Rule": {
+                    "term": "SEC Rule",
+                    "formula": "",
+                    "components": {},
+                    "carve_outs": [],
+                    "provenance": [],
+                    "status": "requires_human_review",
+                    "reason": "term_not_found_in_definitions_section"
+                  }
+                },
+                "carve_outs": [],
+                "provenance": [],
+                "status": "resolved",
+                "reason": null
+              },
+              "Secured Debt": {
+                "term": "Secured Debt",
+                "formula": "(Indebtedness(i,ii,iv,v,vi,vii,x,xiii) - Contingent Guarantees(non-Loan Party) - Undrawn LC/BA Contingencies) - Unsecured Total Debt",
+                "components": {
+                  "Total Debt": {
+                    "term": "Total Debt",
+                    "formula": "Indebtedness(i,ii,iv,v,vi,vii,x,xiii) - Contingent Guarantees(non-Loan Party) - Undrawn LC/BA Contingencies",
+                    "components": {},
+                    "carve_outs": [
+                      "excluding (a) contingent obligations in respect of Guarantees (except to the extent constituting Guarantees in respect of Indebtedness of a Person other than any Loan Party or their Subsidiaries), and (b) contingent obligations in respect of undrawn letters of credit or bankers\u2019 acceptances."
+                    ],
+                    "provenance": [],
+                    "status": "resolved",
+                    "reason": null
+                  }
+                },
+                "carve_outs": [],
+                "provenance": [],
+                "status": "resolved",
+                "reason": null
+              },
+              "Consolidated EBITDA": {
+                "term": "Consolidated EBITDA",
+                "formula": "(Consolidated Net Income - Pre-Acquisition Income - Equity Method Income + Received Dividends - Restricted Subsidiary Earnings) + (Interest Expense (incl. Capitalized, Capital Leases, Synthetic Leases) + LC Fees + Swap Contract Net Costs - Interest Income) + Provision for Taxes + D&A + Unusual/Infrequent Charges + Non-Cash Charges + Restructuring Costs + Transaction Fees + Acquisition Adjustments + Insurance Proceeds/Reimbursements + Legal/Settlement Fees - Corresponding Income/Gains - Extraordinary Gains",
+                "components": {
+                  "Consolidated Interest Expense": {
+                    "term": "Consolidated Interest Expense",
+                    "formula": "Interest Expense (incl. Capitalized, Capital Leases, Synthetic Leases) + LC Fees + Swap Contract Net Costs - Interest Income",
+                    "components": {},
+                    "carve_outs": [],
+                    "provenance": [],
+                    "status": "resolved",
+                    "reason": null
+                  },
+                  "Consolidated Net Income": {
+                    "term": "Consolidated Net Income",
+                    "formula": "Consolidated Net Income - Pre-Acquisition Income - Equity Method Income + Received Dividends - Restricted Subsidiary Earnings",
+                    "components": {},
+                    "carve_outs": [
+                      "provided that there shall be excluded (a) the income (or deficit) of any Person accrued prior to the date it becomes a Subsidiary of the Borrower or is merged into or consolidated with the Borrower or any of its Subsidiaries, (b) the income (or deficit) of any Person (other than a Subsidiary of the Borrower) in",
+                      "except to the extent that any such income is actually received by the Borrower or such Subsidiary in the form of dividends or similar distributions and (c) the undistributed earnings of any Subsidiary of the Borrower to the extent that the declaration or payment of dividends or similar distributions by su",
+                      "other than under any Loan Document) or requirement of Law applicable to such Subsidiary."
+                    ],
+                    "provenance": [],
+                    "status": "resolved",
+                    "reason": null
+                  },
+                  "Permitted Acquisition": {
+                    "term": "Permitted Acquisition",
+                    "formula": "",
+                    "components": {},
+                    "carve_outs": [],
+                    "provenance": [],
+                    "status": "requires_human_review",
+                    "reason": "term_not_found_in_definitions_section"
+                  },
+                  "Equity Interests": {
+                    "term": "Equity Interests",
+                    "formula": "",
+                    "components": {},
+                    "carve_outs": [],
+                    "provenance": [],
+                    "status": "requires_human_review",
+                    "reason": "term_not_found_in_definitions_section"
+                  },
+                  "Closing Date": {
+                    "term": "Closing Date",
+                    "formula": "",
+                    "components": {},
+                    "carve_outs": [],
+                    "provenance": [],
+                    "status": "requires_human_review",
+                    "reason": "term_not_found_in_definitions_section"
+                  },
+                  "Administrative Agent": {
+                    "term": "Administrative Agent",
+                    "formula": "",
+                    "components": {},
+                    "carve_outs": [],
+                    "provenance": [],
+                    "status": "requires_human_review",
+                    "reason": "term_not_found_in_definitions_section"
+                  },
+                  "Loan Documents": {
+                    "term": "Loan Documents",
+                    "formula": "",
+                    "components": {},
+                    "carve_outs": [],
+                    "provenance": [],
+                    "status": "requires_human_review",
+                    "reason": "term_not_found_in_definitions_section"
+                  },
+                  "Permitted Acquisitions": {
+                    "term": "Permitted Acquisitions",
+                    "formula": "",
+                    "components": {},
+                    "carve_outs": [],
+                    "provenance": [],
+                    "status": "requires_human_review",
+                    "reason": "term_not_found_in_definitions_section"
+                  }
+                },
+                "carve_outs": [
+                  "except with respect to clauses (iii) and (v) of this clause (c) , to the extent deducted in determining Consolidated Net Income for such period (if applicable), and without duplication, (i) expenses, losses, charges or write-downs deemed unusual in nature or infrequent in occurrence in accordance with GAA",
+                  "excluding expenses, losses or charges described in sub-clause (vii) of this clause (c)), (ii) non-cash charges, expenses or losses, including, without limitation, (w) any non-cash compensation, (x) non-cash translation (gain) loss, (y) non-cash expense relating to the vesting of warrants, and (z) non-cash ch",
+                  "except to the extent such non-cash charge represents an accrual for a future cash charge), (iii) restructuring, integration, business optimization costs, costs related to undertaking cost saving initiatives, operating expense reductions, operating improvements and cost synergies, retention, recruiting, re",
+                  "other than ordinary course dispositions), issuance, repayment, amendments or modifications, negotiation, forbearance, extension or waiver of Indebtedness or issuance of Equity Interests, in each case whether or not consummated; provided that the aggregate amount added back pursuant to this clause (y) in respe",
+                  "provided that the aggregate amount of all such fees, charges or other expenses added back under this subsection (vii)(1) shall not exceed $10,000,000 in the aggregate over the term of this Agreement and (2) any awards or settlement payments incurred in connection with any action, suit, proceeding or investigatio",
+                  "provided that the aggregate amount of all such payments added back under this subsection (vii)(2) shall not exceed $10,000,000 in the aggregate over the term of this Agreement; provided further that the aggregate amount of all such fees, charges, payments or other expenses added back under this subsection (vii)",
+                  "provided that, notwithstanding the foregoing, (1) the aggregate amount added back (excluding non-cash amounts) in any period to the extent supported with reasonable documentation made pursuant to clauses (c)(i) , (iii) , and ( vii) shall not in any event exceed 15.0% of Consolidated EBITDA after giving effect to"
+                ],
+                "provenance": [],
+                "status": "resolved",
+                "reason": null
+              },
+              "Loan Parties": {
+                "term": "Loan Parties",
+                "formula": "Borrower + Guarantors",
+                "components": {},
+                "carve_outs": [],
+                "provenance": [],
+                "status": "resolved",
+                "reason": null
+              }
+            },
+            "carve_outs": [],
+            "provenance": [],
+            "status": "resolved",
+            "reason": null
+          }
+        },
+        {
+          "name": "Consolidated Interest Coverage Ratio",
+          "comparison": "not_less_than",
+          "threshold": 3.5,
+          "unit": "ratio",
+          "test_frequency": "quarterly",
+          "covenant_type": "maintenance",
+          "citation": {
+            "source_text": "The Borrower shall not permit the Consolidated Interest Coverage Ratio, determined as of the end of each of its fiscal quarters (commencing with the fiscal quarter ending December 31, 2025), for the period of four (4) consecutive fiscal quarters ending with the end of such fiscal quarter to be less than 3.50 to 1.00.",
+            "page": null,
+            "section_label": "Section 6.1"
+          },
+          "audit": {
+            "citation_verified": true,
+            "citation_similarity": 1.0,
+            "calculator_checked": true,
+            "calculator_match": true,
+            "citation_grounded": true,
+            "recomputed_threshold": 3.5,
+            "recomputed_comparison": "not_less_than"
+          },
+          "definition": "as of any date of determination, the ratio of (a) Consolidated EBITDA for the period of the four fiscal quarters most recently ended to (b) Consolidated Interest Expense paid (or required to be paid) in cash during such period.",
+          "resolved_definition": {
+            "term": "Consolidated Interest Coverage Ratio",
+            "formula": "(Consolidated Net Income - Pre-Acquisition Income - Equity Method Income + Received Dividends - Restricted Subsidiary Earnings + Interest Expense (incl. Capitalized, Capital Leases, Synthetic Leases) + LC Fees + Swap Contract Net Costs - Interest Income + Provision for Taxes + D&A + Unusual/Infrequent Charges + Non-Cash Charges + Restructuring Costs + Transaction Fees + Acquisition Adjustments + Insurance Proceeds/Reimbursements + Legal/Settlement Fees - Corresponding Income/Gains - Extraordinary Gains) / (Interest Expense (incl. Capitalized, Capital Leases, Synthetic Leases) + LC Fees + Swap Contract Net Costs - Interest Income)",
+            "components": {
+              "Consolidated Interest Expense": {
+                "term": "Consolidated Interest Expense",
+                "formula": "Interest Expense (incl. Capitalized, Capital Leases, Synthetic Leases) + LC Fees + Swap Contract Net Costs - Interest Income",
+                "components": {},
+                "carve_outs": [],
+                "provenance": [],
+                "status": "resolved",
+                "reason": null
+              },
+              "Consolidated EBITDA": {
+                "term": "Consolidated EBITDA",
+                "formula": "(Consolidated Net Income - Pre-Acquisition Income - Equity Method Income + Received Dividends - Restricted Subsidiary Earnings) + (Interest Expense (incl. Capitalized, Capital Leases, Synthetic Leases) + LC Fees + Swap Contract Net Costs - Interest Income) + Provision for Taxes + D&A + Unusual/Infrequent Charges + Non-Cash Charges + Restructuring Costs + Transaction Fees + Acquisition Adjustments + Insurance Proceeds/Reimbursements + Legal/Settlement Fees - Corresponding Income/Gains - Extraordinary Gains",
+                "components": {
+                  "Consolidated Interest Expense": {
+                    "term": "Consolidated Interest Expense",
+                    "formula": "Interest Expense (incl. Capitalized, Capital Leases, Synthetic Leases) + LC Fees + Swap Contract Net Costs - Interest Income",
+                    "components": {},
+                    "carve_outs": [],
+                    "provenance": [],
+                    "status": "resolved",
+                    "reason": null
+                  },
+                  "Consolidated Net Income": {
+                    "term": "Consolidated Net Income",
+                    "formula": "Consolidated Net Income - Pre-Acquisition Income - Equity Method Income + Received Dividends - Restricted Subsidiary Earnings",
+                    "components": {},
+                    "carve_outs": [
+                      "provided that there shall be excluded (a) the income (or deficit) of any Person accrued prior to the date it becomes a Subsidiary of the Borrower or is merged into or consolidated with the Borrower or any of its Subsidiaries, (b) the income (or deficit) of any Person (other than a Subsidiary of the Borrower) in",
+                      "except to the extent that any such income is actually received by the Borrower or such Subsidiary in the form of dividends or similar distributions and (c) the undistributed earnings of any Subsidiary of the Borrower to the extent that the declaration or payment of dividends or similar distributions by su",
+                      "other than under any Loan Document) or requirement of Law applicable to such Subsidiary."
+                    ],
+                    "provenance": [],
+                    "status": "resolved",
+                    "reason": null
+                  },
+                  "Permitted Acquisition": {
+                    "term": "Permitted Acquisition",
+                    "formula": "",
+                    "components": {},
+                    "carve_outs": [],
+                    "provenance": [],
+                    "status": "requires_human_review",
+                    "reason": "term_not_found_in_definitions_section"
+                  },
+                  "Equity Interests": {
+                    "term": "Equity Interests",
+                    "formula": "",
+                    "components": {},
+                    "carve_outs": [],
+                    "provenance": [],
+                    "status": "requires_human_review",
+                    "reason": "term_not_found_in_definitions_section"
+                  },
+                  "Closing Date": {
+                    "term": "Closing Date",
+                    "formula": "",
+                    "components": {},
+                    "carve_outs": [],
+                    "provenance": [],
+                    "status": "requires_human_review",
+                    "reason": "term_not_found_in_definitions_section"
+                  },
+                  "Administrative Agent": {
+                    "term": "Administrative Agent",
+                    "formula": "",
+                    "components": {},
+                    "carve_outs": [],
+                    "provenance": [],
+                    "status": "requires_human_review",
+                    "reason": "term_not_found_in_definitions_section"
+                  },
+                  "Loan Documents": {
+                    "term": "Loan Documents",
+                    "formula": "",
+                    "components": {},
+                    "carve_outs": [],
+                    "provenance": [],
+                    "status": "requires_human_review",
+                    "reason": "term_not_found_in_definitions_section"
+                  },
+                  "Permitted Acquisitions": {
+                    "term": "Permitted Acquisitions",
+                    "formula": "",
+                    "components": {},
+                    "carve_outs": [],
+                    "provenance": [],
+                    "status": "requires_human_review",
+                    "reason": "term_not_found_in_definitions_section"
+                  }
+                },
+                "carve_outs": [
+                  "except with respect to clauses (iii) and (v) of this clause (c) , to the extent deducted in determining Consolidated Net Income for such period (if applicable), and without duplication, (i) expenses, losses, charges or write-downs deemed unusual in nature or infrequent in occurrence in accordance with GAA",
+                  "excluding expenses, losses or charges described in sub-clause (vii) of this clause (c)), (ii) non-cash charges, expenses or losses, including, without limitation, (w) any non-cash compensation, (x) non-cash translation (gain) loss, (y) non-cash expense relating to the vesting of warrants, and (z) non-cash ch",
+                  "except to the extent such non-cash charge represents an accrual for a future cash charge), (iii) restructuring, integration, business optimization costs, costs related to undertaking cost saving initiatives, operating expense reductions, operating improvements and cost synergies, retention, recruiting, re",
+                  "other than ordinary course dispositions), issuance, repayment, amendments or modifications, negotiation, forbearance, extension or waiver of Indebtedness or issuance of Equity Interests, in each case whether or not consummated; provided that the aggregate amount added back pursuant to this clause (y) in respe",
+                  "provided that the aggregate amount of all such fees, charges or other expenses added back under this subsection (vii)(1) shall not exceed $10,000,000 in the aggregate over the term of this Agreement and (2) any awards or settlement payments incurred in connection with any action, suit, proceeding or investigatio",
+                  "provided that the aggregate amount of all such payments added back under this subsection (vii)(2) shall not exceed $10,000,000 in the aggregate over the term of this Agreement; provided further that the aggregate amount of all such fees, charges, payments or other expenses added back under this subsection (vii)",
+                  "provided that, notwithstanding the foregoing, (1) the aggregate amount added back (excluding non-cash amounts) in any period to the extent supported with reasonable documentation made pursuant to clauses (c)(i) , (iii) , and ( vii) shall not in any event exceed 15.0% of Consolidated EBITDA after giving effect to"
+                ],
+                "provenance": [],
+                "status": "resolved",
+                "reason": null
+              }
+            },
+            "carve_outs": [],
+            "provenance": [],
+            "status": "resolved",
+            "reason": null
+          }
+        },
+        {
+          "name": "Secured Net Debt Leverage Ratio",
+          "comparison": "not_to_exceed",
+          "threshold": 2.5,
+          "unit": "ratio",
+          "test_frequency": "as of the last day of the Computation Period ending immediately prior to the date such Incremental Commitments are incurred",
+          "covenant_type": "incurrence_condition",
+          "citation": {
+            "source_text": "an unlimited amount so long as such amount at such date of determination can be incurred or issued without causing the Secured Net Debt Leverage Ratio to exceed 2.50 to 1.00 on a pro forma basis as of the last day of the Computation Period ending immediately prior to the date such Incremental Commitments are incurred for which financial information is available",
+            "page": null,
+            "section_label": "Section 1.1"
+          },
+          "audit": {
+            "citation_verified": true,
+            "citation_similarity": 1.0,
+            "calculator_checked": true,
+            "calculator_match": true,
+            "citation_grounded": true,
+            "recomputed_threshold": 2.5,
+            "recomputed_comparison": "not_to_exceed"
+          },
+          "definition": "as of the last day of any fiscal quarter, the ratio of (a) Secured Debt as of such day less unrestricted cash and Cash Equivalent Investments of the Loan Parties maintained in deposit accounts in the United States on such day to (b) Consolidated EBITDA for the period of four (4) consecutive fiscal quarters ending on such last day of such fiscal quarter.",
+          "resolved_definition": {
+            "term": "Secured Net Debt Leverage Ratio",
+            "formula": "(Secured Debt - Unrestricted Cash - Cash Equivalent Investments) / Consolidated EBITDA",
+            "components": {
+              "United States": {
+                "term": "United States",
+                "formula": "",
+                "components": {},
+                "carve_outs": [],
+                "provenance": [],
+                "status": "requires_human_review",
+                "reason": "term_not_found_in_definitions_section"
+              },
+              "Cash Equivalent Investments": {
+                "term": "Cash Equivalent Investments",
+                "formula": "US Govt Obligations (\u22641yr) | USD Commercial Paper (\u2264270d, highest rating S&P/Moody's) | CDs/Banker's Acceptances/Time Deposits (\u2264180d, bank capital+surplus+profits \u2265$500M) | Repo Agreements (\u226430d, securities per (a), counterparty per (c)) | Money Market Funds (SEC Rule 2a-7 compliant, AAA/Aaa rated, assets \u2265$5B)",
+                "components": {
+                  "Investment Company Act": {
+                    "term": "Investment Company Act",
+                    "formula": "",
+                    "components": {},
+                    "carve_outs": [],
+                    "provenance": [],
+                    "status": "requires_human_review",
+                    "reason": "term_not_found_in_definitions_section"
+                  },
+                  "SEC Rule": {
+                    "term": "SEC Rule",
+                    "formula": "",
+                    "components": {},
+                    "carve_outs": [],
+                    "provenance": [],
+                    "status": "requires_human_review",
+                    "reason": "term_not_found_in_definitions_section"
+                  }
+                },
+                "carve_outs": [],
+                "provenance": [],
+                "status": "resolved",
+                "reason": null
+              },
+              "Secured Debt": {
+                "term": "Secured Debt",
+                "formula": "(Indebtedness(i,ii,iv,v,vi,vii,x,xiii) - Contingent Guarantees(non-Loan Party) - Undrawn LC/BA Contingencies) - Unsecured Total Debt",
+                "components": {
+                  "Total Debt": {
+                    "term": "Total Debt",
+                    "formula": "Indebtedness(i,ii,iv,v,vi,vii,x,xiii) - Contingent Guarantees(non-Loan Party) - Undrawn LC/BA Contingencies",
+                    "components": {},
+                    "carve_outs": [
+                      "excluding (a) contingent obligations in respect of Guarantees (except to the extent constituting Guarantees in respect of Indebtedness of a Person other than any Loan Party or their Subsidiaries), and (b) contingent obligations in respect of undrawn letters of credit or bankers\u2019 acceptances."
+                    ],
+                    "provenance": [],
+                    "status": "resolved",
+                    "reason": null
+                  }
+                },
+                "carve_outs": [],
+                "provenance": [],
+                "status": "resolved",
+                "reason": null
+              },
+              "Consolidated EBITDA": {
+                "term": "Consolidated EBITDA",
+                "formula": "(Consolidated Net Income - Pre-Acquisition Income - Equity Method Income + Received Dividends - Restricted Subsidiary Earnings) + (Interest Expense (incl. Capitalized, Capital Leases, Synthetic Leases) + LC Fees + Swap Contract Net Costs - Interest Income) + Provision for Taxes + D&A + Unusual/Infrequent Charges + Non-Cash Charges + Restructuring Costs + Transaction Fees + Acquisition Adjustments + Insurance Proceeds/Reimbursements + Legal/Settlement Fees - Corresponding Income/Gains - Extraordinary Gains",
+                "components": {
+                  "Consolidated Interest Expense": {
+                    "term": "Consolidated Interest Expense",
+                    "formula": "Interest Expense (incl. Capitalized, Capital Leases, Synthetic Leases) + LC Fees + Swap Contract Net Costs - Interest Income",
+                    "components": {},
+                    "carve_outs": [],
+                    "provenance": [],
+                    "status": "resolved",
+                    "reason": null
+                  },
+                  "Consolidated Net Income": {
+                    "term": "Consolidated Net Income",
+                    "formula": "Consolidated Net Income - Pre-Acquisition Income - Equity Method Income + Received Dividends - Restricted Subsidiary Earnings",
+                    "components": {},
+                    "carve_outs": [
+                      "provided that there shall be excluded (a) the income (or deficit) of any Person accrued prior to the date it becomes a Subsidiary of the Borrower or is merged into or consolidated with the Borrower or any of its Subsidiaries, (b) the income (or deficit) of any Person (other than a Subsidiary of the Borrower) in",
+                      "except to the extent that any such income is actually received by the Borrower or such Subsidiary in the form of dividends or similar distributions and (c) the undistributed earnings of any Subsidiary of the Borrower to the extent that the declaration or payment of dividends or similar distributions by su",
+                      "other than under any Loan Document) or requirement of Law applicable to such Subsidiary."
+                    ],
+                    "provenance": [],
+                    "status": "resolved",
+                    "reason": null
+                  },
+                  "Permitted Acquisition": {
+                    "term": "Permitted Acquisition",
+                    "formula": "",
+                    "components": {},
+                    "carve_outs": [],
+                    "provenance": [],
+                    "status": "requires_human_review",
+                    "reason": "term_not_found_in_definitions_section"
+                  },
+                  "Equity Interests": {
+                    "term": "Equity Interests",
+                    "formula": "",
+                    "components": {},
+                    "carve_outs": [],
+                    "provenance": [],
+                    "status": "requires_human_review",
+                    "reason": "term_not_found_in_definitions_section"
+                  },
+                  "Closing Date": {
+                    "term": "Closing Date",
+                    "formula": "",
+                    "components": {},
+                    "carve_outs": [],
+                    "provenance": [],
+                    "status": "requires_human_review",
+                    "reason": "term_not_found_in_definitions_section"
+                  },
+                  "Administrative Agent": {
+                    "term": "Administrative Agent",
+                    "formula": "",
+                    "components": {},
+                    "carve_outs": [],
+                    "provenance": [],
+                    "status": "requires_human_review",
+                    "reason": "term_not_found_in_definitions_section"
+                  },
+                  "Loan Documents": {
+                    "term": "Loan Documents",
+                    "formula": "",
+                    "components": {},
+                    "carve_outs": [],
+                    "provenance": [],
+                    "status": "requires_human_review",
+                    "reason": "term_not_found_in_definitions_section"
+                  },
+                  "Permitted Acquisitions": {
+                    "term": "Permitted Acquisitions",
+                    "formula": "",
+                    "components": {},
+                    "carve_outs": [],
+                    "provenance": [],
+                    "status": "requires_human_review",
+                    "reason": "term_not_found_in_definitions_section"
+                  }
+                },
+                "carve_outs": [
+                  "except with respect to clauses (iii) and (v) of this clause (c) , to the extent deducted in determining Consolidated Net Income for such period (if applicable), and without duplication, (i) expenses, losses, charges or write-downs deemed unusual in nature or infrequent in occurrence in accordance with GAA",
+                  "excluding expenses, losses or charges described in sub-clause (vii) of this clause (c)), (ii) non-cash charges, expenses or losses, including, without limitation, (w) any non-cash compensation, (x) non-cash translation (gain) loss, (y) non-cash expense relating to the vesting of warrants, and (z) non-cash ch",
+                  "except to the extent such non-cash charge represents an accrual for a future cash charge), (iii) restructuring, integration, business optimization costs, costs related to undertaking cost saving initiatives, operating expense reductions, operating improvements and cost synergies, retention, recruiting, re",
+                  "other than ordinary course dispositions), issuance, repayment, amendments or modifications, negotiation, forbearance, extension or waiver of Indebtedness or issuance of Equity Interests, in each case whether or not consummated; provided that the aggregate amount added back pursuant to this clause (y) in respe",
+                  "provided that the aggregate amount of all such fees, charges or other expenses added back under this subsection (vii)(1) shall not exceed $10,000,000 in the aggregate over the term of this Agreement and (2) any awards or settlement payments incurred in connection with any action, suit, proceeding or investigatio",
+                  "provided that the aggregate amount of all such payments added back under this subsection (vii)(2) shall not exceed $10,000,000 in the aggregate over the term of this Agreement; provided further that the aggregate amount of all such fees, charges, payments or other expenses added back under this subsection (vii)",
+                  "provided that, notwithstanding the foregoing, (1) the aggregate amount added back (excluding non-cash amounts) in any period to the extent supported with reasonable documentation made pursuant to clauses (c)(i) , (iii) , and ( vii) shall not in any event exceed 15.0% of Consolidated EBITDA after giving effect to"
+                ],
+                "provenance": [],
+                "status": "resolved",
+                "reason": null
+              },
+              "Loan Parties": {
+                "term": "Loan Parties",
+                "formula": "Borrower + Guarantors",
+                "components": {},
+                "carve_outs": [],
+                "provenance": [],
+                "status": "resolved",
+                "reason": null
+              }
+            },
+            "carve_outs": [],
+            "provenance": [],
+            "status": "resolved",
+            "reason": null
+          }
+        },
+        {
+          "name": "Total Net Debt Leverage Ratio",
+          "comparison": "not_to_exceed",
+          "threshold": 4.75,
+          "unit": "ratio",
+          "test_frequency": "quarterly",
+          "covenant_type": "maintenance",
+          "citation": {
+            "source_text": "The Borrower shall not permit the Total Net Debt Leverage Ratio, determined as of the end of each of its fiscal quarters, for the period of four (4) consecutive fiscal quarters ending with the end of such fiscal quarter to exceed, (i) for the fiscal quarter ending December 31, 2025, 4.75 to 1.00",
+            "page": null,
+            "section_label": "Section 6.1"
+          },
+          "audit": {
+            "citation_verified": true,
+            "citation_similarity": 1.0,
+            "calculator_checked": true,
+            "calculator_match": true,
+            "citation_grounded": true,
+            "recomputed_threshold": 4.75,
+            "recomputed_comparison": "not_to_exceed"
+          },
+          "definition": "as of the last day of any fiscal quarter, the ratio of (a) Total Debt as of such day less unrestricted cash and cash equivalents of the Loan Parties maintained in deposit accounts in the United States on such day to (b) Consolidated EBITDA for the period of four (4) consecutive fiscal quarters ending on such last day of such fiscal quarter. \u201c Trade Date \u201d has the meaning specified in Section 9.4(b)(i)(B).",
+          "resolved_definition": {
+            "term": "Total Net Debt Leverage Ratio",
+            "formula": "(Indebtedness(i,ii,iv,v,vi,vii,x,xiii) - Contingent Guarantees(non-Loan Party) - Undrawn LC/BA Contingencies - Unrestricted Cash & Equivalents in US Deposit Accounts) / ((Consolidated Net Income - Pre-Acquisition Income - Equity Method Income + Received Dividends - Restricted Subsidiary Earnings) + (Interest Expense + LC Fees + Swap Contract Net Costs - Interest Income) + Provision for Taxes + D&A + Unusual/Infrequent Charges + Non-Cash Charges + Restructuring Costs + Transaction Fees + Acquisition Adjustments + Insurance Proceeds - Corresponding Income/Gains - Extraordinary Gains) [4-quarter period]",
+            "components": {
+              "Trade Date": {
+                "term": "Trade Date",
+                "formula": "",
+                "components": {},
+                "carve_outs": [],
+                "provenance": [],
+                "status": "requires_human_review",
+                "reason": "term_not_found_in_definitions_section"
+              },
+              "United States": {
+                "term": "United States",
+                "formula": "",
+                "components": {},
+                "carve_outs": [],
+                "provenance": [],
+                "status": "requires_human_review",
+                "reason": "term_not_found_in_definitions_section"
+              },
+              "Total Debt": {
+                "term": "Total Debt",
+                "formula": "Indebtedness(i,ii,iv,v,vi,vii,x,xiii) - Contingent Guarantees(non-Loan Party) - Undrawn LC/BA Contingencies",
+                "components": {},
+                "carve_outs": [
+                  "excluding (a) contingent obligations in respect of Guarantees (except to the extent constituting Guarantees in respect of Indebtedness of a Person other than any Loan Party or their Subsidiaries), and (b) contingent obligations in respect of undrawn letters of credit or bankers\u2019 acceptances."
+                ],
+                "provenance": [],
+                "status": "resolved",
+                "reason": null
+              },
+              "Consolidated EBITDA": {
+                "term": "Consolidated EBITDA",
+                "formula": "(Consolidated Net Income - Pre-Acquisition Income - Equity Method Income + Received Dividends - Restricted Subsidiary Earnings) + (Interest Expense (incl. Capitalized, Capital Leases, Synthetic Leases) + LC Fees + Swap Contract Net Costs - Interest Income) + Provision for Taxes + D&A + Unusual/Infrequent Charges + Non-Cash Charges + Restructuring Costs + Transaction Fees + Acquisition Adjustments + Insurance Proceeds/Reimbursements + Legal/Settlement Fees - Corresponding Income/Gains - Extraordinary Gains",
+                "components": {
+                  "Consolidated Interest Expense": {
+                    "term": "Consolidated Interest Expense",
+                    "formula": "Interest Expense (incl. Capitalized, Capital Leases, Synthetic Leases) + LC Fees + Swap Contract Net Costs - Interest Income",
+                    "components": {},
+                    "carve_outs": [],
+                    "provenance": [],
+                    "status": "resolved",
+                    "reason": null
+                  },
+                  "Consolidated Net Income": {
+                    "term": "Consolidated Net Income",
+                    "formula": "Consolidated Net Income - Pre-Acquisition Income - Equity Method Income + Received Dividends - Restricted Subsidiary Earnings",
+                    "components": {},
+                    "carve_outs": [
+                      "provided that there shall be excluded (a) the income (or deficit) of any Person accrued prior to the date it becomes a Subsidiary of the Borrower or is merged into or consolidated with the Borrower or any of its Subsidiaries, (b) the income (or deficit) of any Person (other than a Subsidiary of the Borrower) in",
+                      "except to the extent that any such income is actually received by the Borrower or such Subsidiary in the form of dividends or similar distributions and (c) the undistributed earnings of any Subsidiary of the Borrower to the extent that the declaration or payment of dividends or similar distributions by su",
+                      "other than under any Loan Document) or requirement of Law applicable to such Subsidiary."
+                    ],
+                    "provenance": [],
+                    "status": "resolved",
+                    "reason": null
+                  },
+                  "Permitted Acquisition": {
+                    "term": "Permitted Acquisition",
+                    "formula": "",
+                    "components": {},
+                    "carve_outs": [],
+                    "provenance": [],
+                    "status": "requires_human_review",
+                    "reason": "term_not_found_in_definitions_section"
+                  },
+                  "Equity Interests": {
+                    "term": "Equity Interests",
+                    "formula": "",
+                    "components": {},
+                    "carve_outs": [],
+                    "provenance": [],
+                    "status": "requires_human_review",
+                    "reason": "term_not_found_in_definitions_section"
+                  },
+                  "Closing Date": {
+                    "term": "Closing Date",
+                    "formula": "",
+                    "components": {},
+                    "carve_outs": [],
+                    "provenance": [],
+                    "status": "requires_human_review",
+                    "reason": "term_not_found_in_definitions_section"
+                  },
+                  "Administrative Agent": {
+                    "term": "Administrative Agent",
+                    "formula": "",
+                    "components": {},
+                    "carve_outs": [],
+                    "provenance": [],
+                    "status": "requires_human_review",
+                    "reason": "term_not_found_in_definitions_section"
+                  },
+                  "Loan Documents": {
+                    "term": "Loan Documents",
+                    "formula": "",
+                    "components": {},
+                    "carve_outs": [],
+                    "provenance": [],
+                    "status": "requires_human_review",
+                    "reason": "term_not_found_in_definitions_section"
+                  },
+                  "Permitted Acquisitions": {
+                    "term": "Permitted Acquisitions",
+                    "formula": "",
+                    "components": {},
+                    "carve_outs": [],
+                    "provenance": [],
+                    "status": "requires_human_review",
+                    "reason": "term_not_found_in_definitions_section"
+                  }
+                },
+                "carve_outs": [
+                  "except with respect to clauses (iii) and (v) of this clause (c) , to the extent deducted in determining Consolidated Net Income for such period (if applicable), and without duplication, (i) expenses, losses, charges or write-downs deemed unusual in nature or infrequent in occurrence in accordance with GAA",
+                  "excluding expenses, losses or charges described in sub-clause (vii) of this clause (c)), (ii) non-cash charges, expenses or losses, including, without limitation, (w) any non-cash compensation, (x) non-cash translation (gain) loss, (y) non-cash expense relating to the vesting of warrants, and (z) non-cash ch",
+                  "except to the extent such non-cash charge represents an accrual for a future cash charge), (iii) restructuring, integration, business optimization costs, costs related to undertaking cost saving initiatives, operating expense reductions, operating improvements and cost synergies, retention, recruiting, re",
+                  "other than ordinary course dispositions), issuance, repayment, amendments or modifications, negotiation, forbearance, extension or waiver of Indebtedness or issuance of Equity Interests, in each case whether or not consummated; provided that the aggregate amount added back pursuant to this clause (y) in respe",
+                  "provided that the aggregate amount of all such fees, charges or other expenses added back under this subsection (vii)(1) shall not exceed $10,000,000 in the aggregate over the term of this Agreement and (2) any awards or settlement payments incurred in connection with any action, suit, proceeding or investigatio",
+                  "provided that the aggregate amount of all such payments added back under this subsection (vii)(2) shall not exceed $10,000,000 in the aggregate over the term of this Agreement; provided further that the aggregate amount of all such fees, charges, payments or other expenses added back under this subsection (vii)",
+                  "provided that, notwithstanding the foregoing, (1) the aggregate amount added back (excluding non-cash amounts) in any period to the extent supported with reasonable documentation made pursuant to clauses (c)(i) , (iii) , and ( vii) shall not in any event exceed 15.0% of Consolidated EBITDA after giving effect to"
+                ],
+                "provenance": [],
+                "status": "resolved",
+                "reason": null
+              },
+              "Loan Parties": {
+                "term": "Loan Parties",
+                "formula": "Borrower + Guarantors",
+                "components": {},
+                "carve_outs": [],
+                "provenance": [],
+                "status": "resolved",
+                "reason": null
+              }
+            },
+            "carve_outs": [],
+            "provenance": [],
+            "status": "resolved",
+            "reason": null
+          }
+        },
+        {
+          "name": "Total Net Debt Leverage Ratio",
+          "comparison": "not_to_exceed",
+          "threshold": 4.5,
+          "unit": "ratio",
+          "test_frequency": "quarterly",
+          "covenant_type": "maintenance",
+          "citation": {
+            "source_text": "The Borrower shall not permit the Total Net Debt Leverage Ratio, determined as of the end of each of its fiscal quarters, for the period of four (4) consecutive fiscal quarters ending with the end of such fiscal quarter to exceed, (ii) for the fiscal quarter ending March 31, 2026 and each fiscal quarter ending thereafter, 4.50 to 1.00",
+            "page": null,
+            "section_label": "Section 6.1"
+          },
+          "audit": {
+            "citation_verified": false,
+            "citation_similarity": 0.039,
+            "calculator_checked": true,
+            "calculator_match": true,
+            "citation_grounded": true,
+            "recomputed_threshold": 4.5,
+            "recomputed_comparison": "not_to_exceed"
+          },
+          "definition": "as of the last day of any fiscal quarter, the ratio of (a) Total Debt as of such day less unrestricted cash and cash equivalents of the Loan Parties maintained in deposit accounts in the United States on such day to (b) Consolidated EBITDA for the period of four (4) consecutive fiscal quarters ending on such last day of such fiscal quarter. \u201c Trade Date \u201d has the meaning specified in Section 9.4(b)(i)(B).",
+          "resolved_definition": {
+            "term": "Total Net Debt Leverage Ratio",
+            "formula": "(Indebtedness(i,ii,iv,v,vi,vii,x,xiii) - Contingent Guarantees(non-Loan Party) - Undrawn LC/BA Contingencies - Unrestricted Cash & Equivalents in US Deposit Accounts) / ((Consolidated Net Income - Pre-Acquisition Income - Equity Method Income + Received Dividends - Restricted Subsidiary Earnings) + (Interest Expense + LC Fees + Swap Contract Net Costs - Interest Income) + Provision for Taxes + D&A + Unusual/Infrequent Charges + Non-Cash Charges + Restructuring Costs + Transaction Fees + Acquisition Adjustments + Insurance Proceeds - Corresponding Income/Gains - Extraordinary Gains) [4-quarter period]",
+            "components": {
+              "Trade Date": {
+                "term": "Trade Date",
+                "formula": "",
+                "components": {},
+                "carve_outs": [],
+                "provenance": [],
+                "status": "requires_human_review",
+                "reason": "term_not_found_in_definitions_section"
+              },
+              "United States": {
+                "term": "United States",
+                "formula": "",
+                "components": {},
+                "carve_outs": [],
+                "provenance": [],
+                "status": "requires_human_review",
+                "reason": "term_not_found_in_definitions_section"
+              },
+              "Total Debt": {
+                "term": "Total Debt",
+                "formula": "Indebtedness(i,ii,iv,v,vi,vii,x,xiii) - Contingent Guarantees(non-Loan Party) - Undrawn LC/BA Contingencies",
+                "components": {},
+                "carve_outs": [
+                  "excluding (a) contingent obligations in respect of Guarantees (except to the extent constituting Guarantees in respect of Indebtedness of a Person other than any Loan Party or their Subsidiaries), and (b) contingent obligations in respect of undrawn letters of credit or bankers\u2019 acceptances."
+                ],
+                "provenance": [],
+                "status": "resolved",
+                "reason": null
+              },
+              "Consolidated EBITDA": {
+                "term": "Consolidated EBITDA",
+                "formula": "(Consolidated Net Income - Pre-Acquisition Income - Equity Method Income + Received Dividends - Restricted Subsidiary Earnings) + (Interest Expense (incl. Capitalized, Capital Leases, Synthetic Leases) + LC Fees + Swap Contract Net Costs - Interest Income) + Provision for Taxes + D&A + Unusual/Infrequent Charges + Non-Cash Charges + Restructuring Costs + Transaction Fees + Acquisition Adjustments + Insurance Proceeds/Reimbursements + Legal/Settlement Fees - Corresponding Income/Gains - Extraordinary Gains",
+                "components": {
+                  "Consolidated Interest Expense": {
+                    "term": "Consolidated Interest Expense",
+                    "formula": "Interest Expense (incl. Capitalized, Capital Leases, Synthetic Leases) + LC Fees + Swap Contract Net Costs - Interest Income",
+                    "components": {},
+                    "carve_outs": [],
+                    "provenance": [],
+                    "status": "resolved",
+                    "reason": null
+                  },
+                  "Consolidated Net Income": {
+                    "term": "Consolidated Net Income",
+                    "formula": "Consolidated Net Income - Pre-Acquisition Income - Equity Method Income + Received Dividends - Restricted Subsidiary Earnings",
+                    "components": {},
+                    "carve_outs": [
+                      "provided that there shall be excluded (a) the income (or deficit) of any Person accrued prior to the date it becomes a Subsidiary of the Borrower or is merged into or consolidated with the Borrower or any of its Subsidiaries, (b) the income (or deficit) of any Person (other than a Subsidiary of the Borrower) in",
+                      "except to the extent that any such income is actually received by the Borrower or such Subsidiary in the form of dividends or similar distributions and (c) the undistributed earnings of any Subsidiary of the Borrower to the extent that the declaration or payment of dividends or similar distributions by su",
+                      "other than under any Loan Document) or requirement of Law applicable to such Subsidiary."
+                    ],
+                    "provenance": [],
+                    "status": "resolved",
+                    "reason": null
+                  },
+                  "Permitted Acquisition": {
+                    "term": "Permitted Acquisition",
+                    "formula": "",
+                    "components": {},
+                    "carve_outs": [],
+                    "provenance": [],
+                    "status": "requires_human_review",
+                    "reason": "term_not_found_in_definitions_section"
+                  },
+                  "Equity Interests": {
+                    "term": "Equity Interests",
+                    "formula": "",
+                    "components": {},
+                    "carve_outs": [],
+                    "provenance": [],
+                    "status": "requires_human_review",
+                    "reason": "term_not_found_in_definitions_section"
+                  },
+                  "Closing Date": {
+                    "term": "Closing Date",
+                    "formula": "",
+                    "components": {},
+                    "carve_outs": [],
+                    "provenance": [],
+                    "status": "requires_human_review",
+                    "reason": "term_not_found_in_definitions_section"
+                  },
+                  "Administrative Agent": {
+                    "term": "Administrative Agent",
+                    "formula": "",
+                    "components": {},
+                    "carve_outs": [],
+                    "provenance": [],
+                    "status": "requires_human_review",
+                    "reason": "term_not_found_in_definitions_section"
+                  },
+                  "Loan Documents": {
+                    "term": "Loan Documents",
+                    "formula": "",
+                    "components": {},
+                    "carve_outs": [],
+                    "provenance": [],
+                    "status": "requires_human_review",
+                    "reason": "term_not_found_in_definitions_section"
+                  },
+                  "Permitted Acquisitions": {
+                    "term": "Permitted Acquisitions",
+                    "formula": "",
+                    "components": {},
+                    "carve_outs": [],
+                    "provenance": [],
+                    "status": "requires_human_review",
+                    "reason": "term_not_found_in_definitions_section"
+                  }
+                },
+                "carve_outs": [
+                  "except with respect to clauses (iii) and (v) of this clause (c) , to the extent deducted in determining Consolidated Net Income for such period (if applicable), and without duplication, (i) expenses, losses, charges or write-downs deemed unusual in nature or infrequent in occurrence in accordance with GAA",
+                  "excluding expenses, losses or charges described in sub-clause (vii) of this clause (c)), (ii) non-cash charges, expenses or losses, including, without limitation, (w) any non-cash compensation, (x) non-cash translation (gain) loss, (y) non-cash expense relating to the vesting of warrants, and (z) non-cash ch",
+                  "except to the extent such non-cash charge represents an accrual for a future cash charge), (iii) restructuring, integration, business optimization costs, costs related to undertaking cost saving initiatives, operating expense reductions, operating improvements and cost synergies, retention, recruiting, re",
+                  "other than ordinary course dispositions), issuance, repayment, amendments or modifications, negotiation, forbearance, extension or waiver of Indebtedness or issuance of Equity Interests, in each case whether or not consummated; provided that the aggregate amount added back pursuant to this clause (y) in respe",
+                  "provided that the aggregate amount of all such fees, charges or other expenses added back under this subsection (vii)(1) shall not exceed $10,000,000 in the aggregate over the term of this Agreement and (2) any awards or settlement payments incurred in connection with any action, suit, proceeding or investigatio",
+                  "provided that the aggregate amount of all such payments added back under this subsection (vii)(2) shall not exceed $10,000,000 in the aggregate over the term of this Agreement; provided further that the aggregate amount of all such fees, charges, payments or other expenses added back under this subsection (vii)",
+                  "provided that, notwithstanding the foregoing, (1) the aggregate amount added back (excluding non-cash amounts) in any period to the extent supported with reasonable documentation made pursuant to clauses (c)(i) , (iii) , and ( vii) shall not in any event exceed 15.0% of Consolidated EBITDA after giving effect to"
+                ],
+                "provenance": [],
+                "status": "resolved",
+                "reason": null
+              },
+              "Loan Parties": {
+                "term": "Loan Parties",
+                "formula": "Borrower + Guarantors",
+                "components": {},
+                "carve_outs": [],
+                "provenance": [],
+                "status": "resolved",
+                "reason": null
+              }
+            },
+            "carve_outs": [],
+            "provenance": [],
+            "status": "resolved",
+            "reason": null
+          }
+        }
+      ]
+    },
+    {
+      "gold_id": "beyond_meat_unprocessed_foods",
+      "document": "data/sample/Beyond Meat - Unprocessed Foods - Loan and Security Agreement.htm",
+      "score": {
+        "num_gold": 2,
+        "num_extracted": 1,
+        "num_hits": 1,
+        "num_misses": 1,
+        "num_false_positives": 0,
+        "recall": 0.5,
+        "precision": 1.0,
+        "threshold_accuracy": 1.0,
+        "covenant_type_accuracy": 1.0
+      },
+      "fields": [
+        {
+          "gold_name": "Minimum Liquidity",
+          "covenant_type": "maintenance",
+          "threshold_exact": true,
+          "threshold_tolerance": true,
+          "comparison": true,
+          "covenant_type_correct": true,
+          "unit": true,
+          "name": true,
+          "test_frequency": true,
+          "all_fields": true,
+          "extracted_threshold": 15000000.0,
+          "gold_threshold": 15000000,
+          "schedule_levels": 0,
+          "schedule_levels_found": 0,
+          "schedule_complete": null
+        }
+      ],
+      "field_accuracy": {
+        "counts": {
+          "threshold_exact": [
+            1,
+            1
+          ],
+          "threshold_tolerance": [
+            1,
+            1
+          ],
+          "comparison": [
+            1,
+            1
+          ],
+          "covenant_type": [
+            1,
+            1
+          ],
+          "unit": [
+            1,
+            1
+          ],
+          "name": [
+            1,
+            1
+          ],
+          "test_frequency": [
+            1,
+            1
+          ],
+          "all_fields": [
+            1,
+            1
+          ]
+        },
+        "schedule_covenants": 0,
+        "schedule_complete": 0,
+        "schedule_levels": 0,
+        "schedule_levels_found": 0,
+        "accuracy": {
+          "threshold_exact": 1.0,
+          "threshold_tolerance": 1.0,
+          "comparison": 1.0,
+          "covenant_type": 1.0,
+          "unit": 1.0,
+          "name": 1.0,
+          "test_frequency": 1.0,
+          "all_fields": 1.0
+        }
+      },
+      "misses": [
+        {
+          "name": "Junior Debt Service Cap",
+          "comparison": "not_to_exceed",
+          "threshold": 20000000,
+          "unit": "USD",
+          "covenant_type": "maintenance",
+          "test_frequency": "annual",
+          "citation_contains": "Junior Debt Service for any fiscal year of Borrower to exceed $20,000,000"
+        }
+      ],
+      "optional_found": [],
+      "false_positives": [],
+      "extracted_financial_covenants": [
+        {
+          "name": "Minimum Liquidity",
+          "comparison": "not_less_than",
+          "threshold": 15000000.0,
+          "unit": "USD",
+          "test_frequency": "at any date",
+          "covenant_type": "maintenance",
+          "citation": {
+            "source_text": "As of any date, Borrower shall not permit Liquidity to be less than $15,000,000.",
+            "page": null,
+            "section_label": "6.10"
+          },
+          "audit": {
+            "citation_verified": true,
+            "citation_similarity": 1.0,
+            "calculator_checked": true,
+            "calculator_match": true,
+            "citation_grounded": true,
+            "recomputed_threshold": 15000000.0,
+            "recomputed_comparison": "not_less_than"
+          },
+          "definition": null
+        }
+      ]
+    },
+    {
+      "gold_id": "flux_power_loan_agreement",
+      "document": "data/sample/Flux Power - Loan Agreement - ex10-1.htm",
+      "score": {
+        "num_gold": 2,
+        "num_extracted": 1,
+        "num_hits": 1,
+        "num_misses": 1,
+        "num_false_positives": 0,
+        "recall": 0.5,
+        "precision": 1.0,
+        "threshold_accuracy": 1.0,
+        "covenant_type_accuracy": 1.0
+      },
+      "fields": [
+        {
+          "gold_name": "Minimum EBITDA",
+          "covenant_type": "maintenance",
+          "threshold_exact": true,
+          "threshold_tolerance": true,
+          "comparison": true,
+          "covenant_type_correct": true,
+          "unit": true,
+          "name": true,
+          "test_frequency": true,
+          "all_fields": true,
+          "extracted_threshold": -4750000.0,
+          "gold_threshold": -4750000,
+          "schedule_levels": 25,
+          "schedule_levels_found": 1,
+          "schedule_complete": false
+        }
+      ],
+      "field_accuracy": {
+        "counts": {
+          "threshold_exact": [
+            1,
+            1
+          ],
+          "threshold_tolerance": [
+            1,
+            1
+          ],
+          "comparison": [
+            1,
+            1
+          ],
+          "covenant_type": [
+            1,
+            1
+          ],
+          "unit": [
+            1,
+            1
+          ],
+          "name": [
+            1,
+            1
+          ],
+          "test_frequency": [
+            1,
+            1
+          ],
+          "all_fields": [
+            1,
+            1
+          ]
+        },
+        "schedule_covenants": 1,
+        "schedule_complete": 0,
+        "schedule_levels": 25,
+        "schedule_levels_found": 1,
+        "accuracy": {
+          "threshold_exact": 1.0,
+          "threshold_tolerance": 1.0,
+          "comparison": 1.0,
+          "covenant_type": 1.0,
+          "unit": 1.0,
+          "name": 1.0,
+          "test_frequency": 1.0,
+          "all_fields": 1.0
+        }
+      },
+      "misses": [
+        {
+          "name": "Capital Expenditures",
+          "comparison": "not_to_exceed",
+          "threshold": 1200000,
+          "unit": "USD",
+          "covenant_type": "maintenance",
+          "test_frequency": "annual",
+          "name_aliases": [
+            "Maximum Capital Expenditures",
+            "Capex Limit"
+          ],
+          "citation_contains": "unfinanced Capital Expenditures in an amount greater than"
+        }
+      ],
+      "optional_found": [],
+      "false_positives": [],
+      "extracted_financial_covenants": [
+        {
+          "name": "Minimum EBITDA",
+          "comparison": "not_less_than",
+          "threshold": -4750000.0,
+          "unit": "USD",
+          "test_frequency": "monthly",
+          "covenant_type": "maintenance",
+          "citation": {
+            "source_text": "At all times during a Financial Covenant Trigger Period, the Borrower shall have, on an aggregate basis, as of the last day of each calendar month, in each case, for the trailing twelve (12) month period immediately then ended, EBITDA of no less than (or in the case of any negative numbers below, which are indicated inside of parenthesis, worse than) the corresponding amount set forth below",
+            "page": null,
+            "section_label": "9.19"
+          },
+          "audit": {
+            "citation_verified": true,
+            "citation_similarity": 1.0,
+            "calculator_checked": false,
+            "calculator_match": true,
+            "citation_grounded": false
+          },
+          "definition": null
+        }
+      ]
+    },
+    {
+      "gold_id": "innventure_wti_fund",
+      "document": "data/sample/Innventure LLC - WTI Fund X and XI - Loan and Security Agreement.htm",
+      "score": {
+        "num_gold": 0,
+        "num_extracted": 0,
+        "num_hits": 0,
+        "num_misses": 0,
+        "num_false_positives": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "threshold_accuracy": 1.0,
+        "covenant_type_accuracy": 1.0
+      },
+      "fields": [],
+      "field_accuracy": {
+        "counts": {
+          "threshold_exact": [
+            0,
+            0
+          ],
+          "threshold_tolerance": [
+            0,
+            0
+          ],
+          "comparison": [
+            0,
+            0
+          ],
+          "covenant_type": [
+            0,
+            0
+          ],
+          "unit": [
+            0,
+            0
+          ],
+          "name": [
+            0,
+            0
+          ],
+          "test_frequency": [
+            0,
+            0
+          ],
+          "all_fields": [
+            0,
+            0
+          ]
+        },
+        "schedule_covenants": 0,
+        "schedule_complete": 0,
+        "schedule_levels": 0,
+        "schedule_levels_found": 0,
+        "accuracy": {
+          "threshold_exact": null,
+          "threshold_tolerance": null,
+          "comparison": null,
+          "covenant_type": null,
+          "unit": null,
+          "name": null,
+          "test_frequency": null,
+          "all_fields": null
+        }
+      },
+      "misses": [],
+      "optional_found": [],
+      "false_positives": [],
+      "extracted_financial_covenants": []
+    },
+    {
+      "gold_id": "lone_star_ast_science",
+      "document": "data/sample/Lone Star State Bank of Texas - AST & Science LLC - Loan Agreement.html",
+      "score": {
+        "num_gold": 0,
+        "num_extracted": 0,
+        "num_hits": 0,
+        "num_misses": 0,
+        "num_false_positives": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "threshold_accuracy": 1.0,
+        "covenant_type_accuracy": 1.0
+      },
+      "fields": [],
+      "field_accuracy": {
+        "counts": {
+          "threshold_exact": [
+            0,
+            0
+          ],
+          "threshold_tolerance": [
+            0,
+            0
+          ],
+          "comparison": [
+            0,
+            0
+          ],
+          "covenant_type": [
+            0,
+            0
+          ],
+          "unit": [
+            0,
+            0
+          ],
+          "name": [
+            0,
+            0
+          ],
+          "test_frequency": [
+            0,
+            0
+          ],
+          "all_fields": [
+            0,
+            0
+          ]
+        },
+        "schedule_covenants": 0,
+        "schedule_complete": 0,
+        "schedule_levels": 0,
+        "schedule_levels_found": 0,
+        "accuracy": {
+          "threshold_exact": null,
+          "threshold_tolerance": null,
+          "comparison": null,
+          "covenant_type": null,
+          "unit": null,
+          "name": null,
+          "test_frequency": null,
+          "all_fields": null
+        }
+      },
+      "misses": [],
+      "optional_found": [],
+      "false_positives": [],
+      "extracted_financial_covenants": []
+    },
+    {
+      "gold_id": "mizuho_qvc",
+      "document": "data/sample/Mizuho- QVC - Loan Agreement.htm",
+      "score": {
+        "num_gold": 6,
+        "num_extracted": 6,
+        "num_hits": 4,
+        "num_misses": 2,
+        "num_false_positives": 2,
+        "recall": 0.6666666666666666,
+        "precision": 0.6666666666666666,
+        "threshold_accuracy": 1.0,
+        "covenant_type_accuracy": 1.0
+      },
+      "fields": [
+        {
+          "gold_name": "Consolidated Leverage Ratio",
+          "covenant_type": "maintenance",
+          "threshold_exact": true,
+          "threshold_tolerance": true,
+          "comparison": true,
+          "covenant_type_correct": true,
+          "unit": true,
+          "name": true,
+          "test_frequency": true,
+          "all_fields": true,
+          "extracted_threshold": 4.5,
+          "gold_threshold": 4.5,
+          "schedule_levels": 0,
+          "schedule_levels_found": 0,
+          "schedule_complete": null
+        },
+        {
+          "gold_name": "Consolidated Leverage Ratio",
+          "covenant_type": "incurrence_condition",
+          "threshold_exact": true,
+          "threshold_tolerance": true,
+          "comparison": true,
+          "covenant_type_correct": true,
+          "unit": true,
+          "name": true,
+          "test_frequency": null,
+          "all_fields": true,
+          "extracted_threshold": 4.5,
+          "gold_threshold": 4.5,
+          "schedule_levels": 0,
+          "schedule_levels_found": 0,
+          "schedule_complete": null
+        },
+        {
+          "gold_name": "Consolidated Secured Leverage Ratio",
+          "covenant_type": "incurrence_condition",
+          "threshold_exact": true,
+          "threshold_tolerance": true,
+          "comparison": true,
+          "covenant_type_correct": true,
+          "unit": true,
+          "name": true,
+          "test_frequency": null,
+          "all_fields": true,
+          "extracted_threshold": 3.5,
+          "gold_threshold": 3.5,
+          "schedule_levels": 0,
+          "schedule_levels_found": 0,
+          "schedule_complete": null
+        },
+        {
+          "gold_name": "Consolidated Leverage Ratio",
+          "covenant_type": "incurrence_condition",
+          "threshold_exact": true,
+          "threshold_tolerance": true,
+          "comparison": true,
+          "covenant_type_correct": true,
+          "unit": true,
+          "name": true,
+          "test_frequency": null,
+          "all_fields": true,
+          "extracted_threshold": 4.25,
+          "gold_threshold": 4.25,
+          "schedule_levels": 0,
+          "schedule_levels_found": 0,
+          "schedule_complete": null
+        }
+      ],
+      "field_accuracy": {
+        "counts": {
+          "threshold_exact": [
+            4,
+            4
+          ],
+          "threshold_tolerance": [
+            4,
+            4
+          ],
+          "comparison": [
+            4,
+            4
+          ],
+          "covenant_type": [
+            4,
+            4
+          ],
+          "unit": [
+            4,
+            4
+          ],
+          "name": [
+            4,
+            4
+          ],
+          "test_frequency": [
+            1,
+            1
+          ],
+          "all_fields": [
+            4,
+            4
+          ]
+        },
+        "schedule_covenants": 0,
+        "schedule_complete": 0,
+        "schedule_levels": 0,
+        "schedule_levels_found": 0,
+        "accuracy": {
+          "threshold_exact": 1.0,
+          "threshold_tolerance": 1.0,
+          "comparison": 1.0,
+          "covenant_type": 1.0,
+          "unit": 1.0,
+          "name": 1.0,
+          "test_frequency": 1.0,
+          "all_fields": 1.0
+        }
+      },
+      "misses": [
+        {
+          "name": "Consolidated Secured Leverage Ratio",
+          "comparison": "not_to_exceed",
+          "threshold": 3.75,
+          "unit": "ratio",
+          "covenant_type": "incurrence_condition",
+          "citation_contains": "immediately before and immediately after giving pro forma effect thereto the Consolidated Secured Leverage Ratio would not be greater than 3.75 to 1.00"
+        },
+        {
+          "name": "Consolidated Leverage Ratio",
+          "comparison": "not_to_exceed",
+          "threshold": 4.0,
+          "unit": "ratio",
+          "covenant_type": "incurrence_condition",
+          "citation_contains": "the Consolidated Leverage Ratio shall be less than or equal to 4.00 to 1.00"
+        }
+      ],
+      "optional_found": [],
+      "false_positives": [
+        {
+          "name": "Consolidated Leverage Ratio",
+          "comparison": "not_to_exceed",
+          "threshold": 4.5,
+          "unit": "ratio",
+          "test_frequency": "pro forma",
+          "covenant_type": "incurrence_condition",
+          "citation": {
+            "source_text": "solely in the case of any such Incremental Facility or Pari Passu Indebtedness being incurred to finance an acquisition or other similar Investment permitted hereunder, the Consolidated Leverage Ratio for the most recent four fiscal quarter period for which financial statements have been delivered pursuant to Section 5.01",
+            "page": null,
+            "section_label": "SECTION\u00a01.01"
+          },
+          "audit": {
+            "citation_verified": true,
+            "citation_similarity": 1.0,
+            "calculator_checked": false,
+            "calculator_match": true,
+            "citation_grounded": false
+          },
+          "definition": "as at any day, the ratio of (a) Consolidated Total Debt on such day to (b) Consolidated EBITDA for the most recent four fiscal quarter period for which financial statements have been delivered pursuant to Section 5.01.",
+          "resolved_definition": {
+            "term": "Consolidated Leverage Ratio",
+            "formula": "(Aggregate Principal of all Indebtedness of Borrowers and Restricted Subsidiaries - (Unrestricted Cash + US Govt Obligations + Bank Deposits + Rated Commercial Paper + Repo Obligations + State/Municipal Securities + LC-Backed Securities + Money Market Funds (95% Equiv) + SEC Rule 2a-7 Funds + Foreign Subsidiary Equivalents)) / (Operating Income + Depreciation + Amortization + Stock Compensation + Interest Expense + Taxes + Restructuring/Non-recurring Items + Equity Offering/Acquisition/Refinancing Expenses + Third-party Reimbursements + Facility Closure/Discontinuation Costs + Debt Transaction Costs + Earn-out/Contingent Consideration + Impairment/Asset Write-offs + Non-cash Charges + (GAAP Rent - Cash Rent) + Pension/Deferred Compensation Costs + Environmental/Litigation Costs + Project Startup Costs + Non-wholly Owned Operating Income + Business Interruption Insurance Proceeds + Expected Cost Savings)",
+            "components": {
+              "Consolidated EBITDA": {
+                "term": "Consolidated EBITDA",
+                "formula": "Operating Income + Depreciation + Amortization + Stock Compensation + Interest Expense + Taxes + Restructuring/Non-recurring Items + Equity Offering/Acquisition/Refinancing Expenses + Third-party Reimbursements + Facility Closure/Discontinuation Costs + Debt Transaction Costs + Earn-out/Contingent Consideration + Impairment/Asset Write-offs + Non-cash Charges + (GAAP Rent - Cash Rent) + Pension/Deferred Compensation Costs + Environmental/Litigation Costs + Project Startup Costs + Non-wholly Owned Operating Income (to extent distributable) + Business Interruption Insurance Proceeds + Expected Cost Savings (capped at 20% of EBITDA)",
+                "components": {
+                  "Stock Compensation Plans": {
+                    "term": "Stock Compensation Plans",
+                    "formula": "Compensation plans where Borrower/Restricted Subsidiaries pay Qurate/Affiliates for Qurate securities issued to employees",
+                    "components": {},
+                    "carve_outs": [],
+                    "provenance": [],
+                    "status": "resolved",
+                    "reason": null
+                  },
+                  "Cost Saving Initiative": {
+                    "term": "Cost Saving Initiative",
+                    "formula": "",
+                    "components": {},
+                    "carve_outs": [],
+                    "provenance": [],
+                    "status": "requires_human_review",
+                    "reason": "term_not_found_in_definitions_section"
+                  },
+                  "Closing Date": {
+                    "term": "Closing Date",
+                    "formula": "",
+                    "components": {},
+                    "carve_outs": [],
+                    "provenance": [],
+                    "status": "requires_human_review",
+                    "reason": "term_not_found_in_definitions_section"
+                  },
+                  "Unrestricted Subsidiaries": {
+                    "term": "Unrestricted Subsidiaries",
+                    "formula": "",
+                    "components": {},
+                    "carve_outs": [],
+                    "provenance": [],
+                    "status": "requires_human_review",
+                    "reason": "term_not_found_in_definitions_section"
+                  },
+                  "Equity Interests": {
+                    "term": "Equity Interests",
+                    "formula": "Equity Interests + Warrants/Options - Convertible Debt",
+                    "components": {},
+                    "carve_outs": [
+                      "excluding any debt securities convertible into any of the foregoing."
+                    ],
+                    "provenance": [],
+                    "status": "resolved",
+                    "reason": null
+                  },
+                  "Restricted Subsidiary": {
+                    "term": "Restricted Subsidiary",
+                    "formula": "All Borrower Subsidiaries - Unrestricted Subsidiaries",
+                    "components": {},
+                    "carve_outs": [
+                      "other than an Unrestricted Subsidiary."
+                    ],
+                    "provenance": [],
+                    "status": "resolved",
+                    "reason": null
+                  },
+                  "Expected Cost Savings": {
+                    "term": "Expected Cost Savings",
+                    "formula": "",
+                    "components": {},
+                    "carve_outs": [],
+                    "provenance": [],
+                    "status": "requires_human_review",
+                    "reason": "term_not_found_in_definitions_section"
+                  }
+                },
+                "carve_outs": [
+                  "other than any write-off or write-down of inventory or accounts receivable, (vii) any non-recurring expenses or charges related to any equity offering, investment, acquisition, disposition or recapitalization permitted hereunder or the incurrence of Indebtedness permitted to be incurred hereunder (including a",
+                  "provided, that if not so received within such one-year period, such amount shall be subtracted in the subsequent calculation period, plus (e) the amount of \u201crun rate\u201d cost savings, operating expense reductions and cost synergies (collectively, \u201c Expected Cost Savings \u201d) related to any acquisition, investment, dis",
+                  "provided that the aggregate amount of addbacks pursuant to this clause (e) shall not exceed 20% of the Consolidated EBITDA for such period immediately after giving effect to any adjustments pursuant to this clause (e), provided that Unrestricted Subsidiaries shall be disregarded for purposes of calculating Conso"
+                ],
+                "provenance": [],
+                "status": "resolved",
+                "reason": null
+              },
+              "Consolidated Total Debt": {
+                "term": "Consolidated Total Debt",
+                "formula": "(Aggregate Principal of all Indebtedness of Borrowers and Restricted Subsidiaries) - (Unrestricted Cash + US Govt Obligations + Bank Deposits + Rated Commercial Paper + Repo Obligations + State/Municipal Securities + LC-Backed Securities + Money Market Funds (95% Equiv) + SEC Rule 2a-7 Funds + Foreign Subsidiary Equivalents)",
+                "components": {
+                  "Restricted Subsidiaries": {
+                    "term": "Restricted Subsidiaries",
+                    "formula": "All Subsidiaries - Unrestricted Subsidiaries",
+                    "components": {},
+                    "carve_outs": [
+                      "other than an Unrestricted Subsidiary."
+                    ],
+                    "provenance": [],
+                    "status": "resolved",
+                    "reason": null
+                  },
+                  "Cash Equivalents": {
+                    "term": "Cash Equivalents",
+                    "formula": "US Govt Obligations + Bank Deposits + Rated Commercial Paper + Repo Obligations + State/Municipal Securities + LC-Backed Securities + Money Market Funds (95% Equiv) + SEC Rule 2a-7 Funds + Foreign Subsidiary Equivalents",
+                    "components": {},
+                    "carve_outs": [],
+                    "provenance": [],
+                    "status": "resolved",
+                    "reason": null
+                  }
+                },
+                "carve_outs": [],
+                "provenance": [],
+                "status": "resolved",
+                "reason": null
+              }
+            },
+            "carve_outs": [],
+            "provenance": [],
+            "status": "resolved",
+            "reason": null
+          }
+        },
+        {
+          "name": "Consolidated Secured Leverage Ratio",
+          "comparison": "not_to_exceed",
+          "threshold": 3.5,
+          "unit": "ratio",
+          "test_frequency": "most recent four fiscal quarter period",
+          "covenant_type": "incurrence_condition",
+          "citation": {
+            "source_text": "solely in the case of any such Incremental Facility or Pari Passu Indebtedness being incurred to finance an acquisition or other similar Investment permitted hereunder, the Consolidated Secured Leverage Ratio for the most recent four fiscal quarter period for which financial statements have been delivered pursuant to Section 5.01",
+            "page": null,
+            "section_label": "SECTION\u00a01.01"
+          },
+          "audit": {
+            "citation_verified": true,
+            "citation_similarity": 1.0,
+            "calculator_checked": false,
+            "calculator_match": true,
+            "citation_grounded": false
+          },
+          "definition": "as at any day, the ratio of (a) Consolidated Secured Debt on such day to (b) Consolidated EBITDA for the most recent four fiscal quarter period for which financial statements have been delivered pursuant to Section 5.01.",
+          "resolved_definition": {
+            "term": "Consolidated Secured Leverage Ratio",
+            "formula": "(Aggregate Principal of Indebtedness of (Borrowers and (All Borrower Subsidiaries - Unrestricted Subsidiaries)) - (Unrestricted Cash + US Govt Obligations + Bank Deposits + Rated Commercial Paper + Repo Obligations + State/Municipal Securities + LC-Backed Securities + Money Market Funds + SEC Rule 2a-7 Funds + Foreign Subsidiary Equivalents)) / (Operating Income + Depreciation + Amortization + Stock Compensation + Interest Expense + Taxes + Restructuring/Non-recurring + Acquisition/Refinancing Expenses + Third-party Reimbursements + Facility Closure Costs + Debt Transaction Costs + Earn-out/Contingent Consideration + Impairment/Write-offs + Non-cash Charges + (GAAP Rent - Cash Rent) + Pension/Deferred Compensation + Environmental/Litigation + Project Startup + Non-wholly Owned Operating Income + Business Interruption Insurance Proceeds + Expected Cost Savings)",
+            "components": {
+              "Consolidated Secured Debt": {
+                "term": "Consolidated Secured Debt",
+                "formula": "[(Aggregate Principal of all Indebtedness of (Borrowers and (All Borrower Subsidiaries - Unrestricted Subsidiaries))) - (Unrestricted Cash + US Govt Obligations + Bank Deposits + Rated Commercial Paper + Repo Obligations + State/Municipal Securities + LC-Backed Securities + Money Market Funds (95% Equiv) + SEC Rule 2a-7 Funds + Foreign Subsidiary Equivalents)] secured by Lien on Collateral or Borrower/Restricted Subsidiary assets",
+                "components": {
+                  "Restricted Subsidiary": {
+                    "term": "Restricted Subsidiary",
+                    "formula": "All Borrower Subsidiaries - Unrestricted Subsidiaries",
+                    "components": {},
+                    "carve_outs": [
+                      "other than an Unrestricted Subsidiary."
+                    ],
+                    "provenance": [],
+                    "status": "resolved",
+                    "reason": null
+                  },
+                  "Consolidated Total Debt": {
+                    "term": "Consolidated Total Debt",
+                    "formula": "(Aggregate Principal of all Indebtedness of Borrowers and Restricted Subsidiaries) - (Unrestricted Cash + US Govt Obligations + Bank Deposits + Rated Commercial Paper + Repo Obligations + State/Municipal Securities + LC-Backed Securities + Money Market Funds (95% Equiv) + SEC Rule 2a-7 Funds + Foreign Subsidiary Equivalents)",
+                    "components": {
+                      "Restricted Subsidiaries": {
+                        "term": "Restricted Subsidiaries",
+                        "formula": "All Subsidiaries - Unrestricted Subsidiaries",
+                        "components": {},
+                        "carve_outs": [
+                          "other than an Unrestricted Subsidiary."
+                        ],
+                        "provenance": [],
+                        "status": "resolved",
+                        "reason": null
+                      },
+                      "Cash Equivalents": {
+                        "term": "Cash Equivalents",
+                        "formula": "US Govt Obligations + Bank Deposits + Rated Commercial Paper + Repo Obligations + State/Municipal Securities + LC-Backed Securities + Money Market Funds (95% Equiv) + SEC Rule 2a-7 Funds + Foreign Subsidiary Equivalents",
+                        "components": {},
+                        "carve_outs": [],
+                        "provenance": [],
+                        "status": "resolved",
+                        "reason": null
+                      }
+                    },
+                    "carve_outs": [],
+                    "provenance": [],
+                    "status": "resolved",
+                    "reason": null
+                  }
+                },
+                "carve_outs": [],
+                "provenance": [],
+                "status": "resolved",
+                "reason": null
+              },
+              "Consolidated EBITDA": {
+                "term": "Consolidated EBITDA",
+                "formula": "Operating Income + Depreciation + Amortization + Stock Compensation + Interest Expense + Taxes + Restructuring/Non-recurring Items + Equity Offering/Acquisition/Refinancing Expenses + Third-party Reimbursements + Facility Closure/Discontinuation Costs + Debt Transaction Costs + Earn-out/Contingent Consideration + Impairment/Asset Write-offs + Non-cash Charges + (GAAP Rent - Cash Rent) + Pension/Deferred Compensation Costs + Environmental/Litigation Costs + Project Startup Costs + Non-wholly Owned Operating Income (to extent distributable) + Business Interruption Insurance Proceeds + Expected Cost Savings (capped at 20% of EBITDA)",
+                "components": {
+                  "Stock Compensation Plans": {
+                    "term": "Stock Compensation Plans",
+                    "formula": "Compensation plans where Borrower/Restricted Subsidiaries pay Qurate/Affiliates for Qurate securities issued to employees",
+                    "components": {},
+                    "carve_outs": [],
+                    "provenance": [],
+                    "status": "resolved",
+                    "reason": null
+                  },
+                  "Cost Saving Initiative": {
+                    "term": "Cost Saving Initiative",
+                    "formula": "",
+                    "components": {},
+                    "carve_outs": [],
+                    "provenance": [],
+                    "status": "requires_human_review",
+                    "reason": "term_not_found_in_definitions_section"
+                  },
+                  "Closing Date": {
+                    "term": "Closing Date",
+                    "formula": "",
+                    "components": {},
+                    "carve_outs": [],
+                    "provenance": [],
+                    "status": "requires_human_review",
+                    "reason": "term_not_found_in_definitions_section"
+                  },
+                  "Unrestricted Subsidiaries": {
+                    "term": "Unrestricted Subsidiaries",
+                    "formula": "",
+                    "components": {},
+                    "carve_outs": [],
+                    "provenance": [],
+                    "status": "requires_human_review",
+                    "reason": "term_not_found_in_definitions_section"
+                  },
+                  "Equity Interests": {
+                    "term": "Equity Interests",
+                    "formula": "Equity Interests + Warrants/Options - Convertible Debt",
+                    "components": {},
+                    "carve_outs": [
+                      "excluding any debt securities convertible into any of the foregoing."
+                    ],
+                    "provenance": [],
+                    "status": "resolved",
+                    "reason": null
+                  },
+                  "Restricted Subsidiary": {
+                    "term": "Restricted Subsidiary",
+                    "formula": "All Borrower Subsidiaries - Unrestricted Subsidiaries",
+                    "components": {},
+                    "carve_outs": [
+                      "other than an Unrestricted Subsidiary."
+                    ],
+                    "provenance": [],
+                    "status": "resolved",
+                    "reason": null
+                  },
+                  "Expected Cost Savings": {
+                    "term": "Expected Cost Savings",
+                    "formula": "",
+                    "components": {},
+                    "carve_outs": [],
+                    "provenance": [],
+                    "status": "requires_human_review",
+                    "reason": "term_not_found_in_definitions_section"
+                  }
+                },
+                "carve_outs": [
+                  "other than any write-off or write-down of inventory or accounts receivable, (vii) any non-recurring expenses or charges related to any equity offering, investment, acquisition, disposition or recapitalization permitted hereunder or the incurrence of Indebtedness permitted to be incurred hereunder (including a",
+                  "provided, that if not so received within such one-year period, such amount shall be subtracted in the subsequent calculation period, plus (e) the amount of \u201crun rate\u201d cost savings, operating expense reductions and cost synergies (collectively, \u201c Expected Cost Savings \u201d) related to any acquisition, investment, dis",
+                  "provided that the aggregate amount of addbacks pursuant to this clause (e) shall not exceed 20% of the Consolidated EBITDA for such period immediately after giving effect to any adjustments pursuant to this clause (e), provided that Unrestricted Subsidiaries shall be disregarded for purposes of calculating Conso"
+                ],
+                "provenance": [],
+                "status": "resolved",
+                "reason": null
+              }
+            },
+            "carve_outs": [],
+            "provenance": [],
+            "status": "resolved",
+            "reason": null
+          }
+        }
+      ],
+      "extracted_financial_covenants": [
+        {
+          "name": "Consolidated Leverage Ratio",
+          "comparison": "not_to_exceed",
+          "threshold": 4.25,
+          "unit": "ratio",
+          "test_frequency": null,
+          "covenant_type": "incurrence_condition",
+          "citation": {
+            "source_text": "after giving pro forma effect thereto, (i) the Consolidated Leverage Ratio is less than or equal to 4.25 to 1.00",
+            "page": null,
+            "section_label": "SECTION\u00a06.11"
+          },
+          "audit": {
+            "citation_verified": true,
+            "citation_similarity": 1.0,
+            "calculator_checked": true,
+            "calculator_match": false,
+            "citation_grounded": true,
+            "recomputed_threshold": 4.25,
+            "recomputed_comparison": "not_less_than"
+          },
+          "definition": "as at any day, the ratio of (a) Consolidated Total Debt on such day to (b) Consolidated EBITDA for the most recent four fiscal quarter period for which financial statements have been delivered pursuant to Section 5.01.",
+          "resolved_definition": {
+            "term": "Consolidated Leverage Ratio",
+            "formula": "(Aggregate Principal of all Indebtedness of Borrowers and Restricted Subsidiaries - (Unrestricted Cash + US Govt Obligations + Bank Deposits + Rated Commercial Paper + Repo Obligations + State/Municipal Securities + LC-Backed Securities + Money Market Funds (95% Equiv) + SEC Rule 2a-7 Funds + Foreign Subsidiary Equivalents)) / (Operating Income + Depreciation + Amortization + Stock Compensation + Interest Expense + Taxes + Restructuring/Non-recurring Items + Equity Offering/Acquisition/Refinancing Expenses + Third-party Reimbursements + Facility Closure/Discontinuation Costs + Debt Transaction Costs + Earn-out/Contingent Consideration + Impairment/Asset Write-offs + Non-cash Charges + (GAAP Rent - Cash Rent) + Pension/Deferred Compensation Costs + Environmental/Litigation Costs + Project Startup Costs + Non-wholly Owned Operating Income + Business Interruption Insurance Proceeds + Expected Cost Savings)",
+            "components": {
+              "Consolidated EBITDA": {
+                "term": "Consolidated EBITDA",
+                "formula": "Operating Income + Depreciation + Amortization + Stock Compensation + Interest Expense + Taxes + Restructuring/Non-recurring Items + Equity Offering/Acquisition/Refinancing Expenses + Third-party Reimbursements + Facility Closure/Discontinuation Costs + Debt Transaction Costs + Earn-out/Contingent Consideration + Impairment/Asset Write-offs + Non-cash Charges + (GAAP Rent - Cash Rent) + Pension/Deferred Compensation Costs + Environmental/Litigation Costs + Project Startup Costs + Non-wholly Owned Operating Income (to extent distributable) + Business Interruption Insurance Proceeds + Expected Cost Savings (capped at 20% of EBITDA)",
+                "components": {
+                  "Stock Compensation Plans": {
+                    "term": "Stock Compensation Plans",
+                    "formula": "Compensation plans where Borrower/Restricted Subsidiaries pay Qurate/Affiliates for Qurate securities issued to employees",
+                    "components": {},
+                    "carve_outs": [],
+                    "provenance": [],
+                    "status": "resolved",
+                    "reason": null
+                  },
+                  "Cost Saving Initiative": {
+                    "term": "Cost Saving Initiative",
+                    "formula": "",
+                    "components": {},
+                    "carve_outs": [],
+                    "provenance": [],
+                    "status": "requires_human_review",
+                    "reason": "term_not_found_in_definitions_section"
+                  },
+                  "Closing Date": {
+                    "term": "Closing Date",
+                    "formula": "",
+                    "components": {},
+                    "carve_outs": [],
+                    "provenance": [],
+                    "status": "requires_human_review",
+                    "reason": "term_not_found_in_definitions_section"
+                  },
+                  "Unrestricted Subsidiaries": {
+                    "term": "Unrestricted Subsidiaries",
+                    "formula": "",
+                    "components": {},
+                    "carve_outs": [],
+                    "provenance": [],
+                    "status": "requires_human_review",
+                    "reason": "term_not_found_in_definitions_section"
+                  },
+                  "Equity Interests": {
+                    "term": "Equity Interests",
+                    "formula": "Equity Interests + Warrants/Options - Convertible Debt",
+                    "components": {},
+                    "carve_outs": [
+                      "excluding any debt securities convertible into any of the foregoing."
+                    ],
+                    "provenance": [],
+                    "status": "resolved",
+                    "reason": null
+                  },
+                  "Restricted Subsidiary": {
+                    "term": "Restricted Subsidiary",
+                    "formula": "All Borrower Subsidiaries - Unrestricted Subsidiaries",
+                    "components": {},
+                    "carve_outs": [
+                      "other than an Unrestricted Subsidiary."
+                    ],
+                    "provenance": [],
+                    "status": "resolved",
+                    "reason": null
+                  },
+                  "Expected Cost Savings": {
+                    "term": "Expected Cost Savings",
+                    "formula": "",
+                    "components": {},
+                    "carve_outs": [],
+                    "provenance": [],
+                    "status": "requires_human_review",
+                    "reason": "term_not_found_in_definitions_section"
+                  }
+                },
+                "carve_outs": [
+                  "other than any write-off or write-down of inventory or accounts receivable, (vii) any non-recurring expenses or charges related to any equity offering, investment, acquisition, disposition or recapitalization permitted hereunder or the incurrence of Indebtedness permitted to be incurred hereunder (including a",
+                  "provided, that if not so received within such one-year period, such amount shall be subtracted in the subsequent calculation period, plus (e) the amount of \u201crun rate\u201d cost savings, operating expense reductions and cost synergies (collectively, \u201c Expected Cost Savings \u201d) related to any acquisition, investment, dis",
+                  "provided that the aggregate amount of addbacks pursuant to this clause (e) shall not exceed 20% of the Consolidated EBITDA for such period immediately after giving effect to any adjustments pursuant to this clause (e), provided that Unrestricted Subsidiaries shall be disregarded for purposes of calculating Conso"
+                ],
+                "provenance": [],
+                "status": "resolved",
+                "reason": null
+              },
+              "Consolidated Total Debt": {
+                "term": "Consolidated Total Debt",
+                "formula": "(Aggregate Principal of all Indebtedness of Borrowers and Restricted Subsidiaries) - (Unrestricted Cash + US Govt Obligations + Bank Deposits + Rated Commercial Paper + Repo Obligations + State/Municipal Securities + LC-Backed Securities + Money Market Funds (95% Equiv) + SEC Rule 2a-7 Funds + Foreign Subsidiary Equivalents)",
+                "components": {
+                  "Restricted Subsidiaries": {
+                    "term": "Restricted Subsidiaries",
+                    "formula": "All Subsidiaries - Unrestricted Subsidiaries",
+                    "components": {},
+                    "carve_outs": [
+                      "other than an Unrestricted Subsidiary."
+                    ],
+                    "provenance": [],
+                    "status": "resolved",
+                    "reason": null
+                  },
+                  "Cash Equivalents": {
+                    "term": "Cash Equivalents",
+                    "formula": "US Govt Obligations + Bank Deposits + Rated Commercial Paper + Repo Obligations + State/Municipal Securities + LC-Backed Securities + Money Market Funds (95% Equiv) + SEC Rule 2a-7 Funds + Foreign Subsidiary Equivalents",
+                    "components": {},
+                    "carve_outs": [],
+                    "provenance": [],
+                    "status": "resolved",
+                    "reason": null
+                  }
+                },
+                "carve_outs": [],
+                "provenance": [],
+                "status": "resolved",
+                "reason": null
+              }
+            },
+            "carve_outs": [],
+            "provenance": [],
+            "status": "resolved",
+            "reason": null
+          }
+        },
+        {
+          "name": "Consolidated Leverage Ratio",
+          "comparison": "not_to_exceed",
+          "threshold": 4.5,
+          "unit": "ratio",
+          "test_frequency": "pro forma",
+          "covenant_type": "incurrence_condition",
+          "citation": {
+            "source_text": "solely in the case of any such Incremental Facility or Pari Passu Indebtedness being incurred to finance an acquisition or other similar Investment permitted hereunder, the Consolidated Leverage Ratio for the most recent four fiscal quarter period for which financial statements have been delivered pursuant to Section 5.01",
+            "page": null,
+            "section_label": "SECTION\u00a01.01"
+          },
+          "audit": {
+            "citation_verified": true,
+            "citation_similarity": 1.0,
+            "calculator_checked": false,
+            "calculator_match": true,
+            "citation_grounded": false
+          },
+          "definition": "as at any day, the ratio of (a) Consolidated Total Debt on such day to (b) Consolidated EBITDA for the most recent four fiscal quarter period for which financial statements have been delivered pursuant to Section 5.01.",
+          "resolved_definition": {
+            "term": "Consolidated Leverage Ratio",
+            "formula": "(Aggregate Principal of all Indebtedness of Borrowers and Restricted Subsidiaries - (Unrestricted Cash + US Govt Obligations + Bank Deposits + Rated Commercial Paper + Repo Obligations + State/Municipal Securities + LC-Backed Securities + Money Market Funds (95% Equiv) + SEC Rule 2a-7 Funds + Foreign Subsidiary Equivalents)) / (Operating Income + Depreciation + Amortization + Stock Compensation + Interest Expense + Taxes + Restructuring/Non-recurring Items + Equity Offering/Acquisition/Refinancing Expenses + Third-party Reimbursements + Facility Closure/Discontinuation Costs + Debt Transaction Costs + Earn-out/Contingent Consideration + Impairment/Asset Write-offs + Non-cash Charges + (GAAP Rent - Cash Rent) + Pension/Deferred Compensation Costs + Environmental/Litigation Costs + Project Startup Costs + Non-wholly Owned Operating Income + Business Interruption Insurance Proceeds + Expected Cost Savings)",
+            "components": {
+              "Consolidated EBITDA": {
+                "term": "Consolidated EBITDA",
+                "formula": "Operating Income + Depreciation + Amortization + Stock Compensation + Interest Expense + Taxes + Restructuring/Non-recurring Items + Equity Offering/Acquisition/Refinancing Expenses + Third-party Reimbursements + Facility Closure/Discontinuation Costs + Debt Transaction Costs + Earn-out/Contingent Consideration + Impairment/Asset Write-offs + Non-cash Charges + (GAAP Rent - Cash Rent) + Pension/Deferred Compensation Costs + Environmental/Litigation Costs + Project Startup Costs + Non-wholly Owned Operating Income (to extent distributable) + Business Interruption Insurance Proceeds + Expected Cost Savings (capped at 20% of EBITDA)",
+                "components": {
+                  "Stock Compensation Plans": {
+                    "term": "Stock Compensation Plans",
+                    "formula": "Compensation plans where Borrower/Restricted Subsidiaries pay Qurate/Affiliates for Qurate securities issued to employees",
+                    "components": {},
+                    "carve_outs": [],
+                    "provenance": [],
+                    "status": "resolved",
+                    "reason": null
+                  },
+                  "Cost Saving Initiative": {
+                    "term": "Cost Saving Initiative",
+                    "formula": "",
+                    "components": {},
+                    "carve_outs": [],
+                    "provenance": [],
+                    "status": "requires_human_review",
+                    "reason": "term_not_found_in_definitions_section"
+                  },
+                  "Closing Date": {
+                    "term": "Closing Date",
+                    "formula": "",
+                    "components": {},
+                    "carve_outs": [],
+                    "provenance": [],
+                    "status": "requires_human_review",
+                    "reason": "term_not_found_in_definitions_section"
+                  },
+                  "Unrestricted Subsidiaries": {
+                    "term": "Unrestricted Subsidiaries",
+                    "formula": "",
+                    "components": {},
+                    "carve_outs": [],
+                    "provenance": [],
+                    "status": "requires_human_review",
+                    "reason": "term_not_found_in_definitions_section"
+                  },
+                  "Equity Interests": {
+                    "term": "Equity Interests",
+                    "formula": "Equity Interests + Warrants/Options - Convertible Debt",
+                    "components": {},
+                    "carve_outs": [
+                      "excluding any debt securities convertible into any of the foregoing."
+                    ],
+                    "provenance": [],
+                    "status": "resolved",
+                    "reason": null
+                  },
+                  "Restricted Subsidiary": {
+                    "term": "Restricted Subsidiary",
+                    "formula": "All Borrower Subsidiaries - Unrestricted Subsidiaries",
+                    "components": {},
+                    "carve_outs": [
+                      "other than an Unrestricted Subsidiary."
+                    ],
+                    "provenance": [],
+                    "status": "resolved",
+                    "reason": null
+                  },
+                  "Expected Cost Savings": {
+                    "term": "Expected Cost Savings",
+                    "formula": "",
+                    "components": {},
+                    "carve_outs": [],
+                    "provenance": [],
+                    "status": "requires_human_review",
+                    "reason": "term_not_found_in_definitions_section"
+                  }
+                },
+                "carve_outs": [
+                  "other than any write-off or write-down of inventory or accounts receivable, (vii) any non-recurring expenses or charges related to any equity offering, investment, acquisition, disposition or recapitalization permitted hereunder or the incurrence of Indebtedness permitted to be incurred hereunder (including a",
+                  "provided, that if not so received within such one-year period, such amount shall be subtracted in the subsequent calculation period, plus (e) the amount of \u201crun rate\u201d cost savings, operating expense reductions and cost synergies (collectively, \u201c Expected Cost Savings \u201d) related to any acquisition, investment, dis",
+                  "provided that the aggregate amount of addbacks pursuant to this clause (e) shall not exceed 20% of the Consolidated EBITDA for such period immediately after giving effect to any adjustments pursuant to this clause (e), provided that Unrestricted Subsidiaries shall be disregarded for purposes of calculating Conso"
+                ],
+                "provenance": [],
+                "status": "resolved",
+                "reason": null
+              },
+              "Consolidated Total Debt": {
+                "term": "Consolidated Total Debt",
+                "formula": "(Aggregate Principal of all Indebtedness of Borrowers and Restricted Subsidiaries) - (Unrestricted Cash + US Govt Obligations + Bank Deposits + Rated Commercial Paper + Repo Obligations + State/Municipal Securities + LC-Backed Securities + Money Market Funds (95% Equiv) + SEC Rule 2a-7 Funds + Foreign Subsidiary Equivalents)",
+                "components": {
+                  "Restricted Subsidiaries": {
+                    "term": "Restricted Subsidiaries",
+                    "formula": "All Subsidiaries - Unrestricted Subsidiaries",
+                    "components": {},
+                    "carve_outs": [
+                      "other than an Unrestricted Subsidiary."
+                    ],
+                    "provenance": [],
+                    "status": "resolved",
+                    "reason": null
+                  },
+                  "Cash Equivalents": {
+                    "term": "Cash Equivalents",
+                    "formula": "US Govt Obligations + Bank Deposits + Rated Commercial Paper + Repo Obligations + State/Municipal Securities + LC-Backed Securities + Money Market Funds (95% Equiv) + SEC Rule 2a-7 Funds + Foreign Subsidiary Equivalents",
+                    "components": {},
+                    "carve_outs": [],
+                    "provenance": [],
+                    "status": "resolved",
+                    "reason": null
+                  }
+                },
+                "carve_outs": [],
+                "provenance": [],
+                "status": "resolved",
+                "reason": null
+              }
+            },
+            "carve_outs": [],
+            "provenance": [],
+            "status": "resolved",
+            "reason": null
+          }
+        },
+        {
+          "name": "Consolidated Leverage Ratio",
+          "comparison": "not_to_exceed",
+          "threshold": 4.5,
+          "unit": "ratio",
+          "test_frequency": "pro forma",
+          "covenant_type": "incurrence_condition",
+          "citation": {
+            "source_text": "in the case of any Incremental Facility or Pari Passu Indebtedness that is unsecured, on a pro forma basis after giving effect to such Incremental Facility or Pari Passu Indebtedness and the use of the proceeds thereof, the Consolidated Leverage Ratio does not exceed either (x) 4.50:1.00",
+            "page": null,
+            "section_label": "SECTION\u00a01.01"
+          },
+          "audit": {
+            "citation_verified": true,
+            "citation_similarity": 1.0,
+            "calculator_checked": true,
+            "calculator_match": true,
+            "citation_grounded": true,
+            "recomputed_threshold": 4.5,
+            "recomputed_comparison": "not_to_exceed"
+          },
+          "definition": "as at any day, the ratio of (a) Consolidated Total Debt on such day to (b) Consolidated EBITDA for the most recent four fiscal quarter period for which financial statements have been delivered pursuant to Section 5.01.",
+          "resolved_definition": {
+            "term": "Consolidated Leverage Ratio",
+            "formula": "(Aggregate Principal of all Indebtedness of Borrowers and Restricted Subsidiaries - (Unrestricted Cash + US Govt Obligations + Bank Deposits + Rated Commercial Paper + Repo Obligations + State/Municipal Securities + LC-Backed Securities + Money Market Funds (95% Equiv) + SEC Rule 2a-7 Funds + Foreign Subsidiary Equivalents)) / (Operating Income + Depreciation + Amortization + Stock Compensation + Interest Expense + Taxes + Restructuring/Non-recurring Items + Equity Offering/Acquisition/Refinancing Expenses + Third-party Reimbursements + Facility Closure/Discontinuation Costs + Debt Transaction Costs + Earn-out/Contingent Consideration + Impairment/Asset Write-offs + Non-cash Charges + (GAAP Rent - Cash Rent) + Pension/Deferred Compensation Costs + Environmental/Litigation Costs + Project Startup Costs + Non-wholly Owned Operating Income + Business Interruption Insurance Proceeds + Expected Cost Savings)",
+            "components": {
+              "Consolidated EBITDA": {
+                "term": "Consolidated EBITDA",
+                "formula": "Operating Income + Depreciation + Amortization + Stock Compensation + Interest Expense + Taxes + Restructuring/Non-recurring Items + Equity Offering/Acquisition/Refinancing Expenses + Third-party Reimbursements + Facility Closure/Discontinuation Costs + Debt Transaction Costs + Earn-out/Contingent Consideration + Impairment/Asset Write-offs + Non-cash Charges + (GAAP Rent - Cash Rent) + Pension/Deferred Compensation Costs + Environmental/Litigation Costs + Project Startup Costs + Non-wholly Owned Operating Income (to extent distributable) + Business Interruption Insurance Proceeds + Expected Cost Savings (capped at 20% of EBITDA)",
+                "components": {
+                  "Stock Compensation Plans": {
+                    "term": "Stock Compensation Plans",
+                    "formula": "Compensation plans where Borrower/Restricted Subsidiaries pay Qurate/Affiliates for Qurate securities issued to employees",
+                    "components": {},
+                    "carve_outs": [],
+                    "provenance": [],
+                    "status": "resolved",
+                    "reason": null
+                  },
+                  "Cost Saving Initiative": {
+                    "term": "Cost Saving Initiative",
+                    "formula": "",
+                    "components": {},
+                    "carve_outs": [],
+                    "provenance": [],
+                    "status": "requires_human_review",
+                    "reason": "term_not_found_in_definitions_section"
+                  },
+                  "Closing Date": {
+                    "term": "Closing Date",
+                    "formula": "",
+                    "components": {},
+                    "carve_outs": [],
+                    "provenance": [],
+                    "status": "requires_human_review",
+                    "reason": "term_not_found_in_definitions_section"
+                  },
+                  "Unrestricted Subsidiaries": {
+                    "term": "Unrestricted Subsidiaries",
+                    "formula": "",
+                    "components": {},
+                    "carve_outs": [],
+                    "provenance": [],
+                    "status": "requires_human_review",
+                    "reason": "term_not_found_in_definitions_section"
+                  },
+                  "Equity Interests": {
+                    "term": "Equity Interests",
+                    "formula": "Equity Interests + Warrants/Options - Convertible Debt",
+                    "components": {},
+                    "carve_outs": [
+                      "excluding any debt securities convertible into any of the foregoing."
+                    ],
+                    "provenance": [],
+                    "status": "resolved",
+                    "reason": null
+                  },
+                  "Restricted Subsidiary": {
+                    "term": "Restricted Subsidiary",
+                    "formula": "All Borrower Subsidiaries - Unrestricted Subsidiaries",
+                    "components": {},
+                    "carve_outs": [
+                      "other than an Unrestricted Subsidiary."
+                    ],
+                    "provenance": [],
+                    "status": "resolved",
+                    "reason": null
+                  },
+                  "Expected Cost Savings": {
+                    "term": "Expected Cost Savings",
+                    "formula": "",
+                    "components": {},
+                    "carve_outs": [],
+                    "provenance": [],
+                    "status": "requires_human_review",
+                    "reason": "term_not_found_in_definitions_section"
+                  }
+                },
+                "carve_outs": [
+                  "other than any write-off or write-down of inventory or accounts receivable, (vii) any non-recurring expenses or charges related to any equity offering, investment, acquisition, disposition or recapitalization permitted hereunder or the incurrence of Indebtedness permitted to be incurred hereunder (including a",
+                  "provided, that if not so received within such one-year period, such amount shall be subtracted in the subsequent calculation period, plus (e) the amount of \u201crun rate\u201d cost savings, operating expense reductions and cost synergies (collectively, \u201c Expected Cost Savings \u201d) related to any acquisition, investment, dis",
+                  "provided that the aggregate amount of addbacks pursuant to this clause (e) shall not exceed 20% of the Consolidated EBITDA for such period immediately after giving effect to any adjustments pursuant to this clause (e), provided that Unrestricted Subsidiaries shall be disregarded for purposes of calculating Conso"
+                ],
+                "provenance": [],
+                "status": "resolved",
+                "reason": null
+              },
+              "Consolidated Total Debt": {
+                "term": "Consolidated Total Debt",
+                "formula": "(Aggregate Principal of all Indebtedness of Borrowers and Restricted Subsidiaries) - (Unrestricted Cash + US Govt Obligations + Bank Deposits + Rated Commercial Paper + Repo Obligations + State/Municipal Securities + LC-Backed Securities + Money Market Funds (95% Equiv) + SEC Rule 2a-7 Funds + Foreign Subsidiary Equivalents)",
+                "components": {
+                  "Restricted Subsidiaries": {
+                    "term": "Restricted Subsidiaries",
+                    "formula": "All Subsidiaries - Unrestricted Subsidiaries",
+                    "components": {},
+                    "carve_outs": [
+                      "other than an Unrestricted Subsidiary."
+                    ],
+                    "provenance": [],
+                    "status": "resolved",
+                    "reason": null
+                  },
+                  "Cash Equivalents": {
+                    "term": "Cash Equivalents",
+                    "formula": "US Govt Obligations + Bank Deposits + Rated Commercial Paper + Repo Obligations + State/Municipal Securities + LC-Backed Securities + Money Market Funds (95% Equiv) + SEC Rule 2a-7 Funds + Foreign Subsidiary Equivalents",
+                    "components": {},
+                    "carve_outs": [],
+                    "provenance": [],
+                    "status": "resolved",
+                    "reason": null
+                  }
+                },
+                "carve_outs": [],
+                "provenance": [],
+                "status": "resolved",
+                "reason": null
+              }
+            },
+            "carve_outs": [],
+            "provenance": [],
+            "status": "resolved",
+            "reason": null
+          }
+        },
+        {
+          "name": "Consolidated Secured Leverage Ratio",
+          "comparison": "not_to_exceed",
+          "threshold": 3.5,
+          "unit": "ratio",
+          "test_frequency": "pro forma",
+          "covenant_type": "incurrence_condition",
+          "citation": {
+            "source_text": "in the case of any Incremental Facility or Pari Passu Indebtedness secured by Liens on the Collateral or by any assets of the Borrowers or any Restricted Subsidiary, on a pro forma basis after giving effect to such Incremental Facility or Pari Passu Indebtedness and the use of the proceeds thereof, the Consolidated Secured Leverage Ratio does not exceed (x) 3.50:1.00",
+            "page": null,
+            "section_label": "SECTION\u00a01.01"
+          },
+          "audit": {
+            "citation_verified": true,
+            "citation_similarity": 1.0,
+            "calculator_checked": true,
+            "calculator_match": true,
+            "citation_grounded": true,
+            "recomputed_threshold": 3.5,
+            "recomputed_comparison": "not_to_exceed"
+          },
+          "definition": "as at any day, the ratio of (a) Consolidated Secured Debt on such day to (b) Consolidated EBITDA for the most recent four fiscal quarter period for which financial statements have been delivered pursuant to Section 5.01.",
+          "resolved_definition": {
+            "term": "Consolidated Secured Leverage Ratio",
+            "formula": "(Aggregate Principal of Indebtedness of (Borrowers and (All Borrower Subsidiaries - Unrestricted Subsidiaries)) - (Unrestricted Cash + US Govt Obligations + Bank Deposits + Rated Commercial Paper + Repo Obligations + State/Municipal Securities + LC-Backed Securities + Money Market Funds + SEC Rule 2a-7 Funds + Foreign Subsidiary Equivalents)) / (Operating Income + Depreciation + Amortization + Stock Compensation + Interest Expense + Taxes + Restructuring/Non-recurring + Acquisition/Refinancing Expenses + Third-party Reimbursements + Facility Closure Costs + Debt Transaction Costs + Earn-out/Contingent Consideration + Impairment/Write-offs + Non-cash Charges + (GAAP Rent - Cash Rent) + Pension/Deferred Compensation + Environmental/Litigation + Project Startup + Non-wholly Owned Operating Income + Business Interruption Insurance Proceeds + Expected Cost Savings)",
+            "components": {
+              "Consolidated Secured Debt": {
+                "term": "Consolidated Secured Debt",
+                "formula": "[(Aggregate Principal of all Indebtedness of (Borrowers and (All Borrower Subsidiaries - Unrestricted Subsidiaries))) - (Unrestricted Cash + US Govt Obligations + Bank Deposits + Rated Commercial Paper + Repo Obligations + State/Municipal Securities + LC-Backed Securities + Money Market Funds (95% Equiv) + SEC Rule 2a-7 Funds + Foreign Subsidiary Equivalents)] secured by Lien on Collateral or Borrower/Restricted Subsidiary assets",
+                "components": {
+                  "Restricted Subsidiary": {
+                    "term": "Restricted Subsidiary",
+                    "formula": "All Borrower Subsidiaries - Unrestricted Subsidiaries",
+                    "components": {},
+                    "carve_outs": [
+                      "other than an Unrestricted Subsidiary."
+                    ],
+                    "provenance": [],
+                    "status": "resolved",
+                    "reason": null
+                  },
+                  "Consolidated Total Debt": {
+                    "term": "Consolidated Total Debt",
+                    "formula": "(Aggregate Principal of all Indebtedness of Borrowers and Restricted Subsidiaries) - (Unrestricted Cash + US Govt Obligations + Bank Deposits + Rated Commercial Paper + Repo Obligations + State/Municipal Securities + LC-Backed Securities + Money Market Funds (95% Equiv) + SEC Rule 2a-7 Funds + Foreign Subsidiary Equivalents)",
+                    "components": {
+                      "Restricted Subsidiaries": {
+                        "term": "Restricted Subsidiaries",
+                        "formula": "All Subsidiaries - Unrestricted Subsidiaries",
+                        "components": {},
+                        "carve_outs": [
+                          "other than an Unrestricted Subsidiary."
+                        ],
+                        "provenance": [],
+                        "status": "resolved",
+                        "reason": null
+                      },
+                      "Cash Equivalents": {
+                        "term": "Cash Equivalents",
+                        "formula": "US Govt Obligations + Bank Deposits + Rated Commercial Paper + Repo Obligations + State/Municipal Securities + LC-Backed Securities + Money Market Funds (95% Equiv) + SEC Rule 2a-7 Funds + Foreign Subsidiary Equivalents",
+                        "components": {},
+                        "carve_outs": [],
+                        "provenance": [],
+                        "status": "resolved",
+                        "reason": null
+                      }
+                    },
+                    "carve_outs": [],
+                    "provenance": [],
+                    "status": "resolved",
+                    "reason": null
+                  }
+                },
+                "carve_outs": [],
+                "provenance": [],
+                "status": "resolved",
+                "reason": null
+              },
+              "Consolidated EBITDA": {
+                "term": "Consolidated EBITDA",
+                "formula": "Operating Income + Depreciation + Amortization + Stock Compensation + Interest Expense + Taxes + Restructuring/Non-recurring Items + Equity Offering/Acquisition/Refinancing Expenses + Third-party Reimbursements + Facility Closure/Discontinuation Costs + Debt Transaction Costs + Earn-out/Contingent Consideration + Impairment/Asset Write-offs + Non-cash Charges + (GAAP Rent - Cash Rent) + Pension/Deferred Compensation Costs + Environmental/Litigation Costs + Project Startup Costs + Non-wholly Owned Operating Income (to extent distributable) + Business Interruption Insurance Proceeds + Expected Cost Savings (capped at 20% of EBITDA)",
+                "components": {
+                  "Stock Compensation Plans": {
+                    "term": "Stock Compensation Plans",
+                    "formula": "Compensation plans where Borrower/Restricted Subsidiaries pay Qurate/Affiliates for Qurate securities issued to employees",
+                    "components": {},
+                    "carve_outs": [],
+                    "provenance": [],
+                    "status": "resolved",
+                    "reason": null
+                  },
+                  "Cost Saving Initiative": {
+                    "term": "Cost Saving Initiative",
+                    "formula": "",
+                    "components": {},
+                    "carve_outs": [],
+                    "provenance": [],
+                    "status": "requires_human_review",
+                    "reason": "term_not_found_in_definitions_section"
+                  },
+                  "Closing Date": {
+                    "term": "Closing Date",
+                    "formula": "",
+                    "components": {},
+                    "carve_outs": [],
+                    "provenance": [],
+                    "status": "requires_human_review",
+                    "reason": "term_not_found_in_definitions_section"
+                  },
+                  "Unrestricted Subsidiaries": {
+                    "term": "Unrestricted Subsidiaries",
+                    "formula": "",
+                    "components": {},
+                    "carve_outs": [],
+                    "provenance": [],
+                    "status": "requires_human_review",
+                    "reason": "term_not_found_in_definitions_section"
+                  },
+                  "Equity Interests": {
+                    "term": "Equity Interests",
+                    "formula": "Equity Interests + Warrants/Options - Convertible Debt",
+                    "components": {},
+                    "carve_outs": [
+                      "excluding any debt securities convertible into any of the foregoing."
+                    ],
+                    "provenance": [],
+                    "status": "resolved",
+                    "reason": null
+                  },
+                  "Restricted Subsidiary": {
+                    "term": "Restricted Subsidiary",
+                    "formula": "All Borrower Subsidiaries - Unrestricted Subsidiaries",
+                    "components": {},
+                    "carve_outs": [
+                      "other than an Unrestricted Subsidiary."
+                    ],
+                    "provenance": [],
+                    "status": "resolved",
+                    "reason": null
+                  },
+                  "Expected Cost Savings": {
+                    "term": "Expected Cost Savings",
+                    "formula": "",
+                    "components": {},
+                    "carve_outs": [],
+                    "provenance": [],
+                    "status": "requires_human_review",
+                    "reason": "term_not_found_in_definitions_section"
+                  }
+                },
+                "carve_outs": [
+                  "other than any write-off or write-down of inventory or accounts receivable, (vii) any non-recurring expenses or charges related to any equity offering, investment, acquisition, disposition or recapitalization permitted hereunder or the incurrence of Indebtedness permitted to be incurred hereunder (including a",
+                  "provided, that if not so received within such one-year period, such amount shall be subtracted in the subsequent calculation period, plus (e) the amount of \u201crun rate\u201d cost savings, operating expense reductions and cost synergies (collectively, \u201c Expected Cost Savings \u201d) related to any acquisition, investment, dis",
+                  "provided that the aggregate amount of addbacks pursuant to this clause (e) shall not exceed 20% of the Consolidated EBITDA for such period immediately after giving effect to any adjustments pursuant to this clause (e), provided that Unrestricted Subsidiaries shall be disregarded for purposes of calculating Conso"
+                ],
+                "provenance": [],
+                "status": "resolved",
+                "reason": null
+              }
+            },
+            "carve_outs": [],
+            "provenance": [],
+            "status": "resolved",
+            "reason": null
+          }
+        },
+        {
+          "name": "Consolidated Secured Leverage Ratio",
+          "comparison": "not_to_exceed",
+          "threshold": 3.5,
+          "unit": "ratio",
+          "test_frequency": "most recent four fiscal quarter period",
+          "covenant_type": "incurrence_condition",
+          "citation": {
+            "source_text": "solely in the case of any such Incremental Facility or Pari Passu Indebtedness being incurred to finance an acquisition or other similar Investment permitted hereunder, the Consolidated Secured Leverage Ratio for the most recent four fiscal quarter period for which financial statements have been delivered pursuant to Section 5.01",
+            "page": null,
+            "section_label": "SECTION\u00a01.01"
+          },
+          "audit": {
+            "citation_verified": true,
+            "citation_similarity": 1.0,
+            "calculator_checked": false,
+            "calculator_match": true,
+            "citation_grounded": false
+          },
+          "definition": "as at any day, the ratio of (a) Consolidated Secured Debt on such day to (b) Consolidated EBITDA for the most recent four fiscal quarter period for which financial statements have been delivered pursuant to Section 5.01.",
+          "resolved_definition": {
+            "term": "Consolidated Secured Leverage Ratio",
+            "formula": "(Aggregate Principal of Indebtedness of (Borrowers and (All Borrower Subsidiaries - Unrestricted Subsidiaries)) - (Unrestricted Cash + US Govt Obligations + Bank Deposits + Rated Commercial Paper + Repo Obligations + State/Municipal Securities + LC-Backed Securities + Money Market Funds + SEC Rule 2a-7 Funds + Foreign Subsidiary Equivalents)) / (Operating Income + Depreciation + Amortization + Stock Compensation + Interest Expense + Taxes + Restructuring/Non-recurring + Acquisition/Refinancing Expenses + Third-party Reimbursements + Facility Closure Costs + Debt Transaction Costs + Earn-out/Contingent Consideration + Impairment/Write-offs + Non-cash Charges + (GAAP Rent - Cash Rent) + Pension/Deferred Compensation + Environmental/Litigation + Project Startup + Non-wholly Owned Operating Income + Business Interruption Insurance Proceeds + Expected Cost Savings)",
+            "components": {
+              "Consolidated Secured Debt": {
+                "term": "Consolidated Secured Debt",
+                "formula": "[(Aggregate Principal of all Indebtedness of (Borrowers and (All Borrower Subsidiaries - Unrestricted Subsidiaries))) - (Unrestricted Cash + US Govt Obligations + Bank Deposits + Rated Commercial Paper + Repo Obligations + State/Municipal Securities + LC-Backed Securities + Money Market Funds (95% Equiv) + SEC Rule 2a-7 Funds + Foreign Subsidiary Equivalents)] secured by Lien on Collateral or Borrower/Restricted Subsidiary assets",
+                "components": {
+                  "Restricted Subsidiary": {
+                    "term": "Restricted Subsidiary",
+                    "formula": "All Borrower Subsidiaries - Unrestricted Subsidiaries",
+                    "components": {},
+                    "carve_outs": [
+                      "other than an Unrestricted Subsidiary."
+                    ],
+                    "provenance": [],
+                    "status": "resolved",
+                    "reason": null
+                  },
+                  "Consolidated Total Debt": {
+                    "term": "Consolidated Total Debt",
+                    "formula": "(Aggregate Principal of all Indebtedness of Borrowers and Restricted Subsidiaries) - (Unrestricted Cash + US Govt Obligations + Bank Deposits + Rated Commercial Paper + Repo Obligations + State/Municipal Securities + LC-Backed Securities + Money Market Funds (95% Equiv) + SEC Rule 2a-7 Funds + Foreign Subsidiary Equivalents)",
+                    "components": {
+                      "Restricted Subsidiaries": {
+                        "term": "Restricted Subsidiaries",
+                        "formula": "All Subsidiaries - Unrestricted Subsidiaries",
+                        "components": {},
+                        "carve_outs": [
+                          "other than an Unrestricted Subsidiary."
+                        ],
+                        "provenance": [],
+                        "status": "resolved",
+                        "reason": null
+                      },
+                      "Cash Equivalents": {
+                        "term": "Cash Equivalents",
+                        "formula": "US Govt Obligations + Bank Deposits + Rated Commercial Paper + Repo Obligations + State/Municipal Securities + LC-Backed Securities + Money Market Funds (95% Equiv) + SEC Rule 2a-7 Funds + Foreign Subsidiary Equivalents",
+                        "components": {},
+                        "carve_outs": [],
+                        "provenance": [],
+                        "status": "resolved",
+                        "reason": null
+                      }
+                    },
+                    "carve_outs": [],
+                    "provenance": [],
+                    "status": "resolved",
+                    "reason": null
+                  }
+                },
+                "carve_outs": [],
+                "provenance": [],
+                "status": "resolved",
+                "reason": null
+              },
+              "Consolidated EBITDA": {
+                "term": "Consolidated EBITDA",
+                "formula": "Operating Income + Depreciation + Amortization + Stock Compensation + Interest Expense + Taxes + Restructuring/Non-recurring Items + Equity Offering/Acquisition/Refinancing Expenses + Third-party Reimbursements + Facility Closure/Discontinuation Costs + Debt Transaction Costs + Earn-out/Contingent Consideration + Impairment/Asset Write-offs + Non-cash Charges + (GAAP Rent - Cash Rent) + Pension/Deferred Compensation Costs + Environmental/Litigation Costs + Project Startup Costs + Non-wholly Owned Operating Income (to extent distributable) + Business Interruption Insurance Proceeds + Expected Cost Savings (capped at 20% of EBITDA)",
+                "components": {
+                  "Stock Compensation Plans": {
+                    "term": "Stock Compensation Plans",
+                    "formula": "Compensation plans where Borrower/Restricted Subsidiaries pay Qurate/Affiliates for Qurate securities issued to employees",
+                    "components": {},
+                    "carve_outs": [],
+                    "provenance": [],
+                    "status": "resolved",
+                    "reason": null
+                  },
+                  "Cost Saving Initiative": {
+                    "term": "Cost Saving Initiative",
+                    "formula": "",
+                    "components": {},
+                    "carve_outs": [],
+                    "provenance": [],
+                    "status": "requires_human_review",
+                    "reason": "term_not_found_in_definitions_section"
+                  },
+                  "Closing Date": {
+                    "term": "Closing Date",
+                    "formula": "",
+                    "components": {},
+                    "carve_outs": [],
+                    "provenance": [],
+                    "status": "requires_human_review",
+                    "reason": "term_not_found_in_definitions_section"
+                  },
+                  "Unrestricted Subsidiaries": {
+                    "term": "Unrestricted Subsidiaries",
+                    "formula": "",
+                    "components": {},
+                    "carve_outs": [],
+                    "provenance": [],
+                    "status": "requires_human_review",
+                    "reason": "term_not_found_in_definitions_section"
+                  },
+                  "Equity Interests": {
+                    "term": "Equity Interests",
+                    "formula": "Equity Interests + Warrants/Options - Convertible Debt",
+                    "components": {},
+                    "carve_outs": [
+                      "excluding any debt securities convertible into any of the foregoing."
+                    ],
+                    "provenance": [],
+                    "status": "resolved",
+                    "reason": null
+                  },
+                  "Restricted Subsidiary": {
+                    "term": "Restricted Subsidiary",
+                    "formula": "All Borrower Subsidiaries - Unrestricted Subsidiaries",
+                    "components": {},
+                    "carve_outs": [
+                      "other than an Unrestricted Subsidiary."
+                    ],
+                    "provenance": [],
+                    "status": "resolved",
+                    "reason": null
+                  },
+                  "Expected Cost Savings": {
+                    "term": "Expected Cost Savings",
+                    "formula": "",
+                    "components": {},
+                    "carve_outs": [],
+                    "provenance": [],
+                    "status": "requires_human_review",
+                    "reason": "term_not_found_in_definitions_section"
+                  }
+                },
+                "carve_outs": [
+                  "other than any write-off or write-down of inventory or accounts receivable, (vii) any non-recurring expenses or charges related to any equity offering, investment, acquisition, disposition or recapitalization permitted hereunder or the incurrence of Indebtedness permitted to be incurred hereunder (including a",
+                  "provided, that if not so received within such one-year period, such amount shall be subtracted in the subsequent calculation period, plus (e) the amount of \u201crun rate\u201d cost savings, operating expense reductions and cost synergies (collectively, \u201c Expected Cost Savings \u201d) related to any acquisition, investment, dis",
+                  "provided that the aggregate amount of addbacks pursuant to this clause (e) shall not exceed 20% of the Consolidated EBITDA for such period immediately after giving effect to any adjustments pursuant to this clause (e), provided that Unrestricted Subsidiaries shall be disregarded for purposes of calculating Conso"
+                ],
+                "provenance": [],
+                "status": "resolved",
+                "reason": null
+              }
+            },
+            "carve_outs": [],
+            "provenance": [],
+            "status": "resolved",
+            "reason": null
+          }
+        },
+        {
+          "name": "Consolidated Leverage Ratio",
+          "comparison": "not_to_exceed",
+          "threshold": 4.5,
+          "unit": "ratio",
+          "test_frequency": "quarterly",
+          "covenant_type": "maintenance",
+          "citation": {
+            "source_text": "the Consolidated Leverage Ratio as of the last day of each fiscal quarter to be greater than 4.50:1.00",
+            "page": null,
+            "section_label": "SECTION\u00a06.09"
+          },
+          "audit": {
+            "citation_verified": true,
+            "citation_similarity": 1.0,
+            "calculator_checked": true,
+            "calculator_match": true,
+            "citation_grounded": true,
+            "recomputed_threshold": 4.5,
+            "recomputed_comparison": "not_to_exceed"
+          },
+          "definition": "as at any day, the ratio of (a) Consolidated Total Debt on such day to (b) Consolidated EBITDA for the most recent four fiscal quarter period for which financial statements have been delivered pursuant to Section 5.01.",
+          "resolved_definition": {
+            "term": "Consolidated Leverage Ratio",
+            "formula": "(Aggregate Principal of all Indebtedness of Borrowers and Restricted Subsidiaries - (Unrestricted Cash + US Govt Obligations + Bank Deposits + Rated Commercial Paper + Repo Obligations + State/Municipal Securities + LC-Backed Securities + Money Market Funds (95% Equiv) + SEC Rule 2a-7 Funds + Foreign Subsidiary Equivalents)) / (Operating Income + Depreciation + Amortization + Stock Compensation + Interest Expense + Taxes + Restructuring/Non-recurring Items + Equity Offering/Acquisition/Refinancing Expenses + Third-party Reimbursements + Facility Closure/Discontinuation Costs + Debt Transaction Costs + Earn-out/Contingent Consideration + Impairment/Asset Write-offs + Non-cash Charges + (GAAP Rent - Cash Rent) + Pension/Deferred Compensation Costs + Environmental/Litigation Costs + Project Startup Costs + Non-wholly Owned Operating Income + Business Interruption Insurance Proceeds + Expected Cost Savings)",
+            "components": {
+              "Consolidated EBITDA": {
+                "term": "Consolidated EBITDA",
+                "formula": "Operating Income + Depreciation + Amortization + Stock Compensation + Interest Expense + Taxes + Restructuring/Non-recurring Items + Equity Offering/Acquisition/Refinancing Expenses + Third-party Reimbursements + Facility Closure/Discontinuation Costs + Debt Transaction Costs + Earn-out/Contingent Consideration + Impairment/Asset Write-offs + Non-cash Charges + (GAAP Rent - Cash Rent) + Pension/Deferred Compensation Costs + Environmental/Litigation Costs + Project Startup Costs + Non-wholly Owned Operating Income (to extent distributable) + Business Interruption Insurance Proceeds + Expected Cost Savings (capped at 20% of EBITDA)",
+                "components": {
+                  "Stock Compensation Plans": {
+                    "term": "Stock Compensation Plans",
+                    "formula": "Compensation plans where Borrower/Restricted Subsidiaries pay Qurate/Affiliates for Qurate securities issued to employees",
+                    "components": {},
+                    "carve_outs": [],
+                    "provenance": [],
+                    "status": "resolved",
+                    "reason": null
+                  },
+                  "Cost Saving Initiative": {
+                    "term": "Cost Saving Initiative",
+                    "formula": "",
+                    "components": {},
+                    "carve_outs": [],
+                    "provenance": [],
+                    "status": "requires_human_review",
+                    "reason": "term_not_found_in_definitions_section"
+                  },
+                  "Closing Date": {
+                    "term": "Closing Date",
+                    "formula": "",
+                    "components": {},
+                    "carve_outs": [],
+                    "provenance": [],
+                    "status": "requires_human_review",
+                    "reason": "term_not_found_in_definitions_section"
+                  },
+                  "Unrestricted Subsidiaries": {
+                    "term": "Unrestricted Subsidiaries",
+                    "formula": "",
+                    "components": {},
+                    "carve_outs": [],
+                    "provenance": [],
+                    "status": "requires_human_review",
+                    "reason": "term_not_found_in_definitions_section"
+                  },
+                  "Equity Interests": {
+                    "term": "Equity Interests",
+                    "formula": "Equity Interests + Warrants/Options - Convertible Debt",
+                    "components": {},
+                    "carve_outs": [
+                      "excluding any debt securities convertible into any of the foregoing."
+                    ],
+                    "provenance": [],
+                    "status": "resolved",
+                    "reason": null
+                  },
+                  "Restricted Subsidiary": {
+                    "term": "Restricted Subsidiary",
+                    "formula": "All Borrower Subsidiaries - Unrestricted Subsidiaries",
+                    "components": {},
+                    "carve_outs": [
+                      "other than an Unrestricted Subsidiary."
+                    ],
+                    "provenance": [],
+                    "status": "resolved",
+                    "reason": null
+                  },
+                  "Expected Cost Savings": {
+                    "term": "Expected Cost Savings",
+                    "formula": "",
+                    "components": {},
+                    "carve_outs": [],
+                    "provenance": [],
+                    "status": "requires_human_review",
+                    "reason": "term_not_found_in_definitions_section"
+                  }
+                },
+                "carve_outs": [
+                  "other than any write-off or write-down of inventory or accounts receivable, (vii) any non-recurring expenses or charges related to any equity offering, investment, acquisition, disposition or recapitalization permitted hereunder or the incurrence of Indebtedness permitted to be incurred hereunder (including a",
+                  "provided, that if not so received within such one-year period, such amount shall be subtracted in the subsequent calculation period, plus (e) the amount of \u201crun rate\u201d cost savings, operating expense reductions and cost synergies (collectively, \u201c Expected Cost Savings \u201d) related to any acquisition, investment, dis",
+                  "provided that the aggregate amount of addbacks pursuant to this clause (e) shall not exceed 20% of the Consolidated EBITDA for such period immediately after giving effect to any adjustments pursuant to this clause (e), provided that Unrestricted Subsidiaries shall be disregarded for purposes of calculating Conso"
+                ],
+                "provenance": [],
+                "status": "resolved",
+                "reason": null
+              },
+              "Consolidated Total Debt": {
+                "term": "Consolidated Total Debt",
+                "formula": "(Aggregate Principal of all Indebtedness of Borrowers and Restricted Subsidiaries) - (Unrestricted Cash + US Govt Obligations + Bank Deposits + Rated Commercial Paper + Repo Obligations + State/Municipal Securities + LC-Backed Securities + Money Market Funds (95% Equiv) + SEC Rule 2a-7 Funds + Foreign Subsidiary Equivalents)",
+                "components": {
+                  "Restricted Subsidiaries": {
+                    "term": "Restricted Subsidiaries",
+                    "formula": "All Subsidiaries - Unrestricted Subsidiaries",
+                    "components": {},
+                    "carve_outs": [
+                      "other than an Unrestricted Subsidiary."
+                    ],
+                    "provenance": [],
+                    "status": "resolved",
+                    "reason": null
+                  },
+                  "Cash Equivalents": {
+                    "term": "Cash Equivalents",
+                    "formula": "US Govt Obligations + Bank Deposits + Rated Commercial Paper + Repo Obligations + State/Municipal Securities + LC-Backed Securities + Money Market Funds (95% Equiv) + SEC Rule 2a-7 Funds + Foreign Subsidiary Equivalents",
+                    "components": {},
+                    "carve_outs": [],
+                    "provenance": [],
+                    "status": "resolved",
+                    "reason": null
+                  }
+                },
+                "carve_outs": [],
+                "provenance": [],
+                "status": "resolved",
+                "reason": null
+              }
+            },
+            "carve_outs": [],
+            "provenance": [],
+            "status": "resolved",
+            "reason": null
+          }
+        }
+      ]
+    },
+    {
+      "gold_id": "old_plank_trail_halo_pets",
+      "document": "data/sample/Old Plank Trail Community Bank - Halo Purely for Pets - Loan and Security Agreement.html",
+      "score": {
+        "num_gold": 1,
+        "num_extracted": 1,
+        "num_hits": 1,
+        "num_misses": 0,
+        "num_false_positives": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "threshold_accuracy": 1.0,
+        "covenant_type_accuracy": 1.0
+      },
+      "fields": [
+        {
+          "gold_name": "Fixed Charge Coverage Ratio",
+          "covenant_type": "maintenance",
+          "threshold_exact": true,
+          "threshold_tolerance": true,
+          "comparison": true,
+          "covenant_type_correct": true,
+          "unit": true,
+          "name": true,
+          "test_frequency": true,
+          "all_fields": true,
+          "extracted_threshold": 1.25,
+          "gold_threshold": 1.25,
+          "schedule_levels": 0,
+          "schedule_levels_found": 0,
+          "schedule_complete": null
+        }
+      ],
+      "field_accuracy": {
+        "counts": {
+          "threshold_exact": [
+            1,
+            1
+          ],
+          "threshold_tolerance": [
+            1,
+            1
+          ],
+          "comparison": [
+            1,
+            1
+          ],
+          "covenant_type": [
+            1,
+            1
+          ],
+          "unit": [
+            1,
+            1
+          ],
+          "name": [
+            1,
+            1
+          ],
+          "test_frequency": [
+            1,
+            1
+          ],
+          "all_fields": [
+            1,
+            1
+          ]
+        },
+        "schedule_covenants": 0,
+        "schedule_complete": 0,
+        "schedule_levels": 0,
+        "schedule_levels_found": 0,
+        "accuracy": {
+          "threshold_exact": 1.0,
+          "threshold_tolerance": 1.0,
+          "comparison": 1.0,
+          "covenant_type": 1.0,
+          "unit": 1.0,
+          "name": 1.0,
+          "test_frequency": 1.0,
+          "all_fields": 1.0
+        }
+      },
+      "misses": [],
+      "optional_found": [],
+      "false_positives": [],
+      "extracted_financial_covenants": [
+        {
+          "name": "Fixed Charge Coverage Ratio",
+          "comparison": "not_less_than",
+          "threshold": 1.25,
+          "unit": "ratio",
+          "test_frequency": "quarterly",
+          "covenant_type": "maintenance",
+          "citation": {
+            "source_text": "Not permit the Fixed Charge Coverage Ratio as of the last day of any fiscal quarter to be less than 1.25 to 1.00, tested as of the last day of each fiscal quarter beginning with the fiscal quarter ending March 31, 2021.",
+            "page": null,
+            "section_label": "9.4"
+          },
+          "audit": {
+            "citation_verified": true,
+            "citation_similarity": 1.0,
+            "calculator_checked": true,
+            "calculator_match": true,
+            "citation_grounded": true,
+            "recomputed_threshold": 1.25,
+            "recomputed_comparison": "not_less_than"
+          },
+          "definition": "(1) Fixed Charge Operating Cash Flow, divided by (2) Fixed Charges, all as determined for Borrower and its Subsidiaries on a consolidated basis in accordance with GAAP. The Fixed Charge Coverage Ratio shall be calculated on a trailing twelve (12) month basis ending as of the last day of each test period.",
+          "resolved_definition": {
+            "term": "Fixed Charge Coverage Ratio",
+            "formula": "(EBITDA - (unfinanced Capital Expenditures + income taxes paid in cash + dividends, distributions and Equity Interest redemptions paid in cash) + min(PPP Loan Proceeds - (Non-forgivable Uses), PPP Loan Forgiveness)) / ((Total Interest Expense + Capitalized Lease Interest + Preferred Equity Interest + LC/BA Fees + Rate Management Net Costs) + Principal Payments on Indebtedness (excl. PPP Forgivable Uses forgiven under CARES Act) + Principal Payments on Capital Leases)",
+            "components": {
+              "Fixed Charges": {
+                "term": "Fixed Charges",
+                "formula": "(Total Interest Expense + Capitalized Lease Interest + Preferred Equity Interest + LC/BA Fees + Rate Management Net Costs) + Principal Payments on Indebtedness (excl. PPP Forgivable Uses forgiven under CARES Act) + Principal Payments on Capital Leases",
+                "components": {
+                  "Interest Expense": {
+                    "term": "Interest Expense",
+                    "formula": "Total Interest Expense + Capitalized Lease Interest + Preferred Equity Interest + LC/BA Fees + Rate Management Net Costs",
+                    "components": {},
+                    "carve_outs": [],
+                    "provenance": [],
+                    "status": "resolved",
+                    "reason": null
+                  },
+                  "CARES Act": {
+                    "term": "CARES Act",
+                    "formula": "",
+                    "components": {},
+                    "carve_outs": [],
+                    "provenance": [],
+                    "status": "requires_human_review",
+                    "reason": "term_not_found_in_definitions_section"
+                  },
+                  "Capital Leases": {
+                    "term": "Capital Leases",
+                    "formula": "",
+                    "components": {},
+                    "carve_outs": [],
+                    "provenance": [],
+                    "status": "requires_human_review",
+                    "reason": "term_not_found_in_definitions_section"
+                  }
+                },
+                "carve_outs": [
+                  "excluding Interest Expense in respect of that portion of the PPP Loan that is used for funding Forgivable Uses), plus (2) scheduled payments, required payments and prepayments of principal on Indebtedness (excluding principal in respect of that portion of the PPP Loan that is used for funding Forgivable Uses"
+                ],
+                "provenance": [],
+                "status": "resolved",
+                "reason": null
+              },
+              "The Fixed Charge Coverage Ratio": {
+                "term": "The Fixed Charge Coverage Ratio",
+                "formula": "",
+                "components": {},
+                "carve_outs": [],
+                "provenance": [],
+                "status": "requires_human_review",
+                "reason": "term_not_found_in_definitions_section"
+              },
+              "Fixed Charge Operating Cash Flow": {
+                "term": "Fixed Charge Operating Cash Flow",
+                "formula": "EBITDA - (unfinanced Capital Expenditures + income taxes paid in cash + dividends, distributions and Equity Interest redemptions paid in cash) + min(PPP Loan Proceeds - (Non-forgivable Uses), PPP Loan Forgiveness)",
+                "components": {
+                  "Forgivable Uses": {
+                    "term": "Forgivable Uses",
+                    "formula": "PPP Loan Proceeds - (Non-forgivable Uses)",
+                    "components": {},
+                    "carve_outs": [],
+                    "provenance": [],
+                    "status": "resolved",
+                    "reason": null
+                  },
+                  "PPP Loan": {
+                    "term": "PPP Loan",
+                    "formula": "PPP Loan - Wells Fargo ($431,000)",
+                    "components": {},
+                    "carve_outs": [],
+                    "provenance": [],
+                    "status": "resolved",
+                    "reason": null
+                  },
+                  "Equity Interest": {
+                    "term": "Equity Interest",
+                    "formula": "Common Stock + Preferred Stock + Warrants + Membership Interests + Convertible Securities + Other Equity Interests",
+                    "components": {},
+                    "carve_outs": [],
+                    "provenance": [],
+                    "status": "resolved",
+                    "reason": null
+                  },
+                  "Capital Expenditures": {
+                    "term": "Capital Expenditures",
+                    "formula": "Fixed Asset Expenditures + Capitalized Lease Obligations - Insurance-Reimbursed Expenditures",
+                    "components": {},
+                    "carve_outs": [],
+                    "provenance": [],
+                    "status": "resolved",
+                    "reason": null
+                  }
+                },
+                "carve_outs": [
+                  "provided that, such amount shall not exceed the amount that is forgiven pursuant to the PPP Loan program."
+                ],
+                "provenance": [],
+                "status": "resolved",
+                "reason": null
+              }
+            },
+            "carve_outs": [],
+            "provenance": [],
+            "status": "resolved",
+            "reason": null
+          }
+        }
+      ]
+    },
+    {
+      "gold_id": "runway_growth_aspen_university",
+      "document": "data/sample/RUNWAY GROWTH CREDIT FUND INC - Aspen University - LOAN AND SECURITY AGREEMENT.html",
+      "score": {
+        "num_gold": 2,
+        "num_extracted": 1,
+        "num_hits": 1,
+        "num_misses": 1,
+        "num_false_positives": 0,
+        "recall": 0.5,
+        "precision": 1.0,
+        "threshold_accuracy": 1.0,
+        "covenant_type_accuracy": 1.0
+      },
+      "fields": [
+        {
+          "gold_name": "Current Ratio",
+          "covenant_type": "maintenance",
+          "threshold_exact": true,
+          "threshold_tolerance": true,
+          "comparison": true,
+          "covenant_type_correct": true,
+          "unit": true,
+          "name": true,
+          "test_frequency": true,
+          "all_fields": true,
+          "extracted_threshold": 1.5,
+          "gold_threshold": 1.5,
+          "schedule_levels": 0,
+          "schedule_levels_found": 0,
+          "schedule_complete": null
+        }
+      ],
+      "field_accuracy": {
+        "counts": {
+          "threshold_exact": [
+            1,
+            1
+          ],
+          "threshold_tolerance": [
+            1,
+            1
+          ],
+          "comparison": [
+            1,
+            1
+          ],
+          "covenant_type": [
+            1,
+            1
+          ],
+          "unit": [
+            1,
+            1
+          ],
+          "name": [
+            1,
+            1
+          ],
+          "test_frequency": [
+            1,
+            1
+          ],
+          "all_fields": [
+            1,
+            1
+          ]
+        },
+        "schedule_covenants": 0,
+        "schedule_complete": 0,
+        "schedule_levels": 0,
+        "schedule_levels_found": 0,
+        "accuracy": {
+          "threshold_exact": 1.0,
+          "threshold_tolerance": 1.0,
+          "comparison": 1.0,
+          "covenant_type": 1.0,
+          "unit": 1.0,
+          "name": 1.0,
+          "test_frequency": 1.0,
+          "all_fields": 1.0
+        }
+      },
+      "misses": [
+        {
+          "name": "Minimum Consolidated Net Worth",
+          "comparison": "not_less_than",
+          "threshold": 5750000,
+          "unit": "USD",
+          "covenant_type": "maintenance",
+          "test_frequency": "continuous",
+          "citation_contains": "permit Consolidated Net Worth to be less than $5,750,000"
+        }
+      ],
+      "optional_found": [],
+      "false_positives": [],
+      "extracted_financial_covenants": [
+        {
+          "name": "Current Ratio",
+          "comparison": "not_less_than",
+          "threshold": 1.5,
+          "unit": "ratio",
+          "test_frequency": "at any time",
+          "covenant_type": "maintenance",
+          "citation": {
+            "source_text": "Loan Parties shall not, at any time, permit the ratio of Consolidated Current Assets to Consolidated Current Liabilities to be less than 1.50",
+            "page": null,
+            "section_label": null
+          },
+          "audit": {
+            "citation_verified": true,
+            "citation_similarity": 1.0,
+            "calculator_checked": false,
+            "calculator_match": true,
+            "citation_grounded": true
+          },
+          "definition": null
+        }
+      ]
+    },
+    {
+      "gold_id": "sample_credit_agreement",
+      "document": "data/sample/sample_credit_agreement.html",
+      "score": {
+        "num_gold": 3,
+        "num_extracted": 3,
+        "num_hits": 3,
+        "num_misses": 0,
+        "num_false_positives": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "threshold_accuracy": 1.0,
+        "covenant_type_accuracy": 1.0
+      },
+      "fields": [
+        {
+          "gold_name": "Consolidated Leverage Ratio",
+          "covenant_type": "maintenance",
+          "threshold_exact": true,
+          "threshold_tolerance": true,
+          "comparison": true,
+          "covenant_type_correct": true,
+          "unit": true,
+          "name": true,
+          "test_frequency": true,
+          "all_fields": true,
+          "extracted_threshold": 3.5,
+          "gold_threshold": 3.5,
+          "schedule_levels": 0,
+          "schedule_levels_found": 0,
+          "schedule_complete": null
+        },
+        {
+          "gold_name": "Fixed Charge Coverage Ratio",
+          "covenant_type": "maintenance",
+          "threshold_exact": true,
+          "threshold_tolerance": true,
+          "comparison": true,
+          "covenant_type_correct": true,
+          "unit": true,
+          "name": true,
+          "test_frequency": true,
+          "all_fields": true,
+          "extracted_threshold": 1.25,
+          "gold_threshold": 1.25,
+          "schedule_levels": 0,
+          "schedule_levels_found": 0,
+          "schedule_complete": null
+        },
+        {
+          "gold_name": "Minimum Liquidity",
+          "covenant_type": "maintenance",
+          "threshold_exact": true,
+          "threshold_tolerance": true,
+          "comparison": true,
+          "covenant_type_correct": true,
+          "unit": true,
+          "name": true,
+          "test_frequency": true,
+          "all_fields": true,
+          "extracted_threshold": 10000000.0,
+          "gold_threshold": 10000000,
+          "schedule_levels": 0,
+          "schedule_levels_found": 0,
+          "schedule_complete": null
+        }
+      ],
+      "field_accuracy": {
+        "counts": {
+          "threshold_exact": [
+            3,
+            3
+          ],
+          "threshold_tolerance": [
+            3,
+            3
+          ],
+          "comparison": [
+            3,
+            3
+          ],
+          "covenant_type": [
+            3,
+            3
+          ],
+          "unit": [
+            3,
+            3
+          ],
+          "name": [
+            3,
+            3
+          ],
+          "test_frequency": [
+            3,
+            3
+          ],
+          "all_fields": [
+            3,
+            3
+          ]
+        },
+        "schedule_covenants": 0,
+        "schedule_complete": 0,
+        "schedule_levels": 0,
+        "schedule_levels_found": 0,
+        "accuracy": {
+          "threshold_exact": 1.0,
+          "threshold_tolerance": 1.0,
+          "comparison": 1.0,
+          "covenant_type": 1.0,
+          "unit": 1.0,
+          "name": 1.0,
+          "test_frequency": 1.0,
+          "all_fields": 1.0
+        }
+      },
+      "misses": [],
+      "optional_found": [],
+      "false_positives": [],
+      "extracted_financial_covenants": [
+        {
+          "name": "Consolidated Leverage Ratio",
+          "comparison": "not_to_exceed",
+          "threshold": 3.5,
+          "unit": "ratio",
+          "test_frequency": "quarterly",
+          "covenant_type": "maintenance",
+          "citation": {
+            "source_text": "The Borrower shall not permit the Consolidated Leverage Ratio as of the last day of any fiscal quarter to exceed 3.50:1.00.",
+            "page": null,
+            "section_label": "SECTION 6. FINANCIAL COVENANTS"
+          },
+          "audit": {
+            "citation_verified": true,
+            "citation_similarity": 1.0,
+            "calculator_checked": true,
+            "calculator_match": true,
+            "citation_grounded": true,
+            "recomputed_threshold": 3.5,
+            "recomputed_comparison": "not_to_exceed"
+          },
+          "definition": null
+        },
+        {
+          "name": "Fixed Charge Coverage Ratio",
+          "comparison": "not_less_than",
+          "threshold": 1.25,
+          "unit": "ratio",
+          "test_frequency": "quarterly",
+          "covenant_type": "maintenance",
+          "citation": {
+            "source_text": "The Borrower shall not permit the Fixed Charge Coverage Ratio as of the last day of any fiscal quarter to be less than 1.25:1.00",
+            "page": null,
+            "section_label": "Section 6.2"
+          },
+          "audit": {
+            "citation_verified": true,
+            "citation_similarity": 1.0,
+            "calculator_checked": true,
+            "calculator_match": true,
+            "citation_grounded": true,
+            "recomputed_threshold": 1.25,
+            "recomputed_comparison": "not_less_than"
+          },
+          "definition": null
+        },
+        {
+          "name": "Consolidated Liquidity",
+          "comparison": "not_less_than",
+          "threshold": 10000000.0,
+          "unit": "USD",
+          "test_frequency": "at all times",
+          "covenant_type": "maintenance",
+          "citation": {
+            "source_text": "The Borrower shall maintain Consolidated Liquidity of not less than $10,000,000 at all times.",
+            "page": null,
+            "section_label": "Section 6.3"
+          },
+          "audit": {
+            "citation_verified": true,
+            "citation_similarity": 1.0,
+            "calculator_checked": true,
+            "calculator_match": true,
+            "citation_grounded": true,
+            "recomputed_threshold": 10000000.0,
+            "recomputed_comparison": "not_less_than"
+          },
+          "definition": null
+        }
+      ]
+    },
+    {
+      "gold_id": "wells_fargo_retailco",
+      "document": "data/sample/Wells Fargo - RetailCo - Loan Agreement.html",
+      "score": {
+        "num_gold": 0,
+        "num_extracted": 0,
+        "num_hits": 0,
+        "num_misses": 0,
+        "num_false_positives": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "threshold_accuracy": 1.0,
+        "covenant_type_accuracy": 1.0
+      },
+      "fields": [],
+      "field_accuracy": {
+        "counts": {
+          "threshold_exact": [
+            0,
+            0
+          ],
+          "threshold_tolerance": [
+            0,
+            0
+          ],
+          "comparison": [
+            0,
+            0
+          ],
+          "covenant_type": [
+            0,
+            0
+          ],
+          "unit": [
+            0,
+            0
+          ],
+          "name": [
+            0,
+            0
+          ],
+          "test_frequency": [
+            0,
+            0
+          ],
+          "all_fields": [
+            0,
+            0
+          ]
+        },
+        "schedule_covenants": 0,
+        "schedule_complete": 0,
+        "schedule_levels": 0,
+        "schedule_levels_found": 0,
+        "accuracy": {
+          "threshold_exact": null,
+          "threshold_tolerance": null,
+          "comparison": null,
+          "covenant_type": null,
+          "unit": null,
+          "name": null,
+          "test_frequency": null,
+          "all_fields": null
+        }
+      },
+      "misses": [],
+      "optional_found": [
+        {
+          "name": "Debt Service Coverage Ratio",
+          "comparison": "not_less_than",
+          "threshold": 1.1,
+          "unit": "ratio",
+          "covenant_type": "incurrence_condition",
+          "required": false,
+          "citation_contains": "the Debt Service Coverage Ratio shall be less than 1.10 to 1.00"
+        }
+      ],
+      "false_positives": [],
+      "extracted_financial_covenants": [
+        {
+          "name": "Debt Service Coverage Ratio",
+          "comparison": "not_less_than",
+          "threshold": 1.1,
+          "unit": "ratio",
+          "test_frequency": null,
+          "covenant_type": "incurrence_condition",
+          "citation": {
+            "source_text": "the Debt Service Coverage Ratio shall be less than 1.10 to 1.00",
+            "page": null,
+            "section_label": "ARTICLE 4"
+          },
+          "audit": {
+            "citation_verified": true,
+            "citation_similarity": 1.0,
+            "calculator_checked": true,
+            "calculator_match": true,
+            "citation_grounded": true,
+            "recomputed_threshold": 1.1,
+            "recomputed_comparison": "not_less_than"
+          },
+          "definition": "as of the last day of the calendar month immediately preceding the applicable date of calculation, the quotient obtained by dividing (1) the Adjusted Net Cash Flow by (2) the aggregate principal and interest projected to be due and payable over the twelve (12) month period subsequent to the date of calculation (interest only periods will be disregarded for purposes of this calculation) and a 30-year amortization period. Borrower shall deliver to Lender such information as is reasonably required for Lender to make all applicable calculations. Lender\u2019s calculation of the Debt Service Coverage Ratio, and all component calculations, shall be conclusive and binding on Borrower absent manifest error.",
+          "resolved_definition": {
+            "term": "Debt Service Coverage Ratio",
+            "formula": "(NOI - Normalized TI/Leasing Commissions - Normalized Capital Improvements) / (Aggregate Principal and Interest Due over 12 months + Principal Due over remaining 30-year amortization)",
+            "components": {
+              "Adjusted Net Cash Flow": {
+                "term": "Adjusted Net Cash Flow",
+                "formula": "NOI - Normalized TI/Leasing Commissions - Normalized Capital Improvements",
+                "components": {},
+                "carve_outs": [],
+                "provenance": [],
+                "status": "resolved",
+                "reason": null
+              }
+            },
+            "carve_outs": [],
+            "provenance": [],
+            "status": "resolved",
+            "reason": null
+          }
+        }
+      ]
+    }
+  ],
+  "meta": {
+    "label": "cached",
+    "source": "committed pipeline outputs in `data/processed/`",
+    "date": "2026-11-02",
+    "gold_files": 10
+  }
+}

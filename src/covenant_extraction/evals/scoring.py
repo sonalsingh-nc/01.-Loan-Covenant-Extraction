@@ -1,5 +1,10 @@
 """Aggregate precision/recall/threshold-accuracy metrics from matched
-covenants (see matching.py)."""
+covenants (see matching.py). Gold entries marked `required: false` are
+excluded from both sides: finding them is not a hit, missing them is not a
+miss, and an extraction absorbed by one is not a false positive.
+
+Field-level metrics (numeric tolerance, step-down schedules, units,
+frequency) live in field_metrics.py."""
 from __future__ import annotations
 
 from dataclasses import dataclass
@@ -22,8 +27,9 @@ class EvalScore:
 
 
 def score_matches(matches: List[CovenantMatch], unmatched_extracted: List[Dict[str, Any]]) -> EvalScore:
-    hits = [m for m in matches if m.extracted is not None]
-    num_gold = len(matches)
+    required = [m for m in matches if m.required]
+    hits = [m for m in required if m.extracted is not None]
+    num_gold = len(required)
     num_hits = len(hits)
     num_false_positives = len(unmatched_extracted)
     num_extracted = num_hits + num_false_positives
