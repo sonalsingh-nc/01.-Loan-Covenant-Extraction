@@ -1,0 +1,34 @@
+{
+  "document": "data/sample/RUNWAY GROWTH CREDIT FUND INC - Aspen University - LOAN AND SECURITY AGREEMENT.html",
+  "cached_output": "data/processed/RunwayGrowth_AspenUniversity-Covenants.json",
+  "notes": "Section 7.11 Current Ratio >= 1.50 at any time; Section 7.12 Minimum Consolidated Net Worth >= $5,750,000 at any time (30-day cure). Section 6.10 Minimum Cash is a formula (greater of six months of projected burn or six months of negative net income) with no fixed number, so it is optional with a null threshold. The 'Operating Milestone' (30% revenue growth, 7.5% EBITDA margin) gates a later tranche and is not a covenant.",
+  "financial_covenants": [
+    {
+      "name": "Current Ratio",
+      "comparison": "not_less_than",
+      "threshold": 1.5,
+      "unit": "ratio",
+      "covenant_type": "maintenance",
+      "test_frequency": "continuous",
+      "citation_contains": "Consolidated Current Assets to Consolidated Current Liabilities to be less than 1.50"
+    },
+    {
+      "name": "Minimum Consolidated Net Worth",
+      "comparison": "not_less_than",
+      "threshold": 5750000,
+      "unit": "USD",
+      "covenant_type": "maintenance",
+      "test_frequency": "continuous",
+      "citation_contains": "permit Consolidated Net Worth to be less than $5,750,000"
+    },
+    {
+      "name": "Minimum Cash",
+      "comparison": "not_less_than",
+      "threshold": null,
+      "unit": "USD",
+      "covenant_type": "maintenance",
+      "required": false,
+      "citation_contains": "maintain Cash or Cash Equivalents in Collateral Accounts"
+    }
+  ]
+}

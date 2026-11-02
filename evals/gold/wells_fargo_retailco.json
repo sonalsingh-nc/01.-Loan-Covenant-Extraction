@@ -1,0 +1,34 @@
+{
+  "document": "data/sample/Wells Fargo - RetailCo - Loan Agreement.html",
+  "cached_output": "data/processed/Wellsfargo_RetailCo-Covenants.json",
+  "notes": "CMBS mortgage loan with no maintenance financial covenants. Ratio tests appear only as conditions: DSCR < 1.10x lets Lender replace the Manager; Debt Yield >= 11.0% is a condition to a partial release; Debt Yield >= 9.0% waives the leasing reserve deposit. All three are optional: reporting them as incurrence conditions is defensible, omitting them is too.",
+  "financial_covenants": [
+    {
+      "name": "Debt Service Coverage Ratio",
+      "comparison": "not_less_than",
+      "threshold": 1.1,
+      "unit": "ratio",
+      "covenant_type": "incurrence_condition",
+      "required": false,
+      "citation_contains": "the Debt Service Coverage Ratio shall be less than 1.10 to 1.00"
+    },
+    {
+      "name": "Debt Yield",
+      "comparison": "not_less_than",
+      "threshold": 11.0,
+      "unit": "percent",
+      "covenant_type": "incurrence_condition",
+      "required": false,
+      "citation_contains": "Debt Yield of the Remaining Property shall be no less than the greater of"
+    },
+    {
+      "name": "Debt Yield",
+      "comparison": "not_less_than",
+      "threshold": 9.0,
+      "unit": "percent",
+      "covenant_type": "incurrence_condition",
+      "required": false,
+      "citation_contains": "the Debt Yield is no less than 9.0%"
+    }
+  ]
+}

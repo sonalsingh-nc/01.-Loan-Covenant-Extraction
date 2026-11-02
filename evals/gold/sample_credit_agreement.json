@@ -5,10 +5,11 @@
     {
       "name": "Consolidated Leverage Ratio",
       "comparison": "not_to_exceed",
-      "threshold": 3.50,
+      "threshold": 3.5,
       "unit": "ratio",
       "covenant_type": "maintenance",
-      "citation_contains": "Consolidated Leverage Ratio as of the last day of any fiscal quarter to exceed 3.50:1.00"
+      "citation_contains": "Consolidated Leverage Ratio as of the last day of any fiscal quarter to exceed 3.50:1.00",
+      "test_frequency": "quarterly"
     },
     {
       "name": "Fixed Charge Coverage Ratio",
@@ -16,7 +17,8 @@
       "threshold": 1.25,
       "unit": "ratio",
       "covenant_type": "maintenance",
-      "citation_contains": "Fixed Charge Coverage Ratio as of the last day of any fiscal quarter to be less than 1.25:1.00"
+      "citation_contains": "Fixed Charge Coverage Ratio as of the last day of any fiscal quarter to be less than 1.25:1.00",
+      "test_frequency": "quarterly"
     },
     {
       "name": "Minimum Liquidity",
@@ -24,7 +26,9 @@
       "threshold": 10000000,
       "unit": "USD",
       "covenant_type": "maintenance",
-      "citation_contains": "Consolidated Liquidity of not"
+      "citation_contains": "Consolidated Liquidity of not",
+      "test_frequency": "continuous"
     }
-  ]
+  ],
+  "cached_output": "data/processed/SampleCreditAgreement-Covenants.json"
 }

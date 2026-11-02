@@ -142,3 +142,11 @@ or running LM Studio server is required to run the suite.
 - Candidate selection uses fixed reference queries; for contracts with very
   unusual covenant phrasing, consider lowering the keyword-only reliance by
   tuning `retrieval/keyword_filter.py`.
+
+## Evals
+
+`covenant-eval --backend cached` scores extraction against a hand-labeled
+gold set of 10 agreements (precision/recall, field-level accuracy with a
+numeric tolerance, step-down schedule coverage) and writes a markdown
+report. See [`evals/README.md`](evals/README.md) and the latest
+[results](evals/results/cached.md).

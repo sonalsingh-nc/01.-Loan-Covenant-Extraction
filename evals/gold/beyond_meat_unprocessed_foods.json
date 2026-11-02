@@ -1,0 +1,25 @@
+{
+  "document": "data/sample/Beyond Meat - Unprocessed Foods - Loan and Security Agreement.htm",
+  "cached_output": "data/processed/BeyondMeat_UnprocessedFoods-Covenants.json",
+  "notes": "Section 6.10 Financial Covenants: (a) Minimum Liquidity >= $15,000,000 as of any date; (b) Junior Debt Service Cap <= $20,000,000 per fiscal year. Both sit in the Financial Covenants section, so both are required. Grepped for Leverage/Coverage/Net Worth/EBITDA covenants -- none.",
+  "financial_covenants": [
+    {
+      "name": "Minimum Liquidity",
+      "comparison": "not_less_than",
+      "threshold": 15000000,
+      "unit": "USD",
+      "covenant_type": "maintenance",
+      "test_frequency": "continuous",
+      "citation_contains": "Borrower shall not permit Liquidity to be less than $15,000,000"
+    },
+    {
+      "name": "Junior Debt Service Cap",
+      "comparison": "not_to_exceed",
+      "threshold": 20000000,
+      "unit": "USD",
+      "covenant_type": "maintenance",
+      "test_frequency": "annual",
+      "citation_contains": "Junior Debt Service for any fiscal year of Borrower to exceed $20,000,000"
+    }
+  ]
+}
