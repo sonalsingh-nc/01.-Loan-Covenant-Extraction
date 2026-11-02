@@ -1,0 +1,120 @@
+{
+  "financial_covenants": [
+    {
+      "name": "Current Ratio",
+      "comparison": "not_less_than",
+      "threshold": 1.5,
+      "unit": "ratio",
+      "test_frequency": "at any time",
+      "covenant_type": "maintenance",
+      "citation": {
+        "source_text": "Loan Parties shall not, at any time, permit the ratio of Consolidated Current Assets to Consolidated Current Liabilities to be less than 1.50",
+        "page": null,
+        "section_label": null
+      },
+      "audit": {
+        "citation_verified": true,
+        "citation_similarity": 1.0,
+        "calculator_checked": false,
+        "calculator_match": true,
+        "citation_grounded": true
+      },
+      "definition": null
+    }
+  ],
+  "ebitda_addbacks": [],
+  "negative_covenants": [],
+  "loan_terms": {
+    "borrowers": [
+      {
+        "value": "ASPEN GROUP, INC., a Delaware corporation",
+        "citation": {
+          "source_text": "ASPEN GROUP, INC., a Delaware corporation (\"Borrower\")",
+          "page": null,
+          "section_label": null
+        },
+        "audit": {
+          "citation_verified": true,
+          "citation_similarity": 0.86
+        }
+      },
+      {
+        "value": "ASPEN UNIVERSITY, INC., a Delaware corporation",
+        "citation": {
+          "source_text": "ASPEN UNIVERSITY, INC., a Delaware corporation (\"Aspen University\")",
+          "page": null,
+          "section_label": null
+        },
+        "audit": {
+          "citation_verified": false,
+          "citation_similarity": 0.637
+        }
+      },
+      {
+        "value": "ASPEN NEWCO, INC., a Delaware corporation",
+        "citation": {
+          "source_text": "ASPEN NEWCO, INC., a Delaware corporation (\"Newco\")",
+          "page": null,
+          "section_label": null
+        },
+        "audit": {
+          "citation_verified": false,
+          "citation_similarity": 0.701
+        }
+      }
+    ],
+    "lenders": [
+      {
+        "value": "RUNWAY GROWTH CREDIT FUND INC., a Maryland corporation",
+        "citation": {
+          "source_text": "RUNWAY GROWTH CREDIT FUND INC., a Maryland corporation (\"Lender\")",
+          "page": null,
+          "section_label": null
+        },
+        "audit": {
+          "citation_verified": false,
+          "citation_similarity": 0.678
+        }
+      }
+    ],
+    "loan_type": null,
+    "loan_amount": null,
+    "interest_rate": {
+      "value": "Applicable Rate",
+      "citation": {
+        "source_text": "the outstanding principal amount of the Term Loans shall accrue interest from and after its Funding Date, at the Applicable Rate",
+        "page": null,
+        "section_label": null
+      },
+      "audit": {
+        "citation_verified": true,
+        "citation_similarity": 1.0
+      }
+    },
+    "start_date": {
+      "value": "July 25, 2017",
+      "citation": {
+        "source_text": "dated as of July 25, 2017 (the \"Closing Date\")",
+        "page": null,
+        "section_label": null
+      },
+      "audit": {
+        "citation_verified": false,
+        "citation_similarity": 0.804
+      }
+    },
+    "end_date": null,
+    "principal_repayment_terms": {
+      "value": "During any Interest-Only Period, no scheduled payments of the principal of the Term Loans shall be due. After an Interest-Only Period, equal installments on each Payment Date, calculated by dividing the aggregate principal amount of the Term Loans outstanding on the first day following the end of an Interest-Only Period by the number of Payment Dates remaining prior to the Term Loan Maturity Date, with the remaining balance due on the final Payment Date.",
+      "citation": {
+        "source_text": "During any Interest-Only Period, no scheduled payments of the principal of the Term Loans shall be due.  Borrower agrees to repay to Lender the outstanding principal amount of the Term Loans, on each Payment Date occurring after an Interest-Only Period, in equal installments, plus accrued and unpaid interest.  The principal amounts of such installments shall be calculated by dividing (i) the sum of the aggregate principal amount of the Term Loans outstanding on the first day following the end of an Interest-Only Period, by (ii) the number of Payment Dates remaining prior to the Term Loan Maturity Date.  On the final Payment Date,",
+        "page": null,
+        "section_label": null
+      },
+      "audit": {
+        "citation_verified": true,
+        "citation_similarity": 1.0
+      }
+    }
+  }
+}

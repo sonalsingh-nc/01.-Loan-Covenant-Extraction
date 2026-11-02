@@ -1,0 +1,280 @@
+{
+  "financial_covenants": [
+    {
+      "name": "Minimum Liquidity",
+      "comparison": "not_less_than",
+      "threshold": 15000000.0,
+      "unit": "USD",
+      "test_frequency": "at any date",
+      "covenant_type": "maintenance",
+      "citation": {
+        "source_text": "As of any date, Borrower shall not permit Liquidity to be less than $15,000,000.",
+        "page": null,
+        "section_label": "6.10"
+      },
+      "audit": {
+        "citation_verified": true,
+        "citation_similarity": 1.0,
+        "calculator_checked": true,
+        "calculator_match": true,
+        "citation_grounded": true,
+        "recomputed_threshold": 15000000.0,
+        "recomputed_comparison": "not_less_than"
+      },
+      "definition": null
+    }
+  ],
+  "ebitda_addbacks": [],
+  "negative_covenants": [],
+  "loan_terms": {
+    "borrowers": [
+      {
+        "value": "BEYOND MEAT, INC., a Delaware corporation",
+        "citation": {
+          "source_text": "BEYOND MEAT, INC. , a Delaware corporation\n(\" Borrower \")",
+          "page": null,
+          "section_label": null
+        },
+        "audit": {
+          "citation_verified": true,
+          "citation_similarity": 0.876
+        }
+      }
+    ],
+    "lenders": [
+      {
+        "value": "UNPROCESSED FOODS, LLC , a Wyoming limited liability company",
+        "citation": {
+          "source_text": "UNPROCESSED FOODS, LLC , a Wyoming limited liability company (\" UF \"), as a Lender",
+          "page": null,
+          "section_label": null
+        },
+        "audit": {
+          "citation_verified": true,
+          "citation_similarity": 0.854
+        }
+      }
+    ],
+    "loan_type": null,
+    "loan_amount": null,
+    "interest_rate": {
+      "value": "the outstanding principal amount of any Term Loan Advance shall bear interest at a per annum fixed rate equal to 12.0%; provided that at any time after the Initial Maturity Date has been extended in accordance with Section 1.7, the outstanding principal amount of any Term Loan Advance shall bear interest at a per annum fixed rate equal to 17.5%",
+      "citation": {
+        "source_text": "the outstanding principal amount of any Term Loan Advance shall bear interest at a per annum fixed rate equal to 12.0%; provided that at any time after the Initial Maturity Date has been extended in accordance with Section 1.7, the outstanding principal amount of any Term Loan Advance shall bear interest at a per annum fixed rate equal to 17.5%",
+        "page": null,
+        "section_label": "1.2"
+      },
+      "audit": {
+        "citation_verified": true,
+        "citation_similarity": 1.0
+      }
+    },
+    "start_date": {
+      "value": "May 7, 2025",
+      "citation": {
+        "source_text": "dated as of May 7, 2025 (the \" Effective\nDate \")",
+        "page": null,
+        "section_label": null
+      },
+      "audit": {
+        "citation_verified": false,
+        "citation_similarity": 0.784
+      }
+    },
+    "end_date": {
+      "value": "Term Loan Maturity Date",
+      "citation": {
+        "source_text": "All unpaid principal of the Term Loan Advances outstanding, accrued and unpaid interest thereon and all other unpaid Obligations (including any MOIC Amount) then outstanding with respect to the Term Loan Advances are due and payable in full on the Term Loan Maturity Date.",
+        "page": null,
+        "section_label": "1.1"
+      },
+      "audit": {
+        "citation_verified": true,
+        "citation_similarity": 1.0
+      },
+      "resolved_value": {
+        "term": "Term Loan Maturity Date",
+        "formula": "max(February 7, 2030, if Extended_Maturity_Date > February 7, 2030 then Extended_Maturity_Date else February 7, 2030); if not Business Day then next Business Day; if Junior_Debt_Maturity_Date exists then min(result, Junior_Debt_Maturity_Date - 90 days) at Lender election",
+        "components": {
+          "Maturity Date": {
+            "term": "Maturity Date",
+            "formula": "",
+            "components": {},
+            "carve_outs": [],
+            "provenance": [],
+            "status": "requires_human_review",
+            "reason": "term_not_found_in_definitions_section"
+          },
+          "Extended Maturity Date": {
+            "term": "Extended Maturity Date",
+            "formula": "",
+            "components": {},
+            "carve_outs": [],
+            "provenance": [],
+            "status": "requires_human_review",
+            "reason": "term_not_found_in_definitions_section"
+          },
+          "Initial Maturity Date": {
+            "term": "Initial Maturity Date",
+            "formula": "February 7, 2030",
+            "components": {},
+            "carve_outs": [],
+            "provenance": [],
+            "status": "resolved",
+            "reason": null
+          },
+          "Term Loan Advances": {
+            "term": "Term Loan Advances",
+            "formula": "",
+            "components": {},
+            "carve_outs": [],
+            "provenance": [],
+            "status": "requires_human_review",
+            "reason": "term_not_found_in_definitions_section"
+          },
+          "Loan Party": {
+            "term": "Loan Party",
+            "formula": "Borrower + Guarantors + Successors + Assigns",
+            "components": {},
+            "carve_outs": [],
+            "provenance": [],
+            "status": "resolved",
+            "reason": null
+          },
+          "Junior Debt Maturity Date": {
+            "term": "Junior Debt Maturity Date",
+            "formula": "",
+            "components": {},
+            "carve_outs": [],
+            "provenance": [],
+            "status": "requires_human_review",
+            "reason": "term_not_found_in_definitions_section"
+          },
+          "Business Day": {
+            "term": "Business Day",
+            "formula": "a day other than Saturday, Sunday, or a day on which commercial banks in New York City are authorized or required by law to close",
+            "components": {
+              "New York City": {
+                "term": "New York City",
+                "formula": "",
+                "components": {},
+                "carve_outs": [],
+                "provenance": [],
+                "status": "requires_human_review",
+                "reason": "term_not_found_in_definitions_section"
+              }
+            },
+            "carve_outs": [
+              "other than a Saturday, Sunday or other day on which commercial banks in New York City are authorized or required by law to close."
+            ],
+            "provenance": [],
+            "status": "resolved",
+            "reason": null
+          },
+          "Term Loan Advance": {
+            "term": "Term Loan Advance",
+            "formula": "",
+            "components": {},
+            "carve_outs": [],
+            "provenance": [],
+            "status": "requires_human_review",
+            "reason": "term_not_found_in_definitions_section"
+          },
+          "Intercompany Debt": {
+            "term": "Intercompany Debt",
+            "formula": "Indebtedness - (Borrower to External Parties) - (Loan Party to External Parties)",
+            "components": {},
+            "carve_outs": [],
+            "provenance": [],
+            "status": "resolved",
+            "reason": null
+          },
+          "Subordinated Debt": {
+            "term": "Subordinated Debt",
+            "formula": "Indebtedness (other than Intercompany Debt) where: (i) subordinated to Obligations per (Customary Intercreditor Agreement if (Junior Liens rank below Senior Liens AND Borrower may pay Junior Debt Service) or similar); (ii) maturity \u2265 90 days after Initial Maturity Date (or Extended Maturity Date if extended); (iii) no amortization before Term Loan Maturity Date and Loan Documents termination; excluding Existing Notes, including New Notes",
+            "components": {
+              "Required Lenders": {
+                "term": "Required Lenders",
+                "formula": "",
+                "components": {},
+                "carve_outs": [],
+                "provenance": [],
+                "status": "requires_human_review",
+                "reason": "term_not_found_in_definitions_section"
+              },
+              "Loan Parties": {
+                "term": "Loan Parties",
+                "formula": "Borrower + Guarantors + Successors + Assigns",
+                "components": {},
+                "carve_outs": [],
+                "provenance": [],
+                "status": "resolved",
+                "reason": null
+              },
+              "Loan Documents": {
+                "term": "Loan Documents",
+                "formula": "",
+                "components": {},
+                "carve_outs": [],
+                "provenance": [],
+                "status": "requires_human_review",
+                "reason": "term_not_found_in_definitions_section"
+              },
+              "Intercreditor Agreement": {
+                "term": "Intercreditor Agreement",
+                "formula": "Customary Intercreditor Agreement if (Junior Liens rank below Senior Liens AND Borrower may pay Junior Debt Service)",
+                "components": {},
+                "carve_outs": [],
+                "provenance": [],
+                "status": "resolved",
+                "reason": null
+              },
+              "New Notes": {
+                "term": "New Notes",
+                "formula": "",
+                "components": {},
+                "carve_outs": [],
+                "provenance": [],
+                "status": "requires_human_review",
+                "reason": "term_not_found_in_definitions_section"
+              },
+              "Existing Notes": {
+                "term": "Existing Notes",
+                "formula": "",
+                "components": {},
+                "carve_outs": [],
+                "provenance": [],
+                "status": "requires_human_review",
+                "reason": "term_not_found_in_definitions_section"
+              }
+            },
+            "carve_outs": [
+              "other than Intercompany Debt) incurred by such Person which (i) is subordinated in right of payment and security to the Obligations (pursuant to the Intercreditor Agreement or other subordination, intercreditor or other similar agreement in form and substance reasonably satisfactory to Lenders and as entered"
+            ],
+            "provenance": [],
+            "status": "resolved",
+            "reason": null
+          }
+        },
+        "carve_outs": [
+          "other than Intercompany Debt), in each case, the scheduled maturity date of which occurs before the latest Term Loan Maturity Date at such time (such date, the \u201c Junior Debt Maturity Date \u201d), then, at any Lender\u2019s election (notified to Borrower in writing by such Lender), the Term Loan Maturity Date for one o"
+        ],
+        "provenance": [],
+        "status": "resolved",
+        "reason": null
+      }
+    },
+    "principal_repayment_terms": {
+      "value": "All unpaid principal of the Term Loan Advances outstanding, accrued and unpaid interest thereon and all other unpaid Obligations (including any MOIC Amount) then outstanding with respect to the Term Loan Advances are due and payable in full on the Term Loan Maturity Date.",
+      "citation": {
+        "source_text": "All unpaid principal of the Term Loan Advances outstanding, accrued and unpaid interest thereon and all other unpaid Obligations (including any MOIC Amount) then outstanding with respect to the Term Loan Advances are due and payable in full on the Term Loan Maturity Date.",
+        "page": null,
+        "section_label": "1.1"
+      },
+      "audit": {
+        "citation_verified": true,
+        "citation_similarity": 1.0
+      }
+    }
+  }
+}

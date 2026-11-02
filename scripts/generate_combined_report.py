@@ -166,6 +166,10 @@ th {
   top: 0;
 }
 tbody tr:hover { background: var(--accent-soft); }
+tbody tr.loan-header { background: var(--accent-soft); border-top: 2px solid var(--accent); }
+tbody tr.loan-header:hover { background: var(--accent-soft); }
+td.loan-attrs-cell { font-weight: 500; vertical-align: top; padding: 1rem 0.75rem; }
+span.loan-details { display: block; font-size: 0.8rem; color: var(--ink-soft); margin: 0.3rem 0 0; font-weight: 400; }
 td.num { font-variant-numeric: tabular-nums; font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 0.83rem; }
 td.doc-cell { font-weight: 600; }
 
@@ -427,10 +431,11 @@ def _covenant_detail_html(doc_name: str, anchor_id: str, covenant: Dict[str, Any
 
 
 def _rows_for_document(doc_name: str, doc_slug: str, data: Dict[str, Any]) -> tuple:
-    """Returns (rows, footnotes, details) -- footnotes has 0-2 entries
-    (borrowers, lenders) emitted once for the document regardless of how
-    many covenant rows it contributes; details has one detail-card entry
-    per covenant row, in the same order, for the master-detail section."""
+    """Returns (loan_attrs, rows, footnotes, details) where:
+    - loan_attrs: dict with borrower, lenders, loan_type, amount, interest_rate, end_date
+    - rows: list of covenant rows (without loan attributes repeated)
+    - footnotes: 0-2 entries (borrowers, lenders) emitted once per document
+    - details: one detail-card entry per covenant row for the master-detail section"""
     loan_terms = data.get("loan_terms") or {}
     borrower, borrower_note = _truncated_cell(
         loan_terms.get("borrowers") or [], "Other borrowers", f"note-{doc_slug}-borrowers"
@@ -445,11 +450,19 @@ def _rows_for_document(doc_name: str, doc_slug: str, data: Dict[str, Any]) -> tu
     interest_terms = _cited_value(loan_terms.get("interest_rate"))
     maturity_date = _cited_value(loan_terms.get("end_date"))
 
-    loan_level = [borrower, lenders, loan_type, amount, interest_terms, maturity_date]
+    loan_attrs = {
+        "borrower": borrower,
+        "lenders": lenders,
+        "type": loan_type,
+        "amount": amount,
+        "rate": interest_terms,
+        "maturity": maturity_date,
+    }
+
     covenants = data.get("financial_covenants") or []
 
     if not covenants:
-        return [[html.escape(doc_name), *loan_level, EMPTY, EMPTY, EMPTY, EMPTY]], footnotes, []
+        return loan_attrs, [["—", "—", "—", "—"]], footnotes, []
 
     rows = []
     details = []
@@ -463,8 +476,6 @@ def _rows_for_document(doc_name: str, doc_slug: str, data: Dict[str, Any]) -> tu
         section = covenant.get("citation", {}).get("section_label") or EMPTY
         rows.append(
             [
-                html.escape(doc_name),
-                *loan_level,
                 f'<a class="covenant-link" href="#{anchor_id}">{html.escape(covenant.get("name", ""))}</a>{type_badge}',
                 _format_comparison(covenant),
                 _format_threshold(covenant),
@@ -472,7 +483,7 @@ def _rows_for_document(doc_name: str, doc_slug: str, data: Dict[str, Any]) -> tu
             ]
         )
         details.append(_covenant_detail_html(doc_name, anchor_id, covenant))
-    return rows, footnotes, details
+    return loan_attrs, rows, footnotes, details
 
 
 _LOAN_TERM_LABELS = {
@@ -525,7 +536,7 @@ def _slugify(name: str) -> str:
 
 def build_report_html(processed_dir: Path) -> str:
     json_paths = sorted(processed_dir.glob("*.json"))
-    all_rows: List[List[str]] = []
+    all_loan_sections: List[str] = []
     all_details: List[str] = []
     stale_docs: List[str] = []
     review_flags: List[str] = []
@@ -536,36 +547,44 @@ def build_report_html(processed_dir: Path) -> str:
         doc_name = path.stem
         if "loan_terms" not in data:
             stale_docs.append(doc_name)
-        rows, footnotes, details = _rows_for_document(doc_name, _slugify(doc_name), data)
-        all_rows.extend(rows)
+        loan_attrs, rows, footnotes, details = _rows_for_document(doc_name, _slugify(doc_name), data)
+
+        # Build HTML for this document's loan section
+        loan_section_html = (
+            f'<tr class="loan-header">'
+            f'<td colspan="4" class="loan-attrs-cell">'
+            f'<strong>{html.escape(doc_name)}</strong><br>'
+            f'<span class="loan-details">Borrower: {loan_attrs["borrower"]}</span><br>'
+            f'<span class="loan-details">Lenders: {loan_attrs["lenders"]}</span><br>'
+            f'<span class="loan-details">Type: {loan_attrs["type"]}</span><br>'
+            f'<span class="loan-details">Amount: {loan_attrs["amount"]}</span><br>'
+            f'<span class="loan-details">Rate: {loan_attrs["rate"]}</span><br>'
+            f'<span class="loan-details">Maturity: {loan_attrs["maturity"]}</span>'
+            f'</td>'
+            f'</tr>'
+        )
+        all_loan_sections.append(loan_section_html)
+
+        # Add covenant rows for this loan
+        covenant_rows_html = "\n".join(
+            "<tr>"
+            + "".join(
+                f'<td class="{"num" if col in {"Threshold", "Section"} else ""}">{cell}</td>'
+                for col, cell in zip(["Covenant Name", "Comparison", "Threshold", "Section"], row)
+            )
+            + "</tr>"
+            for row in rows
+        )
+        all_loan_sections.append(covenant_rows_html)
+
         all_details.extend(details)
         party_footnotes.extend(footnotes)
         review_flags.extend(_collect_review_flags(doc_name, data))
 
-    columns = [
-        "Document",
-        "Borrower",
-        "Lenders",
-        "Loan Type",
-        "Amount",
-        "Interest Terms",
-        "Maturity Date",
-        "Covenant Name",
-        "Comparison",
-        "Threshold",
-        "Section",
-    ]
+    columns = ["Covenant Name", "Comparison", "Threshold", "Section"]
     num_columns = {"Threshold", "Section"}
     header_html = "".join(f"<th>{html.escape(c)}</th>" for c in columns)
-    body_html = "\n".join(
-        "<tr>"
-        + "".join(
-            f'<td class="{"doc-cell" if col == "Document" else ("num" if col in num_columns else "")}">{cell}</td>'
-            for col, cell in zip(columns, row)
-        )
-        + "</tr>"
-        for row in all_rows
-    )
+    body_html = "\n".join(all_loan_sections)
 
     review_html = ""
     if review_flags:
@@ -608,7 +627,7 @@ def build_report_html(processed_dir: Path) -> str:
 <body>
 <p class="eyebrow">covenant_extraction &middot; combined across data/processed</p>
 <h1>Combined Covenant Report</h1>
-<p class="meta">{len(json_paths)} document(s) &middot; {len(all_rows)} row(s) &middot; source: {html.escape(str(processed_dir))} &middot; click a covenant name for its full definition</p>
+<p class="meta">{len(json_paths)} document(s) &middot; {len(all_details)} covenant(s) &middot; source: {html.escape(str(processed_dir))} &middot; click a covenant name for its full definition</p>
 {review_html}
 <div class="table-wrap" id="report-table">
 <table>

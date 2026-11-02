@@ -1,0 +1,141 @@
+{
+  "financial_covenants": [
+    {
+      "name": "Debt Service Coverage Ratio",
+      "comparison": "not_less_than",
+      "threshold": 1.1,
+      "unit": "ratio",
+      "test_frequency": null,
+      "covenant_type": "incurrence_condition",
+      "citation": {
+        "source_text": "the Debt Service Coverage Ratio shall be less than 1.10 to 1.00",
+        "page": null,
+        "section_label": "ARTICLE 4"
+      },
+      "audit": {
+        "citation_verified": true,
+        "citation_similarity": 1.0,
+        "calculator_checked": true,
+        "calculator_match": true,
+        "citation_grounded": true,
+        "recomputed_threshold": 1.1,
+        "recomputed_comparison": "not_less_than"
+      },
+      "definition": "as of the last day of the calendar month immediately preceding the applicable date of calculation, the quotient obtained by dividing (1) the Adjusted Net Cash Flow by (2) the aggregate principal and interest projected to be due and payable over the twelve (12) month period subsequent to the date of calculation (interest only periods will be disregarded for purposes of this calculation) and a 30-year amortization period. Borrower shall deliver to Lender such information as is reasonably required for Lender to make all applicable calculations. Lender\u2019s calculation of the Debt Service Coverage Ratio, and all component calculations, shall be conclusive and binding on Borrower absent manifest error.",
+      "resolved_definition": {
+        "term": "Debt Service Coverage Ratio",
+        "formula": "(NOI - Normalized TI/Leasing Commissions - Normalized Capital Improvements) / (Aggregate Principal and Interest Due over 12 months + Principal Due over remaining 30-year amortization)",
+        "components": {
+          "Adjusted Net Cash Flow": {
+            "term": "Adjusted Net Cash Flow",
+            "formula": "NOI - Normalized TI/Leasing Commissions - Normalized Capital Improvements",
+            "components": {},
+            "carve_outs": [],
+            "provenance": [],
+            "status": "resolved",
+            "reason": null
+          }
+        },
+        "carve_outs": [],
+        "provenance": [],
+        "status": "resolved",
+        "reason": null
+      }
+    }
+  ],
+  "ebitda_addbacks": [],
+  "negative_covenants": [],
+  "loan_terms": {
+    "borrowers": [
+      {
+        "value": "Borrower",
+        "citation": {
+          "source_text": "as Borrower",
+          "page": null,
+          "section_label": null
+        },
+        "audit": {
+          "citation_verified": true,
+          "citation_similarity": 1.0
+        }
+      },
+      {
+        "value": "THE ENTITIES SET FORTH ON SCHEDULE VI",
+        "citation": {
+          "source_text": "THE ENTITIES SET FORTH ON SCHEDULE VI , each having an address at c/o Consolidated-Tomoka Land Co., 1530 Cornerstone Blvd., Suite 100, Daytona Beach, Florida 32117",
+          "page": null,
+          "section_label": null
+        },
+        "audit": {
+          "citation_verified": true,
+          "citation_similarity": 1.0
+        }
+      }
+    ],
+    "lenders": [
+      {
+        "value": "WELLS FARGO BANK, NATIONAL ASSOCIATION",
+        "citation": {
+          "source_text": "WELLS FARGO BANK,\nNATIONAL ASSOCIATION",
+          "page": null,
+          "section_label": null
+        },
+        "audit": {
+          "citation_verified": true,
+          "citation_similarity": 1.0
+        }
+      },
+      {
+        "value": "Lender",
+        "citation": {
+          "source_text": "Promissory Note of even date herewith in the principal amount of $30,000,000, made by Borrower in favor of Lender",
+          "page": null,
+          "section_label": "ARTICLE 1"
+        },
+        "audit": {
+          "citation_verified": true,
+          "citation_similarity": 1.0
+        }
+      }
+    ],
+    "loan_type": null,
+    "loan_amount": {
+      "value": "$30,000,000",
+      "citation": {
+        "source_text": "Promissory Note of even date herewith in the principal amount of $30,000,000",
+        "page": null,
+        "section_label": "ARTICLE 1"
+      },
+      "audit": {
+        "citation_verified": true,
+        "citation_similarity": 1.0
+      }
+    },
+    "interest_rate": null,
+    "start_date": {
+      "value": "September 30, 2014",
+      "citation": {
+        "source_text": "Dated as of September 30, 2014",
+        "page": null,
+        "section_label": null
+      },
+      "audit": {
+        "citation_verified": true,
+        "citation_similarity": 1.0
+      }
+    },
+    "end_date": {
+      "value": "October 11, 2034",
+      "citation": {
+        "source_text": "\"Maturity Date\" shall mean October 11, 2034 or such other date on which the final payment of principal of the Note becomes due and payable as therein or herein provided, whether at such stated maturity date, by declaration of acceleration, or otherwise.",
+        "page": null,
+        "section_label": "ARTICLE 1"
+      },
+      "audit": {
+        "citation_verified": true,
+        "citation_similarity": 0.932
+      }
+    },
+    "principal_repayment_terms": null
+  }
+}

@@ -1,0 +1,127 @@
+{
+  "financial_covenants": [
+    {
+      "name": "Minimum EBITDA",
+      "comparison": "not_less_than",
+      "threshold": -4750000.0,
+      "unit": "USD",
+      "test_frequency": "monthly",
+      "covenant_type": "maintenance",
+      "citation": {
+        "source_text": "At all times during a Financial Covenant Trigger Period, the Borrower shall have, on an aggregate basis, as of the last day of each calendar month, in each case, for the trailing twelve (12) month period immediately then ended, EBITDA of no less than (or in the case of any negative numbers below, which are indicated inside of parenthesis, worse than) the corresponding amount set forth below",
+        "page": null,
+        "section_label": "9.19"
+      },
+      "audit": {
+        "citation_verified": true,
+        "citation_similarity": 1.0,
+        "calculator_checked": false,
+        "calculator_match": true,
+        "citation_grounded": false
+      },
+      "definition": null
+    }
+  ],
+  "ebitda_addbacks": [],
+  "negative_covenants": [],
+  "loan_terms": {
+    "borrowers": [
+      {
+        "value": "FLUX POWER HOLDINGS, INC., a Nevada corporation",
+        "citation": {
+          "source_text": "FLUX POWER HOLDINGS, INC. , a Nevada corporation (\" Holdings \")",
+          "page": null,
+          "section_label": null
+        },
+        "audit": {
+          "citation_verified": true,
+          "citation_similarity": 0.887
+        }
+      },
+      {
+        "value": "FLUX POWER, INC., a California corporation",
+        "citation": {
+          "source_text": "FLUX POWER, INC. , a California corporation (\" Flux \"",
+          "page": null,
+          "section_label": null
+        },
+        "audit": {
+          "citation_verified": true,
+          "citation_similarity": 0.864
+        }
+      }
+    ],
+    "lenders": [
+      {
+        "value": "GIBRALTAR BUSINESS CAPITAL, LLC, a Delaware limited liability company",
+        "citation": {
+          "source_text": "GIBRALTAR BUSINESS CAPITAL, LLC , a Delaware limited liability company (the \" Lender \")",
+          "page": null,
+          "section_label": null
+        },
+        "audit": {
+          "citation_verified": true,
+          "citation_similarity": 0.918
+        }
+      }
+    ],
+    "loan_type": null,
+    "loan_amount": null,
+    "interest_rate": null,
+    "start_date": {
+      "value": "July 28, 2023",
+      "citation": {
+        "source_text": "This LOAN AND SECURITY AGREEMENT dated as of July 28, 2023",
+        "page": null,
+        "section_label": null
+      },
+      "audit": {
+        "citation_verified": true,
+        "citation_similarity": 1.0
+      }
+    },
+    "end_date": {
+      "value": "Maturity Date",
+      "citation": {
+        "source_text": "All Revolving Loans hereunder shall be repaid by the Borrower on the Maturity Date",
+        "page": null,
+        "section_label": "2.1"
+      },
+      "audit": {
+        "citation_verified": true,
+        "citation_similarity": 1.0
+      },
+      "resolved_value": {
+        "term": "Maturity Date",
+        "formula": "July 28, 2025 or extended per Section 2.1(e) or per modification/extension/renewal note executed by Borrower and accepted by Lender",
+        "components": {
+          "Revolving Note": {
+            "term": "Revolving Note",
+            "formula": "",
+            "components": {},
+            "carve_outs": [],
+            "provenance": [],
+            "status": "requires_human_review",
+            "reason": "term_not_found_in_definitions_section"
+          }
+        },
+        "carve_outs": [],
+        "provenance": [],
+        "status": "resolved",
+        "reason": null
+      }
+    },
+    "principal_repayment_terms": {
+      "value": "repaid by the Borrower on the Maturity Date",
+      "citation": {
+        "source_text": "All Revolving Loans hereunder shall be repaid by the Borrower on the Maturity Date",
+        "page": null,
+        "section_label": "2.1"
+      },
+      "audit": {
+        "citation_verified": true,
+        "citation_similarity": 1.0
+      }
+    }
+  }
+}

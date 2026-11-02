@@ -1,0 +1,98 @@
+{
+  "financial_covenants": [],
+  "ebitda_addbacks": [],
+  "negative_covenants": [],
+  "loan_terms": {
+    "borrowers": [
+      {
+        "value": "Borrower",
+        "citation": {
+          "source_text": "executed by Borrower and payable to Lender",
+          "page": null,
+          "section_label": null
+        },
+        "audit": {
+          "citation_verified": true,
+          "citation_similarity": 1.0
+        }
+      },
+      {
+        "value": "AST & Science, LLC, a Delaware limited liability company",
+        "citation": {
+          "source_text": "The words \" Borrower \" (whether one or more) means AST & Science, LLC , a Delaware limited liability company, (\" AST Delaware \"), AST & Science Texas LLC , a Texas limited liability company (\" AST Texas \") and AST SpaceMobile Manufacturing, LLC , a Texas limited liability company (\" AST Manufacturing \").",
+          "page": null,
+          "section_label": null
+        },
+        "audit": {
+          "citation_verified": false,
+          "citation_similarity": 0.012
+        }
+      }
+    ],
+    "lenders": [
+      {
+        "value": "LONE STAR STATE BANK OF WEST TEXAS",
+        "citation": {
+          "source_text": "This Loan Agreement, dated as of August 9, 2023, is by and between LONE STAR STATE BANK OF WEST TEXAS and Borrower (defined below).",
+          "page": null,
+          "section_label": null
+        },
+        "audit": {
+          "citation_verified": true,
+          "citation_similarity": 1.0
+        }
+      },
+      {
+        "value": "Lender",
+        "citation": {
+          "source_text": "executed by Borrower and payable to Lender",
+          "page": null,
+          "section_label": null
+        },
+        "audit": {
+          "citation_verified": true,
+          "citation_similarity": 1.0
+        }
+      }
+    ],
+    "loan_type": null,
+    "loan_amount": {
+      "value": "fifteen million Dollars ($15,000,000.00)",
+      "citation": {
+        "source_text": "having an original commitment amount of fifteen million Dollars ($15,000,000.00)",
+        "page": null,
+        "section_label": null
+      },
+      "audit": {
+        "citation_verified": true,
+        "citation_similarity": 1.0
+      }
+    },
+    "interest_rate": null,
+    "start_date": {
+      "value": "August 9, 2023",
+      "citation": {
+        "source_text": "This Loan Agreement, dated as of August 9, 2023, is by and between LONE STAR STATE BANK OF WEST TEXAS and Borrower (defined below).",
+        "page": null,
+        "section_label": null
+      },
+      "audit": {
+        "citation_verified": true,
+        "citation_similarity": 1.0
+      }
+    },
+    "end_date": {
+      "value": "January 1, 2029",
+      "citation": {
+        "source_text": "a maturity date of January 1, 2029",
+        "page": null,
+        "section_label": null
+      },
+      "audit": {
+        "citation_verified": true,
+        "citation_similarity": 1.0
+      }
+    },
+    "principal_repayment_terms": null
+  }
+}

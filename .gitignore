@@ -1,0 +1,15 @@
+# Virtual environment (contains deep paths that exceed Windows limits)
+.venv/
+venv/
+
+# Python bytecode and build artifacts
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# Local model downloads / caches
+models/
+
+# Secrets
+*api_key*.txt
+.env

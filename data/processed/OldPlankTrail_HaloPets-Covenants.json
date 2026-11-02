@@ -1,0 +1,239 @@
+{
+  "financial_covenants": [
+    {
+      "name": "Fixed Charge Coverage Ratio",
+      "comparison": "not_less_than",
+      "threshold": 1.25,
+      "unit": "ratio",
+      "test_frequency": "quarterly",
+      "covenant_type": "maintenance",
+      "citation": {
+        "source_text": "Not permit the Fixed Charge Coverage Ratio as of the last day of any fiscal quarter to be less than 1.25 to 1.00, tested as of the last day of each fiscal quarter beginning with the fiscal quarter ending March 31, 2021.",
+        "page": null,
+        "section_label": "9.4"
+      },
+      "audit": {
+        "citation_verified": true,
+        "citation_similarity": 1.0,
+        "calculator_checked": true,
+        "calculator_match": true,
+        "citation_grounded": true,
+        "recomputed_threshold": 1.25,
+        "recomputed_comparison": "not_less_than"
+      },
+      "definition": "(1) Fixed Charge Operating Cash Flow, divided by (2) Fixed Charges, all as determined for Borrower and its Subsidiaries on a consolidated basis in accordance with GAAP. The Fixed Charge Coverage Ratio shall be calculated on a trailing twelve (12) month basis ending as of the last day of each test period.",
+      "resolved_definition": {
+        "term": "Fixed Charge Coverage Ratio",
+        "formula": "(EBITDA - (unfinanced Capital Expenditures + income taxes paid in cash + dividends, distributions and Equity Interest redemptions paid in cash) + min(PPP Loan Proceeds - (Non-forgivable Uses), PPP Loan Forgiveness)) / ((Total Interest Expense + Capitalized Lease Interest + Preferred Equity Interest + LC/BA Fees + Rate Management Net Costs) + Principal Payments on Indebtedness (excl. PPP Forgivable Uses forgiven under CARES Act) + Principal Payments on Capital Leases)",
+        "components": {
+          "Fixed Charges": {
+            "term": "Fixed Charges",
+            "formula": "(Total Interest Expense + Capitalized Lease Interest + Preferred Equity Interest + LC/BA Fees + Rate Management Net Costs) + Principal Payments on Indebtedness (excl. PPP Forgivable Uses forgiven under CARES Act) + Principal Payments on Capital Leases",
+            "components": {
+              "Interest Expense": {
+                "term": "Interest Expense",
+                "formula": "Total Interest Expense + Capitalized Lease Interest + Preferred Equity Interest + LC/BA Fees + Rate Management Net Costs",
+                "components": {},
+                "carve_outs": [],
+                "provenance": [],
+                "status": "resolved",
+                "reason": null
+              },
+              "CARES Act": {
+                "term": "CARES Act",
+                "formula": "",
+                "components": {},
+                "carve_outs": [],
+                "provenance": [],
+                "status": "requires_human_review",
+                "reason": "term_not_found_in_definitions_section"
+              },
+              "Capital Leases": {
+                "term": "Capital Leases",
+                "formula": "",
+                "components": {},
+                "carve_outs": [],
+                "provenance": [],
+                "status": "requires_human_review",
+                "reason": "term_not_found_in_definitions_section"
+              }
+            },
+            "carve_outs": [
+              "excluding Interest Expense in respect of that portion of the PPP Loan that is used for funding Forgivable Uses), plus (2) scheduled payments, required payments and prepayments of principal on Indebtedness (excluding principal in respect of that portion of the PPP Loan that is used for funding Forgivable Uses"
+            ],
+            "provenance": [],
+            "status": "resolved",
+            "reason": null
+          },
+          "The Fixed Charge Coverage Ratio": {
+            "term": "The Fixed Charge Coverage Ratio",
+            "formula": "",
+            "components": {},
+            "carve_outs": [],
+            "provenance": [],
+            "status": "requires_human_review",
+            "reason": "term_not_found_in_definitions_section"
+          },
+          "Fixed Charge Operating Cash Flow": {
+            "term": "Fixed Charge Operating Cash Flow",
+            "formula": "EBITDA - (unfinanced Capital Expenditures + income taxes paid in cash + dividends, distributions and Equity Interest redemptions paid in cash) + min(PPP Loan Proceeds - (Non-forgivable Uses), PPP Loan Forgiveness)",
+            "components": {
+              "Forgivable Uses": {
+                "term": "Forgivable Uses",
+                "formula": "PPP Loan Proceeds - (Non-forgivable Uses)",
+                "components": {},
+                "carve_outs": [],
+                "provenance": [],
+                "status": "resolved",
+                "reason": null
+              },
+              "PPP Loan": {
+                "term": "PPP Loan",
+                "formula": "PPP Loan - Wells Fargo ($431,000)",
+                "components": {},
+                "carve_outs": [],
+                "provenance": [],
+                "status": "resolved",
+                "reason": null
+              },
+              "Equity Interest": {
+                "term": "Equity Interest",
+                "formula": "Common Stock + Preferred Stock + Warrants + Membership Interests + Convertible Securities + Other Equity Interests",
+                "components": {},
+                "carve_outs": [],
+                "provenance": [],
+                "status": "resolved",
+                "reason": null
+              },
+              "Capital Expenditures": {
+                "term": "Capital Expenditures",
+                "formula": "Fixed Asset Expenditures + Capitalized Lease Obligations - Insurance-Reimbursed Expenditures",
+                "components": {},
+                "carve_outs": [],
+                "provenance": [],
+                "status": "resolved",
+                "reason": null
+              }
+            },
+            "carve_outs": [
+              "provided that, such amount shall not exceed the amount that is forgiven pursuant to the PPP Loan program."
+            ],
+            "provenance": [],
+            "status": "resolved",
+            "reason": null
+          }
+        },
+        "carve_outs": [],
+        "provenance": [],
+        "status": "resolved",
+        "reason": null
+      }
+    }
+  ],
+  "ebitda_addbacks": [],
+  "negative_covenants": [],
+  "loan_terms": {
+    "borrowers": [
+      {
+        "value": "Halo, Purely for Pets, Inc.",
+        "citation": {
+          "source_text": "Halo, Purely for Pets, Inc.",
+          "page": null,
+          "section_label": null
+        },
+        "audit": {
+          "citation_verified": true,
+          "citation_similarity": 1.0
+        }
+      },
+      {
+        "value": "Borrower",
+        "citation": {
+          "source_text": "executed and delivered by Borrower to Lender",
+          "page": null,
+          "section_label": "1.1"
+        },
+        "audit": {
+          "citation_verified": true,
+          "citation_similarity": 1.0
+        }
+      }
+    ],
+    "lenders": [
+      {
+        "value": "Old Plank Trail Community Bank, N.A.",
+        "citation": {
+          "source_text": "Old Plank Trail Community Bank, N.A.",
+          "page": null,
+          "section_label": null
+        },
+        "audit": {
+          "citation_verified": true,
+          "citation_similarity": 1.0
+        }
+      },
+      {
+        "value": "Lender",
+        "citation": {
+          "source_text": "executed and delivered by Borrower to Lender",
+          "page": null,
+          "section_label": "1.1"
+        },
+        "audit": {
+          "citation_verified": true,
+          "citation_similarity": 1.0
+        }
+      }
+    ],
+    "loan_type": null,
+    "loan_amount": {
+      "value": "Six Million and no/100 Dollars ($6,000,000.00)",
+      "citation": {
+        "source_text": "in a maximum aggregate principal amount not to exceed Six Million and no/100 Dollars ($6,000,000.00)",
+        "page": null,
+        "section_label": "1.1"
+      },
+      "audit": {
+        "citation_verified": true,
+        "citation_similarity": 1.0
+      }
+    },
+    "interest_rate": null,
+    "start_date": {
+      "value": "January 6, 2021",
+      "citation": {
+        "source_text": "Dated as of January 6, 2021",
+        "page": null,
+        "section_label": null
+      },
+      "audit": {
+        "citation_verified": true,
+        "citation_similarity": 1.0
+      }
+    },
+    "end_date": {
+      "value": "January 6, 2024",
+      "citation": {
+        "source_text": "\" Revolving Loan Termination Date \" means January 6, 2024.",
+        "page": null,
+        "section_label": "1.1"
+      },
+      "audit": {
+        "citation_verified": false,
+        "citation_similarity": 0.757
+      }
+    },
+    "principal_repayment_terms": {
+      "value": "commencing on February 1, 2021 and continuing on the first day of each month thereafter through January 1, 2022, Borrower shall make monthly principal payments in the amount of Fifty Thousand and no/100 ($50,000.00) each; commencing on February 1, 2022 and continuing on the first day of each month thereafter through January 1, 2023, Borrower shall make monthly principal payments in the amount of Seventy-Five Thousand and no/100 ($75,000.00) each; commencing on February 1, 2023 and continuing on the first day of each month thereafter, Borrower shall make monthly principal payments in the amount of One Hundred Twenty-Five Thousand and 00/100 Dollars ($125,000.00) each; and on or before the Term Loan A Maturity Date, Borrower shall repay in full all outstanding Term Loan A principal",
+      "citation": {
+        "source_text": "principal under Term Loan A shall be paid as follows: (i) commencing on February 1, 2021 and continuing on the first day of each month thereafter through January 1, 2022, Borrower shall make monthly principal payments in the amount of Fifty Thousand and no/100 ($50,000.00) each; (ii) commencing on February 1, 2022 and continuing on the first day of each month thereafter through January 1, 2023, Borrower shall make monthly principal payments in the amount of Seventy-Five Thousand and no/100 ($75,000.00) each; (iii) commencing on February 1, 2023 and continuing on the first day of each month thereafter, Borrower shall make monthly principal payments in the amount of One Hundred Twenty-Five Thousand and 00/100 Dollars ($125,000.00) each; and (iv) on or before the Term Loan A Maturity Date, Borrower shall repay in full all outstanding Term Loan A principal",
+        "page": null,
+        "section_label": "2.4"
+      },
+      "audit": {
+        "citation_verified": true,
+        "citation_similarity": 1.0
+      }
+    }
+  }
+}

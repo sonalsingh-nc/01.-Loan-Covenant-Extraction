@@ -1,0 +1,111 @@
+{
+  "financial_covenants": [],
+  "ebitda_addbacks": [],
+  "negative_covenants": [],
+  "loan_terms": {
+    "borrowers": [
+      {
+        "value": "INNVENTURE LLC",
+        "citation": {
+          "source_text": "INNVENTURE LLC",
+          "page": null,
+          "section_label": null
+        },
+        "audit": {
+          "citation_verified": true,
+          "citation_similarity": 1.0
+        }
+      },
+      {
+        "value": "a Delaware limited liability company",
+        "citation": {
+          "source_text": "a Delaware limited liability company, as \"Borrower\",",
+          "page": null,
+          "section_label": null
+        },
+        "audit": {
+          "citation_verified": true,
+          "citation_similarity": 0.867
+        }
+      },
+      {
+        "value": "Borrower",
+        "citation": {
+          "source_text": "Borrower and each of WTI Fund X, Inc. ( \" Fund 10 \" ) and WTI Fund XI, Inc. ( \" Fund 11 \" ) have entered or anticipate entering into one or more transactions pursuant to which each Lender severally and not jointly agrees to make available to Borrower a loan facility",
+          "page": null,
+          "section_label": null
+        },
+        "audit": {
+          "citation_verified": false,
+          "citation_similarity": 0.042
+        }
+      }
+    ],
+    "lenders": [
+      {
+        "value": "WTI Fund X, Inc. (Fund 10)",
+        "citation": {
+          "source_text": "Borrower and each of WTI Fund X, Inc. ( \" Fund 10 \" ) and WTI Fund XI, Inc. ( \" Fund 11 \" )",
+          "page": null,
+          "section_label": null
+        },
+        "audit": {
+          "citation_verified": false,
+          "citation_similarity": 0.649
+        }
+      },
+      {
+        "value": "Fund 10",
+        "citation": {
+          "source_text": "this Agreement is and shall be interpreted for all purposes as separate and distinct agreements between Borrower and Fund 10, on the one hand, and Borrower and Fund 11, on the other hand",
+          "page": null,
+          "section_label": "1.3"
+        },
+        "audit": {
+          "citation_verified": true,
+          "citation_similarity": 1.0
+        }
+      },
+      {
+        "value": "Fund 11",
+        "citation": {
+          "source_text": "this Agreement is and shall be interpreted for all purposes as separate and distinct agreements between Borrower and Fund 10, on the one hand, and Borrower and Fund 11, on the other hand",
+          "page": null,
+          "section_label": "1.3"
+        },
+        "audit": {
+          "citation_verified": true,
+          "citation_similarity": 1.0
+        }
+      }
+    ],
+    "loan_type": null,
+    "loan_amount": null,
+    "interest_rate": null,
+    "start_date": {
+      "value": "October 22, 2024",
+      "citation": {
+        "source_text": "Dated as of October 22, 2024",
+        "page": null,
+        "section_label": null
+      },
+      "audit": {
+        "citation_verified": true,
+        "citation_similarity": 1.0
+      }
+    },
+    "end_date": null,
+    "principal_repayment_terms": {
+      "value": "Principal and interest of each Loan shall be payable at the times and in the manner set forth in the Note and regularly scheduled payments thereof shall be effected by automatic debit of the appropriate funds from Borrower's Primary Operating Account",
+      "citation": {
+        "source_text": "Principal and interest of each Loan shall be payable at the times and in the manner set forth in the Note and regularly scheduled payments thereof shall be effected by automatic debit of the appropriate funds from Borrower's Primary Operating Account as specified in the Supplement hereto",
+        "page": null,
+        "section_label": "2.2"
+      },
+      "audit": {
+        "citation_verified": false,
+        "citation_similarity": 0.006
+      }
+    }
+  }
+}
